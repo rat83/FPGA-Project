@@ -1,65 +1,55 @@
 module MainIntegrator(clk, reset, outX, outY, outZ);
-	input clk, reset;
-	output signed [26:0] outX; 		//the state variable X
-	output signed [26:0] outY; 		//the state variable Y
-	output signed [26:0] outZ; 		//the state variable Z
+	input logic clk, reset;
+	output logic signed [26:0] outX; 		//the state variable X
+	output logic signed [26:0] outY; 		//the state variable Y
+	output logic signed [26:0] outZ; 		//the state variable Z
 	
 	logic signed [26:0] functX, functY, functZ;
 	logic signed [26:0] betaTz, sigTxy, xmuly, rhozTx;
 	
 	// disgusting localparam list. factored out for later use of EnResetReg
-	localparam [26:0] initX = {7{1'b1},20{1'b0}};
-	localparam [26:0] initY = {8'b1,19{1'b0}};
-	localparam [26:0] initZ = {7'd25,20{1'b0}};
-	localparam [26:0} dt 	= {7{1'b0},8'b1,12{1'b0}};
-	localparam [26:0] rho 	= {7'd28,20{1'b0}};
-	localparam [26:0] sigma = {7'd10,20{1'b0}};
-	localparam [26:0] beta 	= {7'd2, 20{1'b0}};
+	localparam signed [26:0] initX = {{7{1'b1}},{20{1'b0}}};
+	localparam signed [26:0] initY = {8'b1,{19{1'b0}}};
+	localparam signed [26:0] initZ = {7'd25,{20{1'b0}}};
+	localparam signed [26:0] sigma = {7'd10,{20{1'b0}}};
+	localparam signed [26:0] beta  = {5'b0 ,22'b1010101010101010101010};
+	localparam signed [26:0] rho 	 = {7'd28,{20{1'b0}}};
 	
 	// these multipliers are essentially all setting up functX/Y/Z
 	// they implement the circuit defined in the handout
+	
+	logic signed [26:0] mul1_t;
+	assign mul1_t = rho - outZ;
 	signed_mult mul1 (
 	.out(rhozTx),
-	.a(rho - outZ),
+	.a(mul1_t  >>> 8),
 	.b(outX)
 	);
 	
 	signed_mult mul2 (
 	.out(xmuly),
 	.a(outX), 
-	.b(outY)
+	.b(outY >>> 8)
 	);
 	
 	signed_mult mul3 (
 	.out(betaTz),
 	.a(outZ),
-	.b(beta) 
+	.b(beta >>> 8) 
 	);
 	
-	signed_mult mul4 (
-	.out(sigTxy),
-	.a(outY - outX),
-	.b(sigma)
-	);
+	assign sigTxy = (outY - outX) >>> 8;
 	
 	// these multipliers are the final stage, feeding into the integrators
 	signed_mult mulX (
-	.out(functX)
+	.out(functX),
 	.a(sigTxy),
-	.b(dt)
+	.b(sigma)
 	);
 	
-	signed_mult mulY (
-	.out(functY)
-	.a(rhozTx - xmuly),
-	.b(dt)
-	);
+	assign functY = rhozTx - (xmuly >>> 8);
 	
-	signed_mult mulZ (
-	.out(functZ),
-	.a(xmuly - betaTz),
-	.b(dt)
-	);
+	assign functZ = (xmuly - betaTz);
 	
 	// these integrators contain the state register and update the register
 	integrator xk (
@@ -134,11 +124,11 @@ endmodule
 //////////////////////////////////////////////////
 
 module EnReg (clk, d, q);
-	input 	[26:0] 	d;
-	output	[26:0]	q;
+	input 	logic [26:0] 	d;
+	output	logic [26:0]	q;
 	input clk;
 	
 	always @(posedge clk) begin
-		d <= q;
+		q <= d;
 	end 
 endmodule 

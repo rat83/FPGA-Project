@@ -1,0 +1,186 @@
+# Compile of TopLevel.v was successful.
+# Compile of Integrator.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 13:22:54 on May 05,2023
+# Loading work.testbench
+# Loading sv_std.std
+# Loading work.MainIntegrator
+# Loading work.signed_mult
+# Loading work.integrator
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/TopLevel.v(36): [PCDPC] - Port size (1) does not match connection size (5) for port 'clk'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/dut File: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv
+add wave -position insertpoint  \
+sim:/testbench/CLOCK_50 \
+sim:/testbench/count \
+sim:/testbench/AnalogClock \
+sim:/testbench/reset \
+sim:/testbench/outX \
+sim:/testbench/outY \
+sim:/testbench/outZ
+run -all
+add wave -position insertpoint  \
+sim:/testbench/dut/dt \
+sim:/testbench/dut/rho \
+sim:/testbench/dut/sigma \
+sim:/testbench/dut/beta
+# Compile of TopLevel.v was successful.
+# Compile of Integrator.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# End time: 13:25:55 on May 05,2023, Elapsed time: 0:03:01
+# Errors: 0, Warnings: 1
+# vsim -gui work.testbench 
+# Start time: 13:25:55 on May 05,2023
+# Loading work.testbench
+# Loading sv_std.std
+# Loading work.MainIntegrator
+# Loading work.signed_mult
+# Loading work.integrator
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/TopLevel.v(36): [PCDPC] - Port size (1) does not match connection size (5) for port 'clk'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/dut File: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv
+add wave -position insertpoint  \
+sim:/testbench/CLOCK_50 \
+sim:/testbench/count \
+sim:/testbench/AnalogClock \
+sim:/testbench/reset \
+sim:/testbench/outX \
+sim:/testbench/outY \
+sim:/testbench/outZ
+run -all
+restart -f
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/TopLevel.v(36): [PCDPC] - Port size (1) does not match connection size (5) for port 'clk'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/dut File: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv
+add wave -position insertpoint  \
+sim:/testbench/dut/initX \
+sim:/testbench/dut/initY \
+sim:/testbench/dut/initZ \
+sim:/testbench/dut/dt \
+sim:/testbench/dut/rho \
+sim:/testbench/dut/sigma \
+sim:/testbench/dut/beta \
+sim:/testbench/dut/clk \
+sim:/testbench/dut/reset \
+sim:/testbench/dut/outX \
+sim:/testbench/dut/outY \
+sim:/testbench/dut/outZ \
+sim:/testbench/dut/functX \
+sim:/testbench/dut/functY \
+sim:/testbench/dut/functZ \
+sim:/testbench/dut/betaTz \
+sim:/testbench/dut/sigTxy \
+sim:/testbench/dut/xmuly \
+sim:/testbench/dut/rhozTx \
+sim:/testbench/dut/mul1_t \
+sim:/testbench/dut/mul4_t
+run
+run
+run
+run
+run
+run
+run
+run -all
+# Unable to retrieve min/max values for "sim:/testbench/outY":
+# 
+# can't unset "d(busyOldCursor)": no such element in array
+# Compile of TopLevel.v was successful.
+# Compile of Integrator.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# End time: 14:44:54 on May 05,2023, Elapsed time: 1:18:59
+# Errors: 1, Warnings: 2
+# vsim -gui work.testbench 
+# Start time: 14:44:55 on May 05,2023
+# Loading work.testbench
+# Loading sv_std.std
+# Loading work.MainIntegrator
+# Loading work.signed_mult
+# Loading work.integrator
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/TopLevel.v(36): [PCDPC] - Port size (1) does not match connection size (5) for port 'clk'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/dut File: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv
+add wave -position insertpoint  \
+sim:/testbench/CLOCK_50 \
+sim:/testbench/count \
+sim:/testbench/AnalogClock \
+sim:/testbench/reset \
+sim:/testbench/outX \
+sim:/testbench/outY \
+sim:/testbench/outZ
+run -all
+# Compile of TopLevel.v was successful.
+# Compile of Integrator.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# End time: 14:49:40 on May 05,2023, Elapsed time: 0:04:45
+# Errors: 0, Warnings: 1
+# vsim -gui work.testbench 
+# Start time: 14:49:40 on May 05,2023
+# Loading work.testbench
+# Loading sv_std.std
+# Loading work.MainIntegrator
+# Loading work.signed_mult
+# Loading work.integrator
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/TopLevel.v(36): [PCDPC] - Port size (1) does not match connection size (5) for port 'clk'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/dut File: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv
+add wave -position insertpoint  \
+sim:/testbench/CLOCK_50 \
+sim:/testbench/count \
+sim:/testbench/AnalogClock \
+sim:/testbench/reset \
+sim:/testbench/outX \
+sim:/testbench/outY \
+sim:/testbench/outZ
+run
+run -all
+# Compile of TopLevel.v was successful.
+# Compile of Integrator.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# End time: 14:52:45 on May 05,2023, Elapsed time: 0:03:05
+# Errors: 0, Warnings: 1
+# vsim -gui work.testbench 
+# Start time: 14:52:45 on May 05,2023
+# Loading work.testbench
+# Loading sv_std.std
+# Loading work.MainIntegrator
+# Loading work.signed_mult
+# Loading work.integrator
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/TopLevel.v(36): [PCDPC] - Port size (1) does not match connection size (5) for port 'clk'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/dut File: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv
+add wave -position insertpoint  \
+sim:/testbench/CLOCK_50 \
+sim:/testbench/count \
+sim:/testbench/AnalogClock \
+sim:/testbench/reset \
+sim:/testbench/outX \
+sim:/testbench/outY \
+sim:/testbench/outZ
+run -all
+# Compile of TopLevel.v was successful.
+# Compile of Integrator.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# End time: 15:17:00 on May 05,2023, Elapsed time: 0:24:15
+# Errors: 0, Warnings: 1
+# vsim -gui work.testbench 
+# Start time: 15:17:00 on May 05,2023
+# Loading work.testbench
+# Loading sv_std.std
+# Loading work.MainIntegrator
+# Loading work.signed_mult
+# Loading work.integrator
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/TopLevel.v(36): [PCDPC] - Port size (1) does not match connection size (5) for port 'clk'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/dut File: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv
+add wave -position insertpoint  \
+sim:/testbench/CLOCK_50 \
+sim:/testbench/count \
+sim:/testbench/AnalogClock \
+sim:/testbench/reset \
+sim:/testbench/outX \
+sim:/testbench/outY \
+sim:/testbench/outZ
+run -all
+# End time: 15:18:03 on May 05,2023, Elapsed time: 0:01:03
+# Errors: 0, Warnings: 1
