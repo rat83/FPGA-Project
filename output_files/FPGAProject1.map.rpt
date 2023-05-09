@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FPGAProject1
-Fri May 05 11:59:32 2023
+Tue May 09 11:48:34 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,10 +36,10 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Fri May 05 11:59:32 2023           ;
+; Analysis & Synthesis Status ; Failed - Tue May 09 11:48:34 2023           ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; FPGAProject1                                ;
-; Top-level Entity Name       ; FPGAProject1                                ;
+; Top-level Entity Name       ; DE1_SoC_Computer                            ;
 ; Family                      ; Cyclone V                                   ;
 ; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
 ; Total registers             ; N/A until Partition Merge                   ;
@@ -57,7 +57,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; FPGAProject1       ; FPGAProject1       ;
+; Top-level entity name                                                           ; DE1_SoC_Computer   ; FPGAProject1       ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -160,7 +160,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri May 05 11:59:24 2023
+    Info: Processing started: Tue May 09 11:48:25 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGAProject1 -c FPGAProject1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -168,15 +168,29 @@ Info (12021): Found 1 design units, including 1 entities, in source file topleve
     Info (12023): Found entity 1: testbench File: C:/Users/rat83/Documents/GitHub/FPGA-Project/TopLevel.v Line: 3
 Info (12021): Found 4 design units, including 4 entities, in source file integrator.sv
     Info (12023): Found entity 1: MainIntegrator File: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv Line: 1
-    Info (12023): Found entity 2: integrator File: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv Line: 96
-    Info (12023): Found entity 3: signed_mult File: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv Line: 120
-    Info (12023): Found entity 4: EnReg File: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv Line: 136
-Warning (10236): Verilog HDL Implicit Net warning at TopLevel.v(19): created implicit net for "AnalogClock" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/TopLevel.v Line: 19
-Error (12007): Top-level design entity "FPGAProject1" is undefined
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
-    Error: Peak virtual memory: 4770 megabytes
-    Error: Processing ended: Fri May 05 11:59:32 2023
-    Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:19
+    Info (12023): Found entity 2: integrator File: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv Line: 86
+    Info (12023): Found entity 3: signed_mult File: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv Line: 110
+    Info (12023): Found entity 4: EnReg File: C:/Users/rat83/Documents/GitHub/FPGA-Project/Integrator.sv Line: 126
+Info (12021): Found 1 design units, including 1 entities, in source file de1_soc_computer.v
+    Info (12023): Found entity 1: DE1_SoC_Computer File: C:/Users/rat83/Documents/GitHub/FPGA-Project/DE1_SoC_Computer.v Line: 3
+Warning (10236): Verilog HDL Implicit Net warning at TopLevel.v(24): created implicit net for "AnalogClock" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/TopLevel.v Line: 24
+Info (12127): Elaborating entity "DE1_SoC_Computer" for the top level hierarchy
+Warning (10034): Output port "LEDR" at DE1_SoC_Computer.v(245) has no driver File: C:/Users/rat83/Documents/GitHub/FPGA-Project/DE1_SoC_Computer.v Line: 245
+Warning (10034): Output port "ADC_DIN" at DE1_SoC_Computer.v(196) has no driver File: C:/Users/rat83/Documents/GitHub/FPGA-Project/DE1_SoC_Computer.v Line: 196
+Warning (10034): Output port "ADC_SCLK" at DE1_SoC_Computer.v(198) has no driver File: C:/Users/rat83/Documents/GitHub/FPGA-Project/DE1_SoC_Computer.v Line: 198
+Warning (10034): Output port "AUD_DACDAT" at DE1_SoC_Computer.v(204) has no driver File: C:/Users/rat83/Documents/GitHub/FPGA-Project/DE1_SoC_Computer.v Line: 204
+Warning (10034): Output port "AUD_XCK" at DE1_SoC_Computer.v(206) has no driver File: C:/Users/rat83/Documents/GitHub/FPGA-Project/DE1_SoC_Computer.v Line: 206
+Warning (10034): Output port "IRDA_TXD" at DE1_SoC_Computer.v(239) has no driver File: C:/Users/rat83/Documents/GitHub/FPGA-Project/DE1_SoC_Computer.v Line: 239
+Warning (10034): Output port "TD_RESET_N" at DE1_SoC_Computer.v(261) has no driver File: C:/Users/rat83/Documents/GitHub/FPGA-Project/DE1_SoC_Computer.v Line: 261
+Error (12006): Node instance "Digit0" instantiates undefined entity "HexDigit". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: C:/Users/rat83/Documents/GitHub/FPGA-Project/DE1_SoC_Computer.v Line: 370
+Error (12006): Node instance "Digit1" instantiates undefined entity "HexDigit". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: C:/Users/rat83/Documents/GitHub/FPGA-Project/DE1_SoC_Computer.v Line: 371
+Error (12006): Node instance "Digit2" instantiates undefined entity "HexDigit". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: C:/Users/rat83/Documents/GitHub/FPGA-Project/DE1_SoC_Computer.v Line: 372
+Error (12006): Node instance "Digit3" instantiates undefined entity "HexDigit". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: C:/Users/rat83/Documents/GitHub/FPGA-Project/DE1_SoC_Computer.v Line: 373
+Error (12006): Node instance "The_System" instantiates undefined entity "Computer_System". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: C:/Users/rat83/Documents/GitHub/FPGA-Project/DE1_SoC_Computer.v Line: 519
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 5 errors, 9 warnings
+    Error: Peak virtual memory: 4769 megabytes
+    Error: Processing ended: Tue May 09 11:48:34 2023
+    Error: Elapsed time: 00:00:09
+    Error: Total CPU time (on all processors): 00:00:22
 
 

@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Failed - Fri May 05 11:59:32 2023
+Analysis & Synthesis Status : Failed - Tue May 09 11:48:34 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : FPGAProject1
-Top-level Entity Name : FPGAProject1
+Top-level Entity Name : DE1_SoC_Computer
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge
