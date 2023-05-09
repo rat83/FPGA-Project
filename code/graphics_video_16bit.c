@@ -80,6 +80,10 @@ void *vga_pixel_virtual_base;
 volatile unsigned int * vga_char_ptr = NULL ;
 void *vga_char_virtual_base;
 
+// fpga output buffer
+volatile unsigned int * lorenz_pixel_ptr = NULL ;
+void *lorenz_pixel_virtual_base;
+
 // /dev/mem file id
 int fd;
 
@@ -135,6 +139,20 @@ int main(void)
     // Get the address that maps to the FPGA pixel buffer
 	vga_pixel_ptr =(unsigned int *)(vga_pixel_virtual_base);
 
+    // === get Lorenz pixel addr ====================
+	// get virtual addr that maps to physical
+	lorenz_pixel_virtual_base = mmap( NULL, PIO_REGS_SPAN, ( PROT_READ | PROT_WRITE ), MAP_SHARED, fd, PIO_REGS_BASE);	
+	if( lorenz_pixel_virtual_base == MAP_FAILED ) {
+		printf( "ERROR: mmap4() failed...\n" );
+		close( fd );
+		return(1);
+	}
+    
+    // Get the address that maps to the FPGA pixel buffer
+	lorenz_pixel_ptr =(int *)(vga_pixel_virtual_base);
+
+    printf("%d %d %d\n", lorenz_pixel_ptr[0], lorenz_pixel_ptr[1], lorenz_pixel_ptr[2]);
+
 	// ===========================================
 
 	/* create a message to be displayed on the VGA 
@@ -174,22 +192,28 @@ int main(void)
 	// so color = B+(G<<5)+(R<<11);
 
     int xpos = 0;
+    int sin_out_y = 0;
+    int ypos_x = 0;
+    int ypos_y = 0;
+    int ypos_z = 0;
 	
 	while(1) 
 	{
 		// start timer
 		gettimeofday(&t1, NULL);
-
-      
 	
 		//VGA_box(int x1, int y1, int x2, int y2, short pixel_color)
 		VGA_box(64, 0, 240, 50, blue); // blue box
 		VGA_box(250, 0, 425, 50, red); // red box
 		VGA_box(435, 0, 600, 50, green); // green box
 
-        sin_out_y = (200+(int)(40*(sin(((float)xpos * 2 * 3.14159265) / 320))));
+        //sin_out_y = (200+(int)(40*(sin(((float)xpos * 2 * 3.14159265) / 320))));
+
+        ypos_x = lorenz_pixel_ptr[0] >> 20;
+        ypos_y = lorenz_pixel_ptr[1] >> 20;
+        ypos_z = lorenz_pixel_ptr[2] >> 20;
 		
-        VGA_PIXEL(xpos,sin_out_y,cyan);
+        VGA_PIXEL(xpos,(200+ypos_x),cyan);
         xpos += 5;
         xpos = xpos % 640;
 
@@ -230,11 +254,11 @@ int main(void)
 		gettimeofday(&t2, NULL);
 		elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000000.0;      // sec to us
 		elapsedTime += (t2.tv_usec - t1.tv_usec) ;   // us 
-		sprintf(time_string, "T = %6.0f uSec  ", elapsedTime);
+		//sprintf(time_string, "T = %6.0f uSec  ", elapsedTime);
         
+		//VGA_text (10, 4, time_string);
+		sprintf(time_string, "x = %x y = %x z = %x", lorenz_pixel_ptr[0], lorenz_pixel_ptr[1], lorenz_pixel_ptr[2]);
 		VGA_text (10, 4, time_string);
-		sprintf(time_string, "Y = %6.0d uSec  ", (200+40*(int)(sin((float)xpos * 2 * 3.14159265 / 320))));
-		VGA_text (10, 6, time_string);
 		// set frame rate
 		usleep(17000);
 		
