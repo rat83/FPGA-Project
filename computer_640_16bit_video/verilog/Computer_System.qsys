@@ -159,7 +159,7 @@
    {
       datum baseAddress
       {
-         value = "65536";
+         value = "71368704";
          type = "String";
       }
    }
@@ -175,7 +175,7 @@
    {
       datum baseAddress
       {
-         value = "65552";
+         value = "71368720";
          type = "String";
       }
    }
@@ -191,7 +191,7 @@
    {
       datum baseAddress
       {
-         value = "65568";
+         value = "71368736";
          type = "String";
       }
    }
@@ -239,6 +239,11 @@
    type="conduit"
    dir="end" />
  <interface name="sdram" internal="SDRAM.wire" type="conduit" dir="end" />
+ <interface
+   name="sdram_clk"
+   internal="System_PLL.sdram_clk"
+   type="clock"
+   dir="start" />
  <interface
    name="system_pll_ref_clk"
    internal="System_PLL.ref_clk"
@@ -907,9 +912,9 @@
   <parameter name="AUTO_SYS_CLK_CLOCK_RATE" value="100000000" />
   <parameter name="AUTO_SYS_CLK_RESET_DOMAIN" value="8" />
   <parameter name="AUTO_UNIQUE_ID">$${FILENAME}_VGA_Subsystem</parameter>
-  <parameter name="AUTO_VGA_PLL_REF_CLK_CLOCK_DOMAIN" value="3" />
+  <parameter name="AUTO_VGA_PLL_REF_CLK_CLOCK_DOMAIN" value="4" />
   <parameter name="AUTO_VGA_PLL_REF_CLK_CLOCK_RATE" value="0" />
-  <parameter name="AUTO_VGA_PLL_REF_CLK_RESET_DOMAIN" value="3" />
+  <parameter name="AUTO_VGA_PLL_REF_CLK_RESET_DOMAIN" value="4" />
  </module>
  <module name="pio_0" kind="altera_avalon_pio" version="18.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
@@ -975,6 +980,33 @@
    kind="avalon"
    version="18.1"
    start="ARM_A9_HPS.h2f_axi_master"
+   end="pio_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x04410000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="ARM_A9_HPS.h2f_axi_master"
+   end="pio_1.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x04410010" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="ARM_A9_HPS.h2f_axi_master"
+   end="pio_2.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x04410020" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="ARM_A9_HPS.h2f_axi_master"
    end="Onchip_SRAM.s2">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x08000000" />
@@ -996,33 +1028,6 @@
    end="VGA_Subsystem.char_buffer_control_slave">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x3030" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="18.1"
-   start="ARM_A9_HPS.h2f_lw_axi_master"
-   end="pio_0.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00010000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="18.1"
-   start="ARM_A9_HPS.h2f_lw_axi_master"
-   end="pio_1.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00010010" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="18.1"
-   start="ARM_A9_HPS.h2f_lw_axi_master"
-   end="pio_2.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00010020" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1055,13 +1060,13 @@
  <connection
    kind="clock"
    version="18.1"
-   start="System_PLL.sdram_clk"
-   end="pio_2.clk" />
+   start="System_PLL.sys_clk"
+   end="pio_0.clk" />
  <connection
    kind="clock"
    version="18.1"
    start="System_PLL.sys_clk"
-   end="pio_0.clk" />
+   end="pio_2.clk" />
  <connection
    kind="clock"
    version="18.1"

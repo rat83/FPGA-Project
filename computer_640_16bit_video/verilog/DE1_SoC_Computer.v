@@ -354,8 +354,8 @@ input						HPS_USB_NXT;
 output					HPS_USB_STP;
 
 MainIntegrator integrator (
-	.clk(clk), 
-	.reset(!reset), 
+	.clk(CLOCK_50), 
+	.reset(KEY[0]), 
 	.outX(pio_out_1), 
 	.outY(pio_out_2), 
 	.outZ(pio_out_3)
@@ -368,9 +368,9 @@ MainIntegrator integrator (
 wire [31:0] pio_out_x, pio_out_y, pio_out_z;
 wire [26:0] pio_out_1, pio_out_2, pio_out_3;
 
-assign pio_out_x = 32'd69;//{{5{pio_out_1[26]}} , pio_out_1};
-assign pio_out_y = 32'd420;//{{5{pio_out_2[26]}} , pio_out_2};
-assign pio_out_z = 32'd666;//{{5{pio_out_3[26]}} , pio_out_3};
+assign pio_out_x = {{5{pio_out_1[26]}} , pio_out_1};
+assign pio_out_y = {{5{pio_out_2[26]}} , pio_out_2};
+assign pio_out_z = {{5{pio_out_3[26]}} , pio_out_3};
 
 //=======================================================
 //  Structural coding

@@ -2,103 +2,7 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
-		},
-		{
-			"name" : "Computer_System:The_System",
 			"pins" : [
-				{
-					"name" : "DRAM_ADDR[0]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_ADDR[1]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_ADDR[2]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_ADDR[3]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_ADDR[4]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_ADDR[5]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_ADDR[6]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_ADDR[7]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_ADDR[8]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_ADDR[9]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_ADDR[10]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_ADDR[11]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_ADDR[12]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_BA[0]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_BA[1]",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_CAS_N",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_CKE",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_CS_N",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_LDQM",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_RAS_N",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_UDQM",
-					"strict" : false
-				},
-				{
-					"name" : "DRAM_WE_N",
-					"strict" : false
-				},
-				{
-					"name" : "FPGA_I2C_SCLK",
-					"strict" : false
-				},
 				{
 					"name" : "VGA_B[0]",
 					"strict" : false
@@ -133,10 +37,6 @@
 				},
 				{
 					"name" : "VGA_BLANK_N",
-					"strict" : false
-				},
-				{
-					"name" : "VGA_CLK",
 					"strict" : false
 				},
 				{
@@ -208,11 +108,95 @@
 					"strict" : false
 				},
 				{
-					"name" : "VGA_SYNC_N",
+					"name" : "VGA_VS",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_VS",
+					"name" : "FPGA_I2C_SCLK",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_ADDR[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_BA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_BA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_CAS_N",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_CS_N",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_LDQM",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_RAS_N",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_UDQM",
+					"strict" : false
+				},
+				{
+					"name" : "DRAM_WE_N",
 					"strict" : false
 				},
 				{
@@ -282,122 +266,13 @@
 				{
 					"name" : "FPGA_I2C_SDAT",
 					"strict" : false
-				}
-			]
-		},
-		{
-			"name" : "multi_hier",
-			"pins" : [
+				},
 				{
-					"name" : "HEX0[0]",
+					"name" : "CLOCK_50",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX0[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX0[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX0[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX0[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX0[6]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX1[6]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX2[6]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[0]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[2]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[4]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[5]",
-					"strict" : false
-				},
-				{
-					"name" : "HEX3[6]",
+					"name" : "KEY[0]",
 					"strict" : false
 				}
 			]

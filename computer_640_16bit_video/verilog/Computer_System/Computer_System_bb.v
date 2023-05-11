@@ -74,6 +74,9 @@ module Computer_System (
 	memory_mem_odt,
 	memory_mem_dm,
 	memory_oct_rzqin,
+	pio_out_x_export,
+	pio_out_y_export,
+	pio_out_z_export,
 	sdram_addr,
 	sdram_ba,
 	sdram_cas_n,
@@ -95,9 +98,7 @@ module Computer_System (
 	vga_B,
 	vga_pll_ref_clk_clk,
 	vga_pll_ref_reset_reset,
-	pio_out_x_export,
-	pio_out_y_export,
-	pio_out_z_export);	
+	sdram_clk_clk);	
 
 	inout		av_config_SDAT;
 	output		av_config_SCLK;
@@ -173,6 +174,9 @@ module Computer_System (
 	output		memory_mem_odt;
 	output	[3:0]	memory_mem_dm;
 	input		memory_oct_rzqin;
+	input	[31:0]	pio_out_x_export;
+	input	[31:0]	pio_out_y_export;
+	input	[31:0]	pio_out_z_export;
 	output	[12:0]	sdram_addr;
 	output	[1:0]	sdram_ba;
 	output		sdram_cas_n;
@@ -194,7 +198,5 @@ module Computer_System (
 	output	[7:0]	vga_B;
 	input		vga_pll_ref_clk_clk;
 	input		vga_pll_ref_reset_reset;
-	input	[31:0]	pio_out_x_export;
-	input	[31:0]	pio_out_y_export;
-	input	[31:0]	pio_out_z_export;
+	output		sdram_clk_clk;
 endmodule

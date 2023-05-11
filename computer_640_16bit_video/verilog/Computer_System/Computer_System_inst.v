@@ -73,6 +73,9 @@
 		.memory_mem_odt                  (<connected-to-memory_mem_odt>),                  //                     .mem_odt
 		.memory_mem_dm                   (<connected-to-memory_mem_dm>),                   //                     .mem_dm
 		.memory_oct_rzqin                (<connected-to-memory_oct_rzqin>),                //                     .oct_rzqin
+		.pio_out_x_export                (<connected-to-pio_out_x_export>),                //            pio_out_x.export
+		.pio_out_y_export                (<connected-to-pio_out_y_export>),                //            pio_out_y.export
+		.pio_out_z_export                (<connected-to-pio_out_z_export>),                //            pio_out_z.export
 		.sdram_addr                      (<connected-to-sdram_addr>),                      //                sdram.addr
 		.sdram_ba                        (<connected-to-sdram_ba>),                        //                     .ba
 		.sdram_cas_n                     (<connected-to-sdram_cas_n>),                     //                     .cas_n
@@ -94,8 +97,6 @@
 		.vga_B                           (<connected-to-vga_B>),                           //                     .B
 		.vga_pll_ref_clk_clk             (<connected-to-vga_pll_ref_clk_clk>),             //      vga_pll_ref_clk.clk
 		.vga_pll_ref_reset_reset         (<connected-to-vga_pll_ref_reset_reset>),         //    vga_pll_ref_reset.reset
-		.pio_out_x_export                (<connected-to-pio_out_x_export>),                //            pio_out_x.export
-		.pio_out_y_export                (<connected-to-pio_out_y_export>),                //            pio_out_y.export
-		.pio_out_z_export                (<connected-to-pio_out_z_export>)                 //            pio_out_z.export
+		.sdram_clk_clk                   (<connected-to-sdram_clk_clk>)                    //            sdram_clk.clk
 	);
 

@@ -15,29 +15,6 @@ Progress: Parameterizing module SDRAM
 Progress: Adding System_PLL [altera_up_avalon_sys_sdram_pll 18.0]
 Progress: Parameterizing module System_PLL
 Progress: Adding VGA_Subsystem [VGA_Subsystem 1.0]
-Progress: Reading input file
-Progress: Adding Sys_Clk [clock_source 18.1]
-Progress: Parameterizing module Sys_Clk
-Progress: Adding VGA_Alpha_Blender [altera_up_avalon_video_alpha_blender 18.0]
-Progress: Parameterizing module VGA_Alpha_Blender
-Progress: Adding VGA_Char_Buffer [altera_up_avalon_video_character_buffer_with_dma 18.0]
-Progress: Parameterizing module VGA_Char_Buffer
-Progress: Adding VGA_Controller [altera_up_avalon_video_vga_controller 18.0]
-Progress: Parameterizing module VGA_Controller
-Progress: Adding VGA_Dual_Clock_FIFO [altera_up_avalon_video_dual_clock_buffer 18.0]
-Progress: Parameterizing module VGA_Dual_Clock_FIFO
-Progress: Adding VGA_PLL [altera_up_avalon_video_pll 18.0]
-Progress: Parameterizing module VGA_PLL
-Progress: Adding VGA_Pixel_DMA [altera_up_avalon_video_pixel_buffer_dma 18.0]
-Progress: Parameterizing module VGA_Pixel_DMA
-Progress: Adding VGA_Pixel_FIFO [altera_up_avalon_video_dual_clock_buffer 18.0]
-Progress: Parameterizing module VGA_Pixel_FIFO
-Progress: Adding VGA_Pixel_RGB_Resampler [altera_up_avalon_video_rgb_resampler 18.0]
-Progress: Parameterizing module VGA_Pixel_RGB_Resampler
-Progress: Building connections
-Progress: Parameterizing connections
-Progress: Validating
-Progress: Done reading input file
 Progress: Parameterizing module VGA_Subsystem
 Progress: Adding pio_0 [altera_avalon_pio 18.1]
 Progress: Parameterizing module pio_0
@@ -113,10 +90,6 @@ Info: Computer_System.pio_1: PIO inputs are not hardwired in test bench. Undefin
 Info: Computer_System.pio_2: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Warning: Computer_System.Onchip_SRAM: Onchip_SRAM.s1 must be connected to an Avalon-MM master
 Info: Computer_System: Generating Computer_System "Computer_System" for QUARTUS_SYNTH
-Info: Inserting clock-crossing logic between cmd_demux.src4 and cmd_mux_004.sink0
-Info: Inserting clock-crossing logic between cmd_demux_001.src4 and cmd_mux_004.sink1
-Info: Inserting clock-crossing logic between rsp_demux_004.src0 and rsp_mux.sink4
-Info: Inserting clock-crossing logic between rsp_demux_004.src1 and rsp_mux_001.sink4
 Info: Interconnect is inserted between master Pixel_DMA_Addr_Translation.master and slave VGA_Subsystem.pixel_dma_control_slave because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
 Warning: ARM_A9_HPS.f2h_irq0: Cannot connect clock for irq_mapper.sender
 Warning: ARM_A9_HPS.f2h_irq0: Cannot connect reset for irq_mapper.sender
@@ -132,30 +105,30 @@ Info: ARM_A9_HPS: "Computer_System" instantiated altera_hps "ARM_A9_HPS"
 Info: AV_Config: Starting Generation of Audio and Video Config
 Info: AV_Config: "Computer_System" instantiated altera_up_avalon_audio_and_video_config "AV_Config"
 Info: Onchip_SRAM: Starting RTL generation for module 'Computer_System_Onchip_SRAM'
-Info: Onchip_SRAM:   Generation command is [exec C:/programs/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/programs/intelfpga/18.1/quartus/bin64/perl/lib -I C:/programs/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/programs/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/programs/intelfpga/18.1/quartus/sopc_builder/bin -I C:/programs/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/programs/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/programs/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Computer_System_Onchip_SRAM --dir=C:/Users/rat83/AppData/Local/Temp/alt9486_3002787911874901870.dir/0103_Onchip_SRAM_gen/ --quartus_dir=C:/programs/intelfpga/18.1/quartus --verilog --config=C:/Users/rat83/AppData/Local/Temp/alt9486_3002787911874901870.dir/0103_Onchip_SRAM_gen//Computer_System_Onchip_SRAM_component_configuration.pl  --do_build_sim=0  ]
+Info: Onchip_SRAM:   Generation command is [exec C:/programs/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/programs/intelfpga/18.1/quartus/bin64/perl/lib -I C:/programs/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/programs/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/programs/intelfpga/18.1/quartus/sopc_builder/bin -I C:/programs/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/programs/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/programs/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Computer_System_Onchip_SRAM --dir=C:/Users/rat83/AppData/Local/Temp/alt9488_6713194775225619217.dir/0304_Onchip_SRAM_gen/ --quartus_dir=C:/programs/intelfpga/18.1/quartus --verilog --config=C:/Users/rat83/AppData/Local/Temp/alt9488_6713194775225619217.dir/0304_Onchip_SRAM_gen//Computer_System_Onchip_SRAM_component_configuration.pl  --do_build_sim=0  ]
 Info: Onchip_SRAM: Done RTL generation for module 'Computer_System_Onchip_SRAM'
 Info: Onchip_SRAM: "Computer_System" instantiated altera_avalon_onchip_memory2 "Onchip_SRAM"
 Info: Pixel_DMA_Addr_Translation: "Computer_System" instantiated altera_up_avalon_video_dma_ctrl_addr_trans "Pixel_DMA_Addr_Translation"
 Info: SDRAM: Starting RTL generation for module 'Computer_System_SDRAM'
-Info: SDRAM:   Generation command is [exec C:/programs/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/programs/intelfpga/18.1/quartus/bin64/perl/lib -I C:/programs/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/programs/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/programs/intelfpga/18.1/quartus/sopc_builder/bin -I C:/programs/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/programs/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/programs/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=Computer_System_SDRAM --dir=C:/Users/rat83/AppData/Local/Temp/alt9486_3002787911874901870.dir/0105_SDRAM_gen/ --quartus_dir=C:/programs/intelfpga/18.1/quartus --verilog --config=C:/Users/rat83/AppData/Local/Temp/alt9486_3002787911874901870.dir/0105_SDRAM_gen//Computer_System_SDRAM_component_configuration.pl  --do_build_sim=0  ]
+Info: SDRAM:   Generation command is [exec C:/programs/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/programs/intelfpga/18.1/quartus/bin64/perl/lib -I C:/programs/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/programs/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/programs/intelfpga/18.1/quartus/sopc_builder/bin -I C:/programs/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/programs/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/programs/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=Computer_System_SDRAM --dir=C:/Users/rat83/AppData/Local/Temp/alt9488_6713194775225619217.dir/0306_SDRAM_gen/ --quartus_dir=C:/programs/intelfpga/18.1/quartus --verilog --config=C:/Users/rat83/AppData/Local/Temp/alt9488_6713194775225619217.dir/0306_SDRAM_gen//Computer_System_SDRAM_component_configuration.pl  --do_build_sim=0  ]
 Info: SDRAM: Done RTL generation for module 'Computer_System_SDRAM'
 Info: SDRAM: "Computer_System" instantiated altera_avalon_new_sdram_controller "SDRAM"
 Info: System_PLL: "Computer_System" instantiated altera_up_avalon_sys_sdram_pll "System_PLL"
 Info: VGA_Subsystem: "Computer_System" instantiated VGA_Subsystem "VGA_Subsystem"
 Info: pio_0: Starting RTL generation for module 'Computer_System_pio_0'
-Info: pio_0:   Generation command is [exec C:/programs/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/programs/intelfpga/18.1/quartus/bin64/perl/lib -I C:/programs/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/programs/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/programs/intelfpga/18.1/quartus/sopc_builder/bin -I C:/programs/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/programs/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/programs/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Computer_System_pio_0 --dir=C:/Users/rat83/AppData/Local/Temp/alt9486_3002787911874901870.dir/0106_pio_0_gen/ --quartus_dir=C:/programs/intelfpga/18.1/quartus --verilog --config=C:/Users/rat83/AppData/Local/Temp/alt9486_3002787911874901870.dir/0106_pio_0_gen//Computer_System_pio_0_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_0:   Generation command is [exec C:/programs/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/programs/intelfpga/18.1/quartus/bin64/perl/lib -I C:/programs/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/programs/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/programs/intelfpga/18.1/quartus/sopc_builder/bin -I C:/programs/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/programs/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/programs/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Computer_System_pio_0 --dir=C:/Users/rat83/AppData/Local/Temp/alt9488_6713194775225619217.dir/0307_pio_0_gen/ --quartus_dir=C:/programs/intelfpga/18.1/quartus --verilog --config=C:/Users/rat83/AppData/Local/Temp/alt9488_6713194775225619217.dir/0307_pio_0_gen//Computer_System_pio_0_component_configuration.pl  --do_build_sim=0  ]
 Info: pio_0: Done RTL generation for module 'Computer_System_pio_0'
 Info: pio_0: "Computer_System" instantiated altera_avalon_pio "pio_0"
-Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
-Info: mm_interconnect_0: "Computer_System" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "Computer_System" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_1: "Computer_System" instantiated altera_mm_interconnect "mm_interconnect_1"
 Info: mm_interconnect_2: "Computer_System" instantiated altera_mm_interconnect "mm_interconnect_2"
 Info: irq_mapper: "Computer_System" instantiated altera_irq_mapper "irq_mapper"
@@ -189,6 +162,7 @@ Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
 Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
 Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
 Info: ARM_A9_HPS_h2f_axi_master_wr_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "ARM_A9_HPS_h2f_axi_master_wr_limiter"
 Info: Reusing file C:/Users/rat83/Documents/GitHub/FPGA-Project/computer_640_16bit_video/verilog/Computer_System/synthesis/submodules/altera_avalon_sc_fifo.v
 Info: VGA_Subsystem_char_buffer_slave_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "VGA_Subsystem_char_buffer_slave_burst_adapter"
@@ -199,8 +173,11 @@ Info: cmd_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexe
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
 Info: Reusing file C:/Users/rat83/Documents/GitHub/FPGA-Project/computer_640_16bit_video/verilog/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
+Info: Reusing file C:/Users/rat83/Documents/GitHub/FPGA-Project/computer_640_16bit_video/verilog/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: rsp_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_002"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
 Info: Reusing file C:/Users/rat83/Documents/GitHub/FPGA-Project/computer_640_16bit_video/verilog/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_002"
@@ -210,6 +187,7 @@ Info: Reusing file C:/Users/rat83/Documents/GitHub/FPGA-Project/computer_640_16b
 Info: Reusing file C:/Users/rat83/Documents/GitHub/FPGA-Project/computer_640_16bit_video/verilog/Computer_System/synthesis/submodules/altera_merlin_burst_uncompressor.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: avalon_st_adapter_001: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
+Info: avalon_st_adapter_002: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_002"
 Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
 Info: router_002: "mm_interconnect_1" instantiated altera_merlin_router "router_002"
 Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
@@ -218,14 +196,11 @@ Info: Reusing file C:/Users/rat83/Documents/GitHub/FPGA-Project/computer_640_16b
 Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
 Info: Reusing file C:/Users/rat83/Documents/GitHub/FPGA-Project/computer_640_16bit_video/verilog/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
-Info: crosser: "mm_interconnect_1" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
-Info: Reusing file C:/Users/rat83/Documents/GitHub/FPGA-Project/computer_640_16bit_video/verilog/Computer_System/synthesis/submodules/altera_avalon_st_pipeline_base.v
-Info: avalon_st_adapter: "mm_interconnect_1" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: border: "hps_io" instantiated altera_interface_generator "border"
 Info: video_pll: "VGA_PLL" instantiated altera_pll "video_pll"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
 Info: error_adapter_0: "avalon_st_adapter_001" instantiated error_adapter "error_adapter_0"
-Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: Computer_System: Done "Computer_System" with 62 modules, 146 files
+Info: error_adapter_0: "avalon_st_adapter_002" instantiated error_adapter "error_adapter_0"
+Info: Computer_System: Done "Computer_System" with 64 modules, 145 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis
