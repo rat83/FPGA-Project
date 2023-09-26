@@ -7,15 +7,17 @@
 ///
 ///////////////////////////////////////
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> 
+#include <math.h>
+#include <string.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/ipc.h> 
 #include <sys/shm.h> 
 #include <sys/mman.h>
-#include <sys/time.h> 
-#include <math.h>
+#include <sys/time.h>
+#include <stdbool.h>
 //#include "address_map_arm_brl4.h"
 
 // video display
@@ -41,6 +43,7 @@ void VGA_Vline(int, int, int, short) ;
 void VGA_Hline(int, int, int, short) ;
 void VGA_disc (int, int, int, short);
 void VGA_circle (int, int, int, int);
+
 // 16-bit primary colors
 #define red  (0+(0<<5)+(31<<11))
 #define dark_red (0+(0<<5)+(15<<11))
@@ -91,7 +94,7 @@ typedef signed int fix15 ;
 #define int2fix15(a) ((fix15)(a << 15))
 #define fix2int15(a) ((int)(a >> 15))
 #define char2fix15(a) (fix15)(((fix15)(a)) << 15)
-#define divfix(a,b) (fix15)(div_s64s64( (((signed long long)(a)) << 15), ((signed long long)(b))))
+#define divfix(a,b) (fix15)(( (((signed long long)(a)) << 15) / ((signed long long)(b))))
 
 // number of Boids to spawn
 #define BOID_COUNT 250
@@ -374,21 +377,21 @@ void boidUpdate(Boid* boid, int idx){
 void drawArena() {
   // Erase screen if change in Boundary State
   if (BoundaryState != PreviousBoundaryState || ConfigurableWidth != PreviousConfigurableWidth) {
-    fillRect(0, 0, 640, 480, BLACK);
+    VGA_box(0, 0, 640, 480, black);
     PreviousBoundaryState = BoundaryState;
     PreviousConfigurableWidth = ConfigurableWidth;
   }
 
   // screen size 640x480
   if (BoundaryState == 0) { // Standard Arena
-    VGA_VLine(100, 100, 280, white) ;
-    VGA_VLine(540, 100, 280, white) ;
-    VGA_HLine(100, 100, 440, white) ;
-    VGA_HLine(100, 380, 440, white) ;
+    VGA_Vline(100, 100, 280, white) ;
+    VGA_Vline(540, 100, 280, white) ;
+    VGA_Hline(100, 100, 440, white) ;
+    VGA_Hline(100, 380, 440, white) ;
   } 
   else if (BoundaryState == 1) { // Top-Bottom Wrapping
-    VGA_VLine(boundary_left, 0, 480, white) ;
-    VGA_VLine(boundary_right, 0, 480, white) ;
+    VGA_Vline(boundary_left, 0, 480, white) ;
+    VGA_Vline(boundary_right, 0, 480, white) ;
   }
   else { // Full Wrapping
     // no arena
@@ -505,18 +508,18 @@ int main(void)
       for (int i = 1; i < BOID_COUNT*2; i=i+2) 
       {
       // erase boid
-      drawRect(fix2int15(boid_array[i]->x), fix2int15(boid_array[i]->y), 2, 2, black);
+      VGA_rect(fix2int15(boid_array[i]->x), fix2int15(boid_array[i]->y), 2, 2, black);
       // update boid's position and velocity
       boidUpdate(boid_array[i], i);
       // draw the boid at its new position
       if(boid_array[i]->bias1){
-        drawRect(fix2int15(boid_array[i]->x), fix2int15(boid_array[i]->y), 2, 2, red); 
+        VGA_rect(fix2int15(boid_array[i]->x), fix2int15(boid_array[i]->y), 2, 2, red); 
       }
       else if(boid_array[i]->bias2){ 
-        drawRect(fix2int15(boid_array[i]->x), fix2int15(boid_array[i]->y), 2, 2, blue);
+        VGA_rect(fix2int15(boid_array[i]->x), fix2int15(boid_array[i]->y), 2, 2, blue);
       }
       else{
-        drawRect(fix2int15(boid_array[i]->x), fix2int15(boid_array[i]->y), 2, 2, white); 
+        VGA_rect(fix2int15(boid_array[i]->x), fix2int15(boid_array[i]->y), 2, 2, white); 
       }
       // draw the boundaries
       }
