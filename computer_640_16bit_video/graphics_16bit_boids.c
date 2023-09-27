@@ -97,7 +97,7 @@ typedef signed int fix15 ;
 #define divfix(a,b) (fix15)(( (((signed long long)(a)) << 15) / ((signed long long)(b))))
 
 // number of Boids to spawn
-#define BOID_COUNT 250
+#define BOID_COUNT 25
 
 // Define boundary positions and velocity values
 int boundary_bottom = 380;
@@ -490,36 +490,44 @@ int main(void)
     static int spare_time ;
 
     // Spawn a boid
+    // NOTE: Implement STATIC ALLOCATION HERE
     int itr = 0;
-    for(int i = 1; i < BOID_COUNT*2; i=i+2){
+    for(int i = 1; i < BOID_COUNT*2; i=i+1){
       boid_array[i] = boid_constructor();
       if(itr < NumBiasedBoids2){
         boid_array[i]->bias2 = 1;
         itr++;
       }
     }
+    
+    printf("OK\n");
 
 
 	while(1) 
 	{
 	  // Measure time at start of thread
-      begin_time = time_us_32() ; 
+//      begin_time = time_us_32() ; 
 
-      for (int i = 1; i < BOID_COUNT*2; i=i+2) 
+      printf("enter loop/n");
+      for (int i = 0; i < BOID_COUNT*2; i=i+1) 
       {
       // erase boid
-      VGA_rect(fix2int15(boid_array[i]->x), fix2int15(boid_array[i]->y), 2, 2, black);
+      //VGA_rect(fix2int15(boid_array[i]->x), fix2int15(boid_array[i]->y), 2, 2, black);
+      printf("rect 1/n");
       // update boid's position and velocity
-      boidUpdate(boid_array[i], i);
+      //boidUpdate(boid_array[i], i);
       // draw the boid at its new position
       if(boid_array[i]->bias1){
-        VGA_rect(fix2int15(boid_array[i]->x), fix2int15(boid_array[i]->y), 2, 2, red); 
+        //VGA_rect(fix2int15(boid_array[i]->x), fix2int15(boid_array[i]->y), 2, 2, red); 
+      printf("rect 2/n");
       }
       else if(boid_array[i]->bias2){ 
-        VGA_rect(fix2int15(boid_array[i]->x), fix2int15(boid_array[i]->y), 2, 2, blue);
+        //VGA_rect(fix2int15(boid_array[i]->x), fix2int15(boid_array[i]->y), 2, 2, blue);
+      printf("rect 3/n");
       }
       else{
-        VGA_rect(fix2int15(boid_array[i]->x), fix2int15(boid_array[i]->y), 2, 2, white); 
+        //VGA_rect(fix2int15(boid_array[i]->x), fix2int15(boid_array[i]->y), 2, 2, white); 
+      printf("rect 4/n");
       }
       // draw the boundaries
       }
@@ -531,8 +539,9 @@ int main(void)
 	VGA_text (10, 3, text_next);
            
       drawArena() ;
+      printf("Cycle successful/n");
       // delay in accordance with frame rate
-      spare_time = FRAME_RATE - (time_us_32() - begin_time) ;
+      //spare_time = FRAME_RATE - (time_us_32() - begin_time) ;
 	} // end while(1)
 } // end main
 
