@@ -100,7 +100,7 @@ typedef signed int fix15 ;
 #define divfix(a,b) (fix15)(( (((signed long long)(a)) << 15) / ((signed long long)(b))))
 
 // number of Boids to spawn
-#define BOID_COUNT 150
+#define BOID_COUNT 230
 
 // Define boundary positions and velocity values
 int boundary_bottom = 380;
@@ -495,7 +495,7 @@ int main(void)
 		VGA_text (10, 4, time_string);
       // delay in accordance with frame rate
 	  //printf("%d - time remaining", spare_time); 	
-	  usleep(33000);
+	  usleep(33000 - elapsedTime);
 	} // end while(1)
 } // end main
 
