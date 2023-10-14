@@ -8,73 +8,145 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/rat83/Documents/GitHub/FPGA-Project/video_sram_master_sram_vga
-vboid_accelerator
+vamax_bmin
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1697215227
+Z1 !s110 1697244258
 !i10b 1
-!s100 ;S>530^[M?Noj`ln@94=^2
-IYnM@JZfJWdzhWOBXi5Qme2
+!s100 GF5PjiHi?9eo:6nHkNoMQ1
+Iil;knmMgjM7]JmMNT4?No3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
-!s105 boid_accelerator_sv_unit
+Z3 !s105 boid_accelerator_sv_unit
 S1
-Z3 dC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog
-w1697053163
-8C:\Users\rat83\Documents\GitHub\FPGA-Project\VGA_to_M10k\verilog\boid_accelerator\boid_accelerator.sv
-FC:\Users\rat83\Documents\GitHub\FPGA-Project\VGA_to_M10k\verilog\boid_accelerator\boid_accelerator.sv
-L0 1
-Z4 OV;L;10.5b;63
+Z4 dC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog
+Z5 w1697241050
+Z6 8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+Z7 FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+L0 51
+Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1697215227.000000
-!s107 C:\Users\rat83\Documents\GitHub\FPGA-Project\VGA_to_M10k\verilog\boid_accelerator\boid_accelerator.sv|
-!s90 -reportprogress|300|-work|boid_accelerator|-sv|-stats=none|C:\Users\rat83\Documents\GitHub\FPGA-Project\VGA_to_M10k\verilog\boid_accelerator\boid_accelerator.sv|
+Z9 !s108 1697244258.000000
+Z10 !s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv|
+Z11 !s90 -reportprogress|300|-work|boid_accelerator|-sv|-stats=none|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv|
 !i113 1
-Z6 o-work boid_accelerator -sv
-Z7 tCvgOpt 0
-vHexDigit
+Z12 o-work boid_accelerator -sv
+Z13 tCvgOpt 0
+vboid_accelerator
+R0
 R1
+!i10b 1
+!s100 i_LaVD9GZeBU9oPNfbPZa2
+Iac_ViiD60DFoog<=`T3ac1
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vd_reg
+R0
+R1
+!i10b 1
+!s100 g<`@J=5EoKEIFMGH9eG@G2
+IgSFM@09J>cMTVVGRzO_:70
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 20
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vfix15_mul
+R0
+R1
+!i10b 1
+!s100 XN3WRR_<9dG:cBz@jG_Qi2
+IBTfJ8@A:]CARE4mTjbX4H3
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 41
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vHexDigit
+!s110 1697244259
 !i10b 1
 !s100 FCA7Ee`D@EaGdW4_hN_hC0
 I;V<I<ggjPdBQEEd=XYX4J0
 R2
-R3
+R4
 w1697052319
 8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/hex_decoder.v
 FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/hex_decoder.v
 L0 3
-R4
+R8
 r1
 !s85 0
 31
-R5
+R9
 !s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/hex_decoder.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/hex_decoder.v|
 !i113 1
 o-work work
-R7
+R13
 n@hex@digit
 vtestbench
 R0
 R1
 !i10b 1
-!s100 JF_hL>292iPhaAFI4;Wam3
-I_3F8ak?[NEZ==ZaB?6bm13
+!s100 d2LUMF`1d>=K>SahN85JI1
+IdM@jTEJDA]B^YaioV9;FO2
 R2
 !s105 testbench_sv_unit
 S1
-R3
-w1697215223
-8C:\Users\rat83\Documents\GitHub\FPGA-Project\VGA_to_M10k\verilog\boid_accelerator\testbench.sv
-FC:\Users\rat83\Documents\GitHub\FPGA-Project\VGA_to_M10k\verilog\boid_accelerator\testbench.sv
-L0 3
 R4
+w1697243848
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv
+L0 3
+R8
 r1
 !s85 0
 31
-R5
-!s107 C:\Users\rat83\Documents\GitHub\FPGA-Project\VGA_to_M10k\verilog\boid_accelerator\testbench.sv|
-!s90 -reportprogress|300|-work|boid_accelerator|-sv|-stats=none|C:\Users\rat83\Documents\GitHub\FPGA-Project\VGA_to_M10k\verilog\boid_accelerator\testbench.sv|
+R9
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv|
+!s90 -reportprogress|300|-work|boid_accelerator|-sv|-stats=none|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv|
 !i113 1
-R6
-R7
+R12
+R13
