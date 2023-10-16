@@ -2,19 +2,29 @@
 
 module testbench();
 
-logic clk;
+logic clk, reset, en;
 
 always begin
 	#10
 	clk = !clk;
 end
 
+always begin
+	#90
+	en = ~en;
+	#10
+	en = ~en;
+end
+
 logic [31:0] a_1, b_1, c_1, q_1, a_2, b_2, c_2, q_2;
+
+logic [31:0] x, y, vx, vy, px, py;
 
 // I'm aware this testbench is kinda gross right now, these are mostly 'sanity check'
 // type tests to make sure the modules I instantiated actually work properly
 
 // checking amax_bmin
+/*
 initial begin
 	a_1 = 32'h0000c000;
 	b_1 =	32'h00013333;
@@ -67,8 +77,14 @@ initial begin
    assert (c_2 == q_2);
 	
 end
+*/
 
 initial begin
+	clk = 0;
+	en = 1;
+	reset = 1'b1;
+	#100
+	reset = 1'b0;
 	#5000
 	$stop;
 end
@@ -76,6 +92,12 @@ end
 always @(posedge clk) begin
 	// num <= num + 4'd1;
 end
+
+boid_accelerator dut(
+	.*
+);
+
+/*
 
 amax_bmin dut1 (
 	.a(a_1),
@@ -88,6 +110,8 @@ fix15_mul dut2(
 	.b(b_2),
 	.q(q_2)
 );
+
+*/
 
 endmodule
 

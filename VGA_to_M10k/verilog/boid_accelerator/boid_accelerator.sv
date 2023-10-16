@@ -1,5 +1,6 @@
 module boid_accelerator(
 	input logic clk,
+	input logic en,
 	input logic reset,
 	
 	output logic [31:0]  
@@ -20,13 +21,14 @@ module boid_accelerator(
 
 	// x/v transient wires
 	
-	logic [31:0] x_comb, 	y_comb
+	logic [31:0] x_comb, 	y_comb,
 					 xv_comb,	yv_comb;
 	
 
 	// pos/speed regs
 	
-	d_reg x_reg #(32,(32'd180 << 16))
+	d_reg #(32,(32'd180 << 16))
+	x_reg
 	(
 		.clk		(clk),
 		.reset	(reset),
@@ -34,7 +36,8 @@ module boid_accelerator(
 		.q			(x)
 	);
 	
-	d_reg y_reg #(32,(32'd240 << 16))
+	d_reg #(32,(32'd240 << 16))
+	y_reg
 	(	
 		.clk		(clk),
 		.reset	(reset),
@@ -43,7 +46,8 @@ module boid_accelerator(
 	);
 	
 	
-	d_reg vx_reg #(32,(32'd4 << 16))
+	d_reg #(32,(32'd4 << 16))
+	vx_reg
 	(
 		.clk		(clk),
 		.reset	(reset),
@@ -51,19 +55,21 @@ module boid_accelerator(
 		.q			(vx)
 	);
 	
-	d_reg vy_reg #(32,(32'd4 << 16))
+	d_reg #(32,(32'd4 << 16))
+	vy_reg
 	(
 		.clk		(clk),
 		.reset	(reset),
-		.d			(vx_comb),
-		.q			(vx)
+		.d			(vy_comb),
+		.q			(vy)
 	);
 	
 	// margins
 	
 	logic [31:0] x_bound, y_bound;
 	
-	d_reg x_bound_reg #(32,(32'd100 << 16))
+	d_reg #(32,(32'd100 << 16))
+	x_bound_reg 
 	(
 		.clk		(clk),
 		.reset	(reset),
@@ -71,7 +77,8 @@ module boid_accelerator(
 		.q			(x_bound)
 	);
 	
-	d_reg y_bound_reg	#(32,(32'd100 << 16))
+	d_reg #(32,(32'd100 << 16))
+	y_bound_reg	
 	(
 		.clk		(clk),
 		.reset	(reset),
@@ -105,7 +112,14 @@ module boid_accelerator(
 		.q		(speed)
 	);
 	
+	assign logic [1:0] speed_bound = { (speed > (32'd8 << 16)), (speed < (32'd4 << 16)) };
 	
+	case (speed_bound)
+		2'd0:
+		2'd1:
+		2'd2:
+		default: // 3 is unreachable 
+	endcase
 	
 endmodule
 
@@ -177,5 +191,7 @@ module amax_bmin(
 	
 	
 endmodule
+
+module fall_edge_detector
 	
 	
