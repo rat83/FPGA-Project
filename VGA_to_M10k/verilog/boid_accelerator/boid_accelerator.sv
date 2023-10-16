@@ -18,7 +18,9 @@ module boid_accelerator(
 		
 		this added to make materially different commit
 	*/
-
+	
+	localparam [31:0] turnfactor = 32'h00001999;
+	
 	// x/v transient wires
 	
 	logic [31:0] x_comb, 	y_comb,
@@ -86,6 +88,50 @@ module boid_accelerator(
 		.q			(y_bound)
 	);
 	
+	
+	
+	//boundary enforcement
+	
+	
+	logic [1:0] x_bchk, y_bchk;
+	
+	logic [31:0] vx_bounded, vy_bounded;
+	
+	assign x_bchk = {x > (640 - x_bound), x < x_bound};
+	assign y_bchk = {y > (480 - y_bound), y < y_bound};
+	
+	case (x_bchk)
+		2'd0: begin
+				vx_bounded = vx;
+			end
+		2'd1: begin
+				vx_bounded = vx + turnfactor;
+			end
+		2'd2: begin
+				vx_bounded = vx - turnfactor
+			end
+		default: begin
+				vx_bounded = vx;
+				// 3 is unreachable, contradictory state
+			end 
+	endcase
+	
+	case (x_bchk)
+		2'd0: begin
+				vy_bounded = vy;
+			end
+		2'd1: begin
+				vy_bounded = vy + turnfactor;
+			end
+		2'd2: begin
+				vy_bounded = vy - turnfactor
+			end
+		default: begin
+				vy_bounded = vy;
+				// 3 is unreachable, contradictory state
+			end 
+	endcase
+	
 	logic [31:0] speed;
 	logic [31:0] vx_sq, vy_sq;
 	
@@ -112,13 +158,28 @@ module boid_accelerator(
 		.q		(speed)
 	);
 	
-	assign logic [1:0] speed_bound = { (speed > (32'd8 << 16)), (speed < (32'd4 << 16)) };
+	assign logic [1:0] speed_bchk = { (speed > (32'd8 << 16)), (speed < (32'd4 << 16)) };
 	
-	case (speed_bound)
-		2'd0:
-		2'd1:
-		2'd2:
-		default: // 3 is unreachable 
+	// speed enforcement
+	
+	case (speed_bchk)
+		2'd0: begin
+				vx_comb = vx_bounded;
+				vy_comb = vy_bounded;
+			end
+		2'd1: begin
+				vx_comb = vx_bounded + (vx_bounded >> 2);
+				vy_comb = vy_bounded + (vy_bounded >> 2);
+			end
+		2'd2: begin
+				vx_comb = vx_bounded - (vx_bounded >> 2);
+				vy_comb = vy_bounded - (vy_bounded >> 2);
+			end
+		default: begin
+				vx_comb = vx_bounded;
+				vy_comb = vy_bounded;
+				// 3 is unreachable, contradictory state
+			end 
 	endcase
 	
 endmodule
