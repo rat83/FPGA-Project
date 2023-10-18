@@ -19,12 +19,12 @@ module boid_accelerator(
 		this added to make materially different commit
 	*/
 	
-	localparam [31:0] turnfactor = 32'h00001999;
+	localparam signed [31:0] turnfactor = 32'h00001999;
 	
 	// x/v transient wires
 	
-	logic [31:0] x_comb, 	y_comb,
-					 xv_comb,	yv_comb;
+	logic [31:0] 			x_comb, 	y_comb;
+	logic signed [31:0]	vx_comb,	vy_comb;
 	
 
 	// pos/speed regs
@@ -38,7 +38,7 @@ module boid_accelerator(
 		.q			(x)
 	);
 	
-	d_reg #(32,(32'd240 << 16))
+	d_reg #(32,(32'd200 << 16))
 	y_reg
 	(	
 		.clk		(clk),
@@ -95,45 +95,47 @@ module boid_accelerator(
 	
 	logic [1:0] x_bchk, y_bchk;
 	
-	logic [31:0] vx_bounded, vy_bounded;
+	logic signed [31:0] vx_bounded, vy_bounded;
 	
-	assign x_bchk = {x > (640 - x_bound), x < x_bound};
-	assign y_bchk = {y > (480 - y_bound), y < y_bound};
+	assign x_bchk = {x > ((32'd640 << 16) - x_bound), x < x_bound};
+	assign y_bchk = {y > ((32'd480 << 16) - y_bound), y < y_bound};
 	
-	case (x_bchk)
-		2'd0: begin
-				vx_bounded = vx;
-			end
-		2'd1: begin
-				vx_bounded = vx + turnfactor;
-			end
-		2'd2: begin
-				vx_bounded = vx - turnfactor
-			end
-		default: begin
-				vx_bounded = vx;
-				// 3 is unreachable, contradictory state
-			end 
-	endcase
+	always_comb begin
+		case (x_bchk)
+			2'd0: begin
+					vx_bounded = vx;
+				end
+			2'd1: begin
+					vx_bounded = vx + turnfactor;
+				end
+			2'd2: begin
+					vx_bounded = vx - turnfactor;
+				end
+			default: begin
+					vx_bounded = vx;
+					// 3 is unreachable, contradictory state
+				end 
+		endcase
+		
+		case (y_bchk)
+			2'd0: begin
+					vy_bounded = vy;
+				end
+			2'd1: begin
+					vy_bounded = vy + turnfactor;
+				end
+			2'd2: begin
+					vy_bounded = vy - turnfactor;
+				end
+			default: begin
+					vy_bounded = vy;
+					// 3 is unreachable, contradictory state
+				end 
+		endcase
+	end
 	
-	case (x_bchk)
-		2'd0: begin
-				vy_bounded = vy;
-			end
-		2'd1: begin
-				vy_bounded = vy + turnfactor;
-			end
-		2'd2: begin
-				vy_bounded = vy - turnfactor
-			end
-		default: begin
-				vy_bounded = vy;
-				// 3 is unreachable, contradictory state
-			end 
-	endcase
-	
-	logic [31:0] speed;
-	logic [31:0] vx_sq, vy_sq;
+	logic signed [31:0] speed;
+	logic signed [31:0] vx_sq, vy_sq;
 	
 	// speed calculation
 	
@@ -158,29 +160,34 @@ module boid_accelerator(
 		.q		(speed)
 	);
 	
-	assign logic [1:0] speed_bchk = { (speed > (32'd8 << 16)), (speed < (32'd4 << 16)) };
+	logic [1:0] speed_bchk;
+	assign speed_bchk = { (speed > (32'd8 << 16)), (speed < (32'd4 << 16)) };
 	
 	// speed enforcement
+	always_comb begin
+		case (speed_bchk)
+			2'd0: begin
+					vx_comb = vx_bounded;
+					vy_comb = vy_bounded;
+				end
+			2'd1: begin
+					vx_comb = vx_bounded + (vx_bounded >>> 2);
+					vy_comb = vy_bounded + (vy_bounded >>> 2);
+				end
+			2'd2: begin
+					vx_comb = vx_bounded - (vx_bounded >>> 2);
+					vy_comb = vy_bounded - (vy_bounded >>> 2);
+				end
+			default: begin
+					vx_comb = vx_bounded;
+					vy_comb = vy_bounded;
+					// 3 is unreachable, contradictory state
+				end 
+		endcase
+	end
 	
-	case (speed_bchk)
-		2'd0: begin
-				vx_comb = vx_bounded;
-				vy_comb = vy_bounded;
-			end
-		2'd1: begin
-				vx_comb = vx_bounded + (vx_bounded >> 2);
-				vy_comb = vy_bounded + (vy_bounded >> 2);
-			end
-		2'd2: begin
-				vx_comb = vx_bounded - (vx_bounded >> 2);
-				vy_comb = vy_bounded - (vy_bounded >> 2);
-			end
-		default: begin
-				vx_comb = vx_bounded;
-				vy_comb = vy_bounded;
-				// 3 is unreachable, contradictory state
-			end 
-	endcase
+	assign x_comb = x + vx_comb;
+	assign y_comb = y + vy_comb;
 	
 endmodule
 
@@ -220,9 +227,9 @@ module amax_bmin(
 	output logic	[31:0] q
 	);
 	
-	logic [31:0] a_temp, b_temp;
+	logic signed [31:0] a_temp, b_temp;
 	
-	logic [31:0] alpha, beta;
+	logic signed [31:0] alpha, beta;
 	
 	//absolute value
 	always_comb begin
@@ -246,13 +253,13 @@ module amax_bmin(
 			beta = a;
 		end
 		
-		q = alpha + (beta >> 1);
+		q = alpha + (beta >>> 1);
 		
 	end
 	
 	
 endmodule
 
-module fall_edge_detector
+// module fall_edge_detector
 	
 	
