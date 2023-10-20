@@ -10,23 +10,23 @@ cModel Technology
 dC:/Users/rat83/Documents/GitHub/FPGA-Project/video_sram_master_sram_vga
 vamax_bmin
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1697658090
+Z1 !s110 1697837013
 !i10b 1
-!s100 z4AhKhXDf:kKJkg_hd1LC3
-IOV@4>1aIBJUHPOh]6hZU?3
+!s100 V56RdAk;bPHGkMdQDWof02
+I7KfD;_`8D6kM8ldD1G?G80
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 !s105 boid_accelerator_sv_unit
 S1
 Z4 dC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog
-Z5 w1697658074
+Z5 w1697836956
 Z6 8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
 Z7 FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
-L0 225
+L0 240
 Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z9 !s108 1697658090.000000
+Z9 !s108 1697837013.000000
 Z10 !s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv|
 Z11 !s90 -reportprogress|300|-work|boid_accelerator|-sv|-stats=none|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv|
 !i113 1
@@ -36,8 +36,8 @@ vboid_accelerator
 R0
 R1
 !i10b 1
-!s100 6:P27V<DN0<LI818i<8aQ2
-INUT]gADXRo07NW7n>GAY`0
+!s100 [[K6ehG?1MJPT:2NlOQki3
+I7WQW=_Xl:2Coc4TQDcVPa0
 R2
 R3
 S1
@@ -60,8 +60,8 @@ vd_reg
 R0
 R1
 !i10b 1
-!s100 aLB3Nim0BOPYmM2F10JEK2
-I>7EZ6[l^mhk;8i:iLjNRV2
+!s100 oQMGFPOFU:@8KPUdi?EjY2
+Im^^FL`G?]O7]7LABZgZU<3
 R2
 R3
 S1
@@ -69,7 +69,31 @@ R4
 R5
 R6
 R7
-L0 194
+L0 208
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vfall_edge_detector
+R0
+R1
+!i10b 1
+!s100 BBPHTzd[099C?^6D<`8S90
+Im:>zbkOSBA79^o@l]1jca2
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 293
 R8
 r1
 !s85 0
@@ -84,8 +108,8 @@ vfix15_mul
 R0
 R1
 !i10b 1
-!s100 ?o<m2o0LD9:iR<dIPjUUg0
-I`RXcb80kb[?2@Cj92FJo63
+!s100 V7?bcK8IFaC5DEf4D]:Kd0
+I>[6]zZVZ1EI4:;=ImU6dE0
 R2
 R3
 S1
@@ -93,7 +117,7 @@ R4
 R5
 R6
 R7
-L0 215
+L0 229
 R8
 r1
 !s85 0
@@ -130,13 +154,13 @@ vtestbench
 R0
 R1
 !i10b 1
-!s100 07m@zli;>AKS]A:LZ2m`23
-IIb`A88[G`Z@YoL`4<3Ce]3
+!s100 Y@hjOnKig[O8AoQE>N^8H3
+IFjiZGnYi2]H;Pc9JUFz9U1
 R2
 !s105 testbench_sv_unit
 S1
 R4
-w1697652687
+w1697837009
 8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv
 FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv
 L0 3

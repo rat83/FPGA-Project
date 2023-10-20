@@ -97,6 +97,11 @@ boid_accelerator dut(
 	.*
 );
 
+logic [31:0] x_sh, y_sh;
+
+assign x_sh = x >>> 16;
+assign y_sh = y >>> 16;
+
 /*
 
 amax_bmin dut1 (
