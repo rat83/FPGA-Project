@@ -1,0 +1,589 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/simulation/modelsim
+valtdq_dqs2_acv_connect_to_hard_phy_cyclonev
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1697834235
+!i10b 1
+!s100 L@LBY8?m2K81I=]<dLF[?0
+I:EhBl<P2F;@AR?@6`7_MG0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 altdq_dqs2_acv_connect_to_hard_phy_cyclonev_sv_unit
+S1
+R0
+Z4 w1697052668
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv
+L0 19
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1697834235.000000
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv|
+!s90 -reportprogress|300|-sv|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv|
+!i113 1
+Z7 o-sv -work Computer_System
+Z8 !s92 -sv -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules
+Z9 tCvgOpt 0
+valtera_mem_if_dll_cyclonev
+R1
+R2
+!i10b 1
+!s100 [9G>WEm;j6E]1F8H81dZV1
+I348S]a6T7<5kl;W4e6M651
+R3
+!s105 altera_mem_if_dll_cyclonev_sv_unit
+S1
+R0
+R4
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_dll_cyclonev.sv
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_dll_cyclonev.sv
+Z10 L0 23
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_dll_cyclonev.sv|
+!s90 -reportprogress|300|-sv|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_dll_cyclonev.sv|
+!i113 1
+R7
+R8
+R9
+valtera_mem_if_hard_memory_controller_top_cyclonev
+R1
+R2
+!i10b 1
+!s100 PV@kBzX4E7SXn_NC4_1fM3
+I^9YCofk1JNhg^X^>hcZP`1
+R3
+!s105 altera_mem_if_hard_memory_controller_top_cyclonev_sv_unit
+S1
+R0
+R4
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv
+Z11 L0 18
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv|
+!s90 -reportprogress|300|-sv|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv|
+!i113 1
+R7
+R8
+R9
+valtera_mem_if_hhp_qseq_synth_top
+Z12 !s110 1697834234
+!i10b 1
+!s100 N_QfhY9G55ERAG1GzlAo@2
+I`0eKC@P9^dI0>a;SIHZQg0
+R3
+R0
+R4
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_hhp_qseq_synth_top.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_hhp_qseq_synth_top.v
+L0 15
+R5
+r1
+!s85 0
+31
+Z13 !s108 1697834234.000000
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_hhp_qseq_synth_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_hhp_qseq_synth_top.v|
+!i113 1
+Z14 o-vlog01compat -work Computer_System
+Z15 !s92 -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules
+R9
+valtera_mem_if_oct_cyclonev
+R1
+R2
+!i10b 1
+!s100 AcnzJmTb5Jz0V@UURnjO60
+I?n7a?acN^UJ=bnlDgZWgn0
+R3
+!s105 altera_mem_if_oct_cyclonev_sv_unit
+S1
+R0
+R4
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_oct_cyclonev.sv
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_oct_cyclonev.sv
+R10
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_oct_cyclonev.sv|
+!s90 -reportprogress|300|-sv|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_oct_cyclonev.sv|
+!i113 1
+R7
+R8
+R9
+valtera_reset_controller
+Z16 !s110 1697834233
+!i10b 1
+!s100 z[H_hRO9gO=:^2E3_jWH03
+I`SY`h8N_ko4@EM:gIT?NH0
+R3
+R0
+Z17 w1697052654
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_reset_controller.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_reset_controller.v
+L0 42
+R5
+r1
+!s85 0
+31
+Z18 !s108 1697834233.000000
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_reset_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_reset_controller.v|
+!i113 1
+R14
+R15
+R9
+valtera_up_avalon_reset_from_locked_signal
+R12
+!i10b 1
+!s100 21LY9FTb`4C4iU[D9:fdD3
+Iha04o;Z1>;zaFj=k0j:?12
+R3
+R0
+R17
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v
+Z19 L0 28
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v|
+!i113 1
+R14
+R15
+R9
+vComputer_System
+R16
+!i10b 1
+!s100 :2zS7LLV@C_^F?]ano88^1
+IcecI6QICh0nj2;F6K[abJ1
+R3
+R0
+w1697052653
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/Computer_System.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/Computer_System.v
+L0 6
+R5
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/Computer_System.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/Computer_System.v|
+!i113 1
+R14
+!s92 -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis
+R9
+n@computer_@system
+vComputer_System_ARM_A9_HPS
+R12
+!i10b 1
+!s100 _afVY_J0@ak?CKAH>H:R<0
+IPii8G82;5m[M`AzZ[In:@0
+R3
+R0
+R17
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_ARM_A9_HPS.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_ARM_A9_HPS.v
+L0 9
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_ARM_A9_HPS.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_ARM_A9_HPS.v|
+!i113 1
+R14
+R15
+R9
+n@computer_@system_@a@r@m_@a9_@h@p@s
+vComputer_System_ARM_A9_HPS_hps_io
+R12
+!i10b 1
+!s100 M2]S4X1k]dVTKaTm4MQ9:2
+I>lAE0l`HXoZ=DVLHJ]IN71
+R3
+R0
+R17
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_ARM_A9_HPS_hps_io.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_ARM_A9_HPS_hps_io.v
+L0 9
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_ARM_A9_HPS_hps_io.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_ARM_A9_HPS_hps_io.v|
+!i113 1
+R14
+R15
+R9
+n@computer_@system_@a@r@m_@a9_@h@p@s_hps_io
+vComputer_System_irq_mapper
+R1
+R12
+!i10b 1
+!s100 oBDFoCK3RWNi]FdnEVo`=1
+IP_C_3dCJ`0fMCG0^hF]oE2
+R3
+!s105 Computer_System_irq_mapper_sv_unit
+S1
+R0
+R17
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_irq_mapper.sv
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_irq_mapper.sv
+L0 31
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_irq_mapper.sv|
+!s90 -reportprogress|300|-sv|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_irq_mapper.sv|
+!i113 1
+R7
+R8
+R9
+n@computer_@system_irq_mapper
+vComputer_System_m10k_pll
+R16
+!i10b 1
+!s100 VC?6TSNUKhiL>WD]^<LPF0
+I]^GVPDnBH0;HK2fzNRn0z3
+R3
+R0
+R17
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_m10k_pll.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_m10k_pll.v
+L0 2
+R5
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_m10k_pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_m10k_pll.v|
+!i113 1
+R14
+R15
+R9
+n@computer_@system_m10k_pll
+vComputer_System_System_PLL
+R16
+!i10b 1
+!s100 O]5>?2li_AnF`9R5RW7@o3
+I?00U0?jGPSzkE9>38ICo53
+R3
+R0
+R17
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_System_PLL.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_System_PLL.v
+L0 9
+R5
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_System_PLL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_System_PLL.v|
+!i113 1
+R14
+R15
+R9
+n@computer_@system_@system_@p@l@l
+vComputer_System_System_PLL_sys_pll
+R12
+!i10b 1
+!s100 OQ9hC`EPn;^aTzSWGjWM`2
+I:Scz<b<P[02><7k]PA3Zm1
+R3
+R0
+R17
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_System_PLL_sys_pll.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_System_PLL_sys_pll.v
+L0 2
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_System_PLL_sys_pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_System_PLL_sys_pll.v|
+!i113 1
+R14
+R15
+R9
+n@computer_@system_@system_@p@l@l_sys_pll
+vComputer_System_vga_pio
+R16
+!i10b 1
+!s100 RmM2T2E7W]bAAOV@^R2zT3
+IG[=^;8_TM7l9=ah<6;:Tf0
+R3
+R0
+R17
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_vga_pio.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_vga_pio.v
+L0 2
+R5
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_vga_pio.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_vga_pio.v|
+!i113 1
+R14
+R15
+R9
+n@computer_@system_vga_pio
+vhps_sdram
+R12
+!i10b 1
+!s100 jbW90WZhb:4iXkRi;gdi^0
+Ihf0fY?Ec^J_MW[GgVJE2@3
+R3
+R0
+R4
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram.v
+L0 9
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram.v|
+!i113 1
+R14
+R15
+R9
+vhps_sdram_p0
+R1
+R2
+!i10b 1
+!s100 ^51L0T@9;J3b7;fD0gebL2
+IgTDb9dW7j3a?@l2cl:9:a0
+R3
+!s105 hps_sdram_p0_sv_unit
+S1
+R0
+R4
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0.sv
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0.sv
+R11
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0.sv|
+!s90 -reportprogress|300|-sv|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0.sv|
+!i113 1
+R7
+R8
+R9
+vhps_sdram_p0_acv_hard_addr_cmd_pads
+R12
+!i10b 1
+!s100 JDiQYD`mV<S3ZbNU2oLkD2
+I`21fOhG4nQRH6FZ?]7HAD1
+R3
+R0
+R4
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v
+Z20 L0 17
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v|
+!i113 1
+R14
+R15
+R9
+vhps_sdram_p0_acv_hard_io_pads
+R12
+!i10b 1
+!s100 SfJ5bje>CFhFCXN8?j91<1
+InUT7`PB1CnLlfh:aJUC4b2
+R3
+R0
+R4
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_hard_io_pads.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_hard_io_pads.v
+R20
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_hard_io_pads.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_hard_io_pads.v|
+!i113 1
+R14
+R15
+R9
+vhps_sdram_p0_acv_hard_memphy
+R12
+!i10b 1
+!s100 YZmZZ30=2fY45]I4U[QfM1
+I4oIKib^X54eCkEhELoFfj1
+R3
+R0
+R4
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_hard_memphy.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_hard_memphy.v
+L0 21
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_hard_memphy.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_hard_memphy.v|
+!i113 1
+R14
+R15
+R9
+vhps_sdram_p0_acv_ldc
+R12
+!i10b 1
+!s100 SK2LP`?Ld8_6n1Ui2PFoz1
+I3A[[iFH4VD8BzV=<K2=k80
+R3
+R0
+R4
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_ldc.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_ldc.v
+R20
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_ldc.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_ldc.v|
+!i113 1
+R14
+R15
+R9
+vhps_sdram_p0_altdqdqs
+R12
+!i10b 1
+!s100 Xk]PjMGV;<WQjf6YEGK3:1
+IKYd;h228ZZ?PkO0HEa?F[1
+R3
+R0
+R4
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_altdqdqs.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_altdqdqs.v
+R20
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_altdqdqs.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_altdqdqs.v|
+!i113 1
+R14
+R15
+R9
+vhps_sdram_p0_clock_pair_generator
+R12
+!i10b 1
+!s100 XFAX];RG805f0mE=G4m7f3
+I_43405_gCaYo_o3WQOV8d3
+R3
+R0
+R4
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_clock_pair_generator.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_clock_pair_generator.v
+R19
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_clock_pair_generator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_clock_pair_generator.v|
+!i113 1
+R14
+R15
+R9
+vhps_sdram_p0_generic_ddio
+R12
+!i10b 1
+!s100 MEaB39e4Y6@9cRdAAXSbL3
+I01hH;:NNA[9IBUYKHQ]N61
+R3
+R0
+R4
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_generic_ddio.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_generic_ddio.v
+R20
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_generic_ddio.v|
+!s90 -reportprogress|300|-vlog01compat|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_generic_ddio.v|
+!i113 1
+R14
+R15
+R9
+vhps_sdram_pll
+R1
+R2
+!i10b 1
+!s100 U9abk]hQl`M=9NB[d=N6P0
+IO=L7@Iz_g6Lf^OGzHZ:c41
+R3
+!s105 hps_sdram_pll_sv_unit
+S1
+R0
+R4
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_pll.sv
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_pll.sv
+L0 25
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_pll.sv|
+!s90 -reportprogress|300|-sv|-work|Computer_System|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_pll.sv|
+!i113 1
+R7
+R8
+R9

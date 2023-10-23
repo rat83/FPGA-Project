@@ -1,0 +1,50 @@
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\vha3\Downloads\PIO_loopback\PIO_loopback\verilog\Computer_System.qsys --synthesis=VERILOG --output-directory=C:\Users\vha3\Downloads\PIO_loopback\PIO_loopback\verilog\Computer_System\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading verilog/Computer_System.qsys
+Progress: Reading input file
+Progress: Adding ARM_A9_HPS [altera_hps 15.0]
+Progress: Parameterizing module ARM_A9_HPS
+Progress: Adding System_PLL [altera_up_avalon_sys_sdram_pll 15.0]
+Progress: Parameterizing module System_PLL
+Progress: Adding m10k_pll [altera_pll 15.0]
+Progress: Parameterizing module m10k_pll
+Progress: Adding vga_pio [altera_pll 15.0]
+Progress: Parameterizing module vga_pio
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Computer_System.ARM_A9_HPS: HPS Main PLL counter settings: n = 0  m = 73
+Info: Computer_System.ARM_A9_HPS: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: Computer_System.ARM_A9_HPS: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: Computer_System.ARM_A9_HPS: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: Computer_System.ARM_A9_HPS: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: Computer_System.m10k_pll: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Info: Computer_System.m10k_pll: Able to implement PLL with user settings
+Info: Computer_System.vga_pio: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Info: Computer_System.vga_pio: Able to implement PLL with user settings
+Info: Computer_System: Generating Computer_System "Computer_System" for QUARTUS_SYNTH
+Warning: ARM_A9_HPS.f2h_irq0: Cannot connect clock for irq_mapper.sender
+Warning: ARM_A9_HPS.f2h_irq0: Cannot connect reset for irq_mapper.sender
+Warning: ARM_A9_HPS.f2h_irq1: Cannot connect clock for irq_mapper_001.sender
+Warning: ARM_A9_HPS.f2h_irq1: Cannot connect reset for irq_mapper_001.sender
+Info: ARM_A9_HPS: "Running  for module: ARM_A9_HPS"
+Info: ARM_A9_HPS: HPS Main PLL counter settings: n = 0  m = 73
+Info: ARM_A9_HPS: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: ARM_A9_HPS: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: ARM_A9_HPS: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: ARM_A9_HPS: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: ARM_A9_HPS: "Computer_System" instantiated altera_hps "ARM_A9_HPS"
+Info: System_PLL: "Computer_System" instantiated altera_up_avalon_sys_sdram_pll "System_PLL"
+Info: m10k_pll: "Computer_System" instantiated altera_pll "m10k_pll"
+Info: vga_pio: "Computer_System" instantiated altera_pll "vga_pio"
+Info: irq_mapper: "Computer_System" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "Computer_System" instantiated altera_reset_controller "rst_controller"
+Info: fpga_interfaces: "ARM_A9_HPS" instantiated altera_interface_generator "fpga_interfaces"
+Info: hps_io: "ARM_A9_HPS" instantiated altera_hps_io "hps_io"
+Info: sys_pll: "System_PLL" instantiated altera_pll "sys_pll"
+Info: reset_from_locked: "System_PLL" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
+Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: Computer_System: Done "Computer_System" with 12 modules, 60 files
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

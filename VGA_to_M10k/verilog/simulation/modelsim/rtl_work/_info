@@ -1,0 +1,101 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/simulation/modelsim
+vDE1_SoC_Computer
+Z1 !s110 1697834234
+!i10b 1
+!s100 JG6h[5kfhfbjm5i;dVMN[0
+IEoASC7eH[8^lKJRBiU4WL2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1697832990
+Z4 8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v
+Z5 FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v
+L0 3
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1697834234.000000
+Z8 !s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog
+Z12 tCvgOpt 0
+n@d@e1_@so@c_@computer
+vHexDigit
+R1
+!i10b 1
+!s100 FCA7Ee`D@EaGdW4_hN_hC0
+IZ_=aICM;IP><>:L9Ae?zB2
+R2
+R0
+w1697052319
+8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/hex_decoder.v
+FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/hex_decoder.v
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/hex_decoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/hex_decoder.v|
+!i113 1
+R10
+R11
+R12
+n@hex@digit
+vM10K_1000_8
+R1
+!i10b 1
+!s100 H;F1KM;oVj:1?>=XgCf?_0
+I>oD[B_4DTkLQMnRSnP@fi3
+R2
+R0
+R3
+R4
+R5
+L0 799
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@m10@k_1000_8
+vvga_driver
+R1
+!i10b 1
+!s100 J=><:aM]3::D]W`J:dZD53
+IOXjm2iAa[]NG8_mU1IXT>0
+R2
+R0
+R3
+R4
+R5
+L0 604
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12

@@ -1,0 +1,313 @@
+# Reading C:/programs/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do DE1_SoC_Computer_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/programs/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlib Computer_System
+# vmap Computer_System Computer_System
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap Computer_System Computer_System 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/Computer_System.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:13 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/Computer_System.v 
+# -- Compiling module Computer_System
+# 
+# Top level modules:
+# 	Computer_System
+# End time: 16:37:13 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_reset_controller.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:13 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_reset_controller.v 
+# -- Compiling module altera_reset_controller
+# 
+# Top level modules:
+# 	altera_reset_controller
+# End time: 16:37:13 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_vga_pio.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:13 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_vga_pio.v 
+# -- Compiling module Computer_System_vga_pio
+# 
+# Top level modules:
+# 	Computer_System_vga_pio
+# End time: 16:37:13 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_m10k_pll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:13 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_m10k_pll.v 
+# -- Compiling module Computer_System_m10k_pll
+# 
+# Top level modules:
+# 	Computer_System_m10k_pll
+# End time: 16:37:13 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_System_PLL.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:13 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_System_PLL.v 
+# -- Compiling module Computer_System_System_PLL
+# 
+# Top level modules:
+# 	Computer_System_System_PLL
+# End time: 16:37:13 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:14 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v 
+# -- Compiling module altera_up_avalon_reset_from_locked_signal
+# 
+# Top level modules:
+# 	altera_up_avalon_reset_from_locked_signal
+# End time: 16:37:14 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_System_PLL_sys_pll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:14 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_System_PLL_sys_pll.v 
+# -- Compiling module Computer_System_System_PLL_sys_pll
+# 
+# Top level modules:
+# 	Computer_System_System_PLL_sys_pll
+# End time: 16:37:14 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_ARM_A9_HPS.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:14 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_ARM_A9_HPS.v 
+# -- Compiling module Computer_System_ARM_A9_HPS
+# 
+# Top level modules:
+# 	Computer_System_ARM_A9_HPS
+# End time: 16:37:14 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_ARM_A9_HPS_hps_io.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:14 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_ARM_A9_HPS_hps_io.v 
+# -- Compiling module Computer_System_ARM_A9_HPS_hps_io
+# 
+# Top level modules:
+# 	Computer_System_ARM_A9_HPS_hps_io
+# End time: 16:37:14 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:14 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram.v 
+# -- Compiling module hps_sdram
+# 
+# Top level modules:
+# 	hps_sdram
+# End time: 16:37:14 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_hhp_qseq_synth_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:14 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_hhp_qseq_synth_top.v 
+# -- Compiling module altera_mem_if_hhp_qseq_synth_top
+# 
+# Top level modules:
+# 	altera_mem_if_hhp_qseq_synth_top
+# End time: 16:37:14 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:14 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v 
+# -- Compiling module hps_sdram_p0_acv_hard_addr_cmd_pads
+# 
+# Top level modules:
+# 	hps_sdram_p0_acv_hard_addr_cmd_pads
+# End time: 16:37:14 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_hard_io_pads.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:14 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_hard_io_pads.v 
+# -- Compiling module hps_sdram_p0_acv_hard_io_pads
+# 
+# Top level modules:
+# 	hps_sdram_p0_acv_hard_io_pads
+# End time: 16:37:14 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_hard_memphy.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:14 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_hard_memphy.v 
+# -- Compiling module hps_sdram_p0_acv_hard_memphy
+# 
+# Top level modules:
+# 	hps_sdram_p0_acv_hard_memphy
+# End time: 16:37:14 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_ldc.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:14 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_acv_ldc.v 
+# -- Compiling module hps_sdram_p0_acv_ldc
+# 
+# Top level modules:
+# 	hps_sdram_p0_acv_ldc
+# End time: 16:37:14 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_altdqdqs.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:14 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_altdqdqs.v 
+# -- Compiling module hps_sdram_p0_altdqdqs
+# 
+# Top level modules:
+# 	hps_sdram_p0_altdqdqs
+# End time: 16:37:14 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_clock_pair_generator.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:14 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_clock_pair_generator.v 
+# -- Compiling module hps_sdram_p0_clock_pair_generator
+# 
+# Top level modules:
+# 	hps_sdram_p0_clock_pair_generator
+# End time: 16:37:14 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_generic_ddio.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:14 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0_generic_ddio.v 
+# -- Compiling module hps_sdram_p0_generic_ddio
+# 
+# Top level modules:
+# 	hps_sdram_p0_generic_ddio
+# End time: 16:37:14 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:14 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v 
+# -- Compiling module DE1_SoC_Computer
+# -- Compiling module vga_driver
+# -- Compiling module M10K_1000_8
+# 
+# Top level modules:
+# 	DE1_SoC_Computer
+# End time: 16:37:14 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/hex_decoder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:14 on Oct 20,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/hex_decoder.v 
+# -- Compiling module HexDigit
+# 
+# Top level modules:
+# 	HexDigit
+# End time: 16:37:14 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_irq_mapper.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:14 on Oct 20,2023
+# vlog -reportprogress 300 -sv -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_irq_mapper.sv 
+# -- Compiling module Computer_System_irq_mapper
+# 
+# Top level modules:
+# 	Computer_System_irq_mapper
+# End time: 16:37:14 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:15 on Oct 20,2023
+# vlog -reportprogress 300 -sv -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv 
+# -- Compiling module altdq_dqs2_acv_connect_to_hard_phy_cyclonev
+# ** Warning: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv(199): (vlog-2597) '4294967295' is being treated as 32-bit signed integer and will overflow.
+# ** Warning: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv(2258): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv(2262): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv(2242): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# 
+# Top level modules:
+# 	altdq_dqs2_acv_connect_to_hard_phy_cyclonev
+# End time: 16:37:15 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4
+# vlog -sv -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_dll_cyclonev.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:15 on Oct 20,2023
+# vlog -reportprogress 300 -sv -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_dll_cyclonev.sv 
+# -- Compiling module altera_mem_if_dll_cyclonev
+# 
+# Top level modules:
+# 	altera_mem_if_dll_cyclonev
+# End time: 16:37:15 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:15 on Oct 20,2023
+# vlog -reportprogress 300 -sv -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv 
+# -- Compiling module altera_mem_if_hard_memory_controller_top_cyclonev
+# 
+# Top level modules:
+# 	altera_mem_if_hard_memory_controller_top_cyclonev
+# End time: 16:37:15 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_oct_cyclonev.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:15 on Oct 20,2023
+# vlog -reportprogress 300 -sv -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/altera_mem_if_oct_cyclonev.sv 
+# -- Compiling module altera_mem_if_oct_cyclonev
+# 
+# Top level modules:
+# 	altera_mem_if_oct_cyclonev
+# End time: 16:37:15 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:15 on Oct 20,2023
+# vlog -reportprogress 300 -sv -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_p0.sv 
+# -- Compiling module hps_sdram_p0
+# 
+# Top level modules:
+# 	hps_sdram_p0
+# End time: 16:37:15 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_pll.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:15 on Oct 20,2023
+# vlog -reportprogress 300 -sv -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_pll.sv 
+# -- Compiling module hps_sdram_pll
+# 
+# Top level modules:
+# 	hps_sdram_pll
+# End time: 16:37:15 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_ARM_A9_HPS_hps_io_border.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:37:15 on Oct 20,2023
+# vlog -reportprogress 300 -sv -work Computer_System "+incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules" C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_ARM_A9_HPS_hps_io_border.sv 
+# -- Compiling module Computer_System_ARM_A9_HPS_hps_io_border
+# ** Error: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_ARM_A9_HPS_hps_io_border.sv(91): (vlog-2730) Undefined variable: 'intermediate'.
+# ** Error (suppressible): C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/Computer_System_ARM_A9_HPS_hps_io_border.sv(123): (vlog-2388) 'intermediate' already declared in this scope (Computer_System_ARM_A9_HPS_hps_io_border).
+# End time: 16:37:15 on Oct 20,2023, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/programs/intelFPGA/18.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./DE1_SoC_Computer_run_msim_rtl_verilog.do line 37
+# C:/programs/intelFPGA/18.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv -work Computer_System +incdir+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules {C:/Users..."
