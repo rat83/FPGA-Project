@@ -451,9 +451,9 @@ assign xy_comp 		= ((x >>> 16) == next_x) & ((y >>> 16) == next_y);
 assign border_comp	= ((next_x == 100) | (next_y == 100) | (next_x == 540) | (next_y == 380));
 
 boid_accelerator xcel (
-	.clk(clk),
-	.reset(KEY[0]),
-	.en(1'b0),
+	.clk(vga_pll),
+	.reset(vga_reset),
+	.en(VGA_VS),
 	.x(x),
 	.y(y)
 	// other outputs left disconnected
