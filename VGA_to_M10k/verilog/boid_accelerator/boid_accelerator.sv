@@ -290,6 +290,8 @@ module amax_bmin(
 	
 endmodule
 
+// fall_edge_detector will pulse 1 cycle high when a falling edge is recorded (with 1 cycle delay)
+
 module fall_edge_detector(
   input  logic clk, signal,
   output logic q
@@ -303,5 +305,122 @@ module fall_edge_detector(
   end
 
 endmodule
+
+// zero_pad_fix15 will sign extend the variable on fix_in to 32 bits, with 
+// compile-time defined parameters to determine how it should be interpreted.
+// on a [total_bit_width - 1:0] register, the variable to be sign extended
+// will be on bits [ (16 + fix_whole_bit_width + lsb_offset) : lsb_offset]
+// and the sign will be on bit 16 + fix_whole_bit_width + lsb_offset.
+// Requirement: total_bit_width, as defined, must be equal to or greater than 
+// 16 + fix_whole_bit_width + lsb_offset.
+
+module zero_pad_fix15
+#(	
+	parameter fix_whole_bit_width = 16,
+	parameter lsb_offset				= 0,
+	parameter total_bit_width		= 32
+)
+(	
+	input 	[total_bit_width - 1:0] fix_in,
+	output	[31:0]						fix_out
+);
+	localparam input_fix_bit_width = 15 + fix_whole_bit_width;
+	assign fix_out = 
+		{{(32 - input_fix_bit_width + lsb_offset){fix_in[input_fix_bit_width]}}, fix_in[input_fix_bit_width - 1:lsb_offset] };
+
+endmodule
+
+module register_test_memory
+#(
+	parameter num_boids = 2
+)
+(
+	input 	[$clog2(num_boids):0]	which_boid,
 	
+	input		[6:0] 	w_en,
+	
+	// input ports
+	
+	input 	[27:0] 	x_in,
+	input 	[26:0]	y_in,
+	input		[20:0]	vx_in,
+	input		[20:0] 	vy_in,
+	
+	input		[31:0]	vx_acc_in,
+	input 	[31:0]	vy_acc_in,
+	
+	// output ports
+	
+	output 	[27:0] 	x_out,
+	output 	[26:0]	y_out,
+	output	[20:0]	vx_out,
+	output	[20:0] 	vy_out,
+	
+	output	[31:0]	vx_acc_out,
+	output 	[31:0]	vy_acc_out
+);
+	logic [$clog2(num_boids):0] x_t 			[27:0];
+	logic [$clog2(num_boids):0] y_t			[26:0];
+	logic [$clog2(num_boids):0] vx_t 		[20:0];
+	logic [$clog2(num_boids):0] vy_t 		[20:0];
+	logic [$clog2(num_boids):0] vx_acc_t	[31:0]; 
+	logic [$clog2(num_boids):0] vy_acc_t	[31:0];
+													
+	// input genvar block, will instantiate test memory
+						
+	genvar i;
+	generate for (i = 0; i < num_boids; i++) begin : tmem
+		
+		// each reg is muxed to state:
+		
+		d_reg #(28, ((28'd120 + 28'd40 * i) << 16)) x
+		(
+			.d((which_boid == i && w_en[1] && w_en[0]) ? x_in : x_t[i]),
+			.q(x_t[i])
+		);
+		
+		d_reg #(27, ((27'd120 + 27'd40 * i) << 16)) y
+		(
+			.d((which_boid == i && w_en[2] && w_en[0]) ? y_in : y_t[i]),
+			.q(y_t[i])
+		);
+		
+		d_reg #(21, ((28'd5) << 16)) vx
+		(
+			.d((which_boid == i && w_en[3] && w_en[0]) ? vx_in : vx_t[i]),
+			.q(vx_t[i])
+		);
+		
+		d_reg #(21, ((28'd4) << 16)) vy
+		(
+			.d((which_boid == i && w_en[4] && w_en[0]) ? vy_in : vy_t[i]),
+			.q(vy_t[i])
+		);
+		
+		d_reg #(32, (0)) x_a
+		(
+			.d((which_boid == i && w_en[5] && w_en[0]) ? vx_acc_in : vx_acc_t[i]),
+			.q(vx_acc_t[i])
+		);
+		
+		d_reg #(32, (0)) y_a
+		(
+			.d((which_boid == i && w_en[6] && w_en[0]) ? vy_acc_in : vy_acc_t[i]),
+			.q(vy_acc_t[i])
+		);
+		end
+	endgenerate
+	
+	// output mux
+	
+	assign x_out 		= 		  x_t[which_boid];
+	assign y_out 		= 		  y_t[which_boid];
+	assign vx_out		= 		 vx_t[which_boid];
+	assign vy_out		= 		 vy_t[which_boid];
+	assign vx_acc_out	=	vx_acc_t[which_boid];
+	assign vy_acc_out = 	vy_acc_t[which_boid];
+	
+endmodule
+
+
 
