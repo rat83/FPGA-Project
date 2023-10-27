@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC_Computer
-Mon Oct 23 17:09:32 2023
+Fri Oct 27 14:24:57 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -180,7 +180,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Oct 23 17:09:32 2023       ;
+; Analysis & Synthesis Status     ; Successful - Fri Oct 27 14:24:57 2023       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC_Computer                            ;
 ; Top-level Entity Name           ; DE1_SoC_Computer                            ;
@@ -306,7 +306,8 @@ refer to the applicable agreement for further details.
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
-;     Processors 7-12        ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processors 8-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -345,6 +346,7 @@ refer to the applicable agreement for further details.
 ; DE1_SoC_Computer.v                                                                        ; yes             ; User Verilog HDL File                        ; C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v                                                                        ;                 ;
 ; hex_decoder.v                                                                             ; yes             ; User Verilog HDL File                        ; C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/hex_decoder.v                                                                             ;                 ;
 ; boid_accelerator/boid_accelerator.sv                                                      ; yes             ; User SystemVerilog HDL File                  ; C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv                                                      ;                 ;
+; boid_accelerator/boid_xcel_helper.sv                                                      ; yes             ; User SystemVerilog HDL File                  ; C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv                                                      ;                 ;
 ; altddio_out.tdf                                                                           ; yes             ; Megafunction                                 ; c:/programs/intelfpga/18.1/quartus/libraries/megafunctions/altddio_out.tdf                                                                                 ;                 ;
 ; aglobal181.inc                                                                            ; yes             ; Megafunction                                 ; c:/programs/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                                                  ;                 ;
 ; stratix_ddio.inc                                                                          ; yes             ; Megafunction                                 ; c:/programs/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ddio.inc                                                                                ;                 ;
@@ -515,7 +517,7 @@ refer to the applicable agreement for further details.
 ;       |Computer_System_vga_pio:vga_pio|                                                                                                 ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|Computer_System:The_System|Computer_System_vga_pio:vga_pio                                                                                                                                                                                                                                                                                                                                         ; Computer_System_vga_pio                                      ; Computer_System ;
 ;          |altera_pll:altera_pll_i|                                                                                                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|Computer_System:The_System|Computer_System_vga_pio:vga_pio|altera_pll:altera_pll_i                                                                                                                                                                                                                                                                                                                 ; altera_pll                                                   ; work            ;
 ;       |altera_reset_controller:rst_controller_001|                                                                                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|Computer_System:The_System|altera_reset_controller:rst_controller_001                                                                                                                                                                                                                                                                                                                              ; altera_reset_controller                                      ; Computer_System ;
-;    |boid_accelerator:xcel|                                                                                                              ; 856 (605)           ; 130 (0)                   ; 0                 ; 6          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel                                                                                                                                                                                                                                                                                                                                                                              ; boid_accelerator                                             ; work            ;
+;    |boid_accelerator:xcel|                                                                                                              ; 856 (334)           ; 130 (0)                   ; 0                 ; 6          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel                                                                                                                                                                                                                                                                                                                                                                              ; boid_accelerator                                             ; work            ;
 ;       |amax_bmin:speed_calc|                                                                                                            ; 235 (235)           ; 0 (0)                     ; 0                 ; 6          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|amax_bmin:speed_calc                                                                                                                                                                                                                                                                                                                                                         ; amax_bmin                                                    ; work            ;
 ;          |fix15_mul:a_mul|                                                                                                              ; 0 (0)               ; 0 (0)                     ; 0                 ; 3          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|amax_bmin:speed_calc|fix15_mul:a_mul                                                                                                                                                                                                                                                                                                                                         ; fix15_mul                                                    ; work            ;
 ;          |fix15_mul:b_mul|                                                                                                              ; 0 (0)               ; 0 (0)                     ; 0                 ; 3          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|amax_bmin:speed_calc|fix15_mul:b_mul                                                                                                                                                                                                                                                                                                                                         ; fix15_mul                                                    ; work            ;
@@ -524,6 +526,7 @@ refer to the applicable agreement for further details.
 ;       |d_reg:x_reg|                                                                                                                     ; 5 (5)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|d_reg:x_reg                                                                                                                                                                                                                                                                                                                                                                  ; d_reg                                                        ; work            ;
 ;       |d_reg:y_reg|                                                                                                                     ; 8 (8)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|d_reg:y_reg                                                                                                                                                                                                                                                                                                                                                                  ; d_reg                                                        ; work            ;
 ;       |fall_edge_detector:fed|                                                                                                          ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|fall_edge_detector:fed                                                                                                                                                                                                                                                                                                                                                       ; fall_edge_detector                                           ; work            ;
+;       |xy_bound_check:xbc|                                                                                                              ; 271 (271)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|xy_bound_check:xbc                                                                                                                                                                                                                                                                                                                                                           ; xy_bound_check                                               ; work            ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 91 (1)              ; 91 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                                                                                   ; sld_hub                                                      ; altera_sld      ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 90 (0)              ; 91 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                                                                                   ; alt_sld_fab_with_jtag_input                                  ; altera_sld      ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 90 (0)              ; 91 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                                                                                ; alt_sld_fab                                                  ; alt_sld_fab     ;
@@ -734,19 +737,19 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |DE1_SoC_Computer|boid_accelerator:xcel|d_reg:x_reg|q[20] ;
-; 3:1                ; 114 bits  ; 228 LEs       ; 0 LEs                ; 228 LEs                ; Yes        ; |DE1_SoC_Computer|boid_accelerator:xcel|d_reg:y_reg|q[1]  ;
-; 10:1               ; 10 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |DE1_SoC_Computer|vga_driver:DUT|v_counter[5]             ;
-; 10:1               ; 10 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |DE1_SoC_Computer|vga_driver:DUT|h_counter[2]             ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_Computer|boid_accelerator:xcel|Mux7              ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_Computer|boid_accelerator:xcel|Mux46             ;
-; 4:1                ; 64 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |DE1_SoC_Computer|boid_accelerator:xcel|Mux119            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |DE1_SoC_Computer|boid_accelerator:xcel|d_reg:x_reg|q[20]        ;
+; 3:1                ; 114 bits  ; 228 LEs       ; 0 LEs                ; 228 LEs                ; Yes        ; |DE1_SoC_Computer|boid_accelerator:xcel|d_reg:y_reg|q[1]         ;
+; 10:1               ; 10 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |DE1_SoC_Computer|vga_driver:DUT|v_counter[5]                    ;
+; 10:1               ; 10 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |DE1_SoC_Computer|vga_driver:DUT|h_counter[2]                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_Computer|boid_accelerator:xcel|xy_bound_check:xbc|Mux7  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |DE1_SoC_Computer|boid_accelerator:xcel|xy_bound_check:xbc|Mux46 ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |DE1_SoC_Computer|boid_accelerator:xcel|Mux55                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -4556,7 +4559,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Oct 23 17:06:29 2023
+    Info: Processing started: Fri Oct 27 14:22:01 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC_Computer -c DE1_SoC_Computer
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file computer_system/synthesis/computer_system.v
@@ -4629,14 +4632,21 @@ Info (12021): Found 3 design units, including 3 entities, in source file de1_soc
     Info (12023): Found entity 3: M10K_1000_8 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 799
 Info (12021): Found 1 design units, including 1 entities, in source file hex_decoder.v
     Info (12023): Found entity 1: HexDigit File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/hex_decoder.v Line: 3
-Info (12021): Found 5 design units, including 5 entities, in source file boid_accelerator/boid_accelerator.sv
+Info (12021): Found 6 design units, including 6 entities, in source file boid_accelerator/boid_accelerator.sv
     Info (12023): Found entity 1: boid_accelerator File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 1
-    Info (12023): Found entity 2: d_reg File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 208
-    Info (12023): Found entity 3: fix15_mul File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 229
-    Info (12023): Found entity 4: amax_bmin File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 240
-    Info (12023): Found entity 5: fall_edge_detector File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 293
+    Info (12023): Found entity 2: xy_sep_chk File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 194
+    Info (12023): Found entity 3: xy_bound_check File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 199
+    Info (12023): Found entity 4: xcel_ctrl File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 256
+    Info (12023): Found entity 5: xcel_dp File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 261
+    Info (12023): Found entity 6: register_test_memory File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 266
+Info (12021): Found 5 design units, including 5 entities, in source file boid_accelerator/boid_xcel_helper.sv
+    Info (12023): Found entity 1: d_reg File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv Line: 1
+    Info (12023): Found entity 2: fix15_mul File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv Line: 22
+    Info (12023): Found entity 3: amax_bmin File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv Line: 33
+    Info (12023): Found entity 4: fall_edge_detector File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv Line: 88
+    Info (12023): Found entity 5: zero_pad_fix15 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv Line: 110
 Warning (10236): Verilog HDL Implicit Net warning at hps_sdram_pll.sv(168): created implicit net for "pll_dr_clk" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/submodules/hps_sdram_pll.sv Line: 168
-Warning (10236): Verilog HDL Implicit Net warning at boid_accelerator.sv(34): created implicit net for "en_post" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 34
+Warning (10236): Verilog HDL Implicit Net warning at boid_accelerator.sv(32): created implicit net for "en_post" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 32
 Info (12127): Elaborating entity "DE1_SoC_Computer" for the top level hierarchy
 Warning (10034): Output port "DRAM_ADDR" at DE1_SoC_Computer.v(209) has no driver File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 209
 Warning (10034): Output port "DRAM_BA" at DE1_SoC_Computer.v(210) has no driver File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 210
@@ -4661,14 +4671,15 @@ Info (12128): Elaborating entity "M10K_1000_8" for hierarchy "M10K_1000_8:pixel_
 Info (12128): Elaborating entity "boid_accelerator" for hierarchy "boid_accelerator:xcel" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 460
 Warning (10034): Output port "px" at boid_accelerator.sv(8) has no driver File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 8
 Warning (10034): Output port "py" at boid_accelerator.sv(8) has no driver File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 8
-Info (12128): Elaborating entity "fall_edge_detector" for hierarchy "boid_accelerator:xcel|fall_edge_detector:fed" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 35
-Info (12128): Elaborating entity "d_reg" for hierarchy "boid_accelerator:xcel|d_reg:x_reg" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 46
-Info (12128): Elaborating entity "d_reg" for hierarchy "boid_accelerator:xcel|d_reg:y_reg" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 55
-Info (12128): Elaborating entity "d_reg" for hierarchy "boid_accelerator:xcel|d_reg:vx_reg" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 65
-Info (12128): Elaborating entity "d_reg" for hierarchy "boid_accelerator:xcel|d_reg:x_bound_reg" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 87
-Info (12128): Elaborating entity "amax_bmin" for hierarchy "boid_accelerator:xcel|amax_bmin:speed_calc" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 175
-Info (12128): Elaborating entity "fix15_mul" for hierarchy "boid_accelerator:xcel|amax_bmin:speed_calc|fix15_mul:a_mul" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 254
-Warning (10230): Verilog HDL assignment warning at boid_accelerator.sv(236): truncated value with size 64 to match size of target (32) File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 236
+Info (12128): Elaborating entity "fall_edge_detector" for hierarchy "boid_accelerator:xcel|fall_edge_detector:fed" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 33
+Info (12128): Elaborating entity "d_reg" for hierarchy "boid_accelerator:xcel|d_reg:x_reg" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 44
+Info (12128): Elaborating entity "d_reg" for hierarchy "boid_accelerator:xcel|d_reg:y_reg" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 53
+Info (12128): Elaborating entity "d_reg" for hierarchy "boid_accelerator:xcel|d_reg:vx_reg" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 63
+Info (12128): Elaborating entity "d_reg" for hierarchy "boid_accelerator:xcel|d_reg:x_bound_reg" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 85
+Info (12128): Elaborating entity "xy_bound_check" for hierarchy "boid_accelerator:xcel|xy_bound_check:xbc" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 99
+Info (12128): Elaborating entity "amax_bmin" for hierarchy "boid_accelerator:xcel|amax_bmin:speed_calc" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 161
+Info (12128): Elaborating entity "fix15_mul" for hierarchy "boid_accelerator:xcel|amax_bmin:speed_calc|fix15_mul:a_mul" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv Line: 47
+Warning (10230): Verilog HDL assignment warning at boid_xcel_helper.sv(29): truncated value with size 64 to match size of target (32) File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv Line: 29
 Info (12128): Elaborating entity "vga_driver" for hierarchy "vga_driver:DUT" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 475
 Info (12128): Elaborating entity "Computer_System" for hierarchy "Computer_System:The_System" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 600
 Info (12128): Elaborating entity "Computer_System_ARM_A9_HPS" for hierarchy "Computer_System:The_System|Computer_System_ARM_A9_HPS:arm_a9_hps" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/Computer_System/synthesis/Computer_System.v Line: 287
@@ -4952,7 +4963,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/db/cmpr_99c.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.10.23.17:06:46 Progress: Loading sldc8888fe3/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.10.27.14:22:21 Progress: Loading sldc8888fe3/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -5298,9 +5309,9 @@ Info (21057): Implemented 3618 device resources after synthesis - the final reso
     Info (21066): Implemented 1 delay-locked loops
     Info (21062): Implemented 6 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 348 warnings
-    Info: Peak virtual memory: 5236 megabytes
-    Info: Processing ended: Mon Oct 23 17:09:32 2023
-    Info: Elapsed time: 00:03:03
-    Info: Total CPU time (on all processors): 00:03:33
+    Info: Peak virtual memory: 5237 megabytes
+    Info: Processing ended: Fri Oct 27 14:24:57 2023
+    Info: Elapsed time: 00:02:56
+    Info: Total CPU time (on all processors): 00:03:16
 
 

@@ -9,6 +9,10 @@ module boid_accelerator(
 		vx, vy 	// velocity
 	
 );
+
+	// To future me: READ COMMENTS OF ctrl module IF RANDOM SHIT BREAKS
+	// JUST READ COMMENTS TBH I WROTE PITFALLS ON COMMENTS FOR YOU
+
 	/*
 		This block retains state of x, y, vx, and vy. Every cycle it is clocked for, it
 		will latch in updated values for x, y, vx, vy that should simply move the 
@@ -18,8 +22,6 @@ module boid_accelerator(
 		
 		this added to make materially different commit
 	*/
-	
-	localparam signed [31:0] turnfactor = 32'h00001999;
 	
 	// x/v transient wires
 	
@@ -96,13 +98,16 @@ module boid_accelerator(
 	);
 	
 	
+	logic signed [31:0] vx_bounded, vy_bounded;
+	
+	xy_bound_check xbc ( .* );
 	
 	//boundary enforcement
 	
+	/*
 	
 	logic [1:0] x_bchk, y_bchk;
 	
-	logic signed [31:0] vx_bounded, vy_bounded;
 	
 	logic signed [31:0] x_max_b_t, y_max_b_t;
 	
@@ -146,26 +151,11 @@ module boid_accelerator(
 		endcase
 	end
 	
-	logic signed [31:0] speed;
-	logic signed [31:0] vx_sq, vy_sq;
-	
-	// speed maximum enforcement
-	
-	/*
-	fix15_mul vx_mul
-	(
-		.a		(vx),
-		.b		(vx),
-		.q		(vx_sq)
-	);
-	
-	fix15_mul vy_mul
-	(
-		.a		(vy),
-		.b		(vy),
-		.q		(vy_sq)
-	);
 	*/
+	
+	// speed enforcement
+	
+	logic signed [31:0] speed;
 	
 	amax_bmin speed_calc
 	(
@@ -177,7 +167,7 @@ module boid_accelerator(
 	logic [1:0] speed_bchk;
 	assign speed_bchk = { ($signed(speed) > $signed(32'd8 << 16)), ($signed(speed) < $signed(32'd4 << 16)) };
 	
-	// speed enforcement
+
 	always_comb begin
 		case (speed_bchk)
 			2'd0: begin
@@ -205,128 +195,176 @@ module boid_accelerator(
 	
 endmodule
 
-module d_reg
-	#(
-		parameter d_width = 32,
-		parameter d_res_v = 0
-	)(
-	input logic 	clk,
-	input logic 	reset,
-	input logic 	[d_width-1:0] d,
-	output logic 	[d_width-1:0] q
-	);
-	
-	always @(posedge clk) begin
-		if (reset) begin
-			q <= d_res_v;
-		end else begin
-			q <= d;
-		end
-	end
-	
+module xy_sep_chk();
+
 endmodule
 
-module fix15_mul(
-	input logic signed 	[31:0] a, b,
-	output logic signed	[31:0] q
-	);
-	
-	logic signed [63:0] temp;
-	assign temp = a * b;
-	assign q = temp >>> 15;
-	
-endmodule
 
-module amax_bmin(
-	input logic 	[31:0] a, b,
-	output logic	[31:0] q
-	);
+module xy_bound_check
+(
+	// vx vy input
+	input logic [31:0] vx, vy, x, y, x_bound, y_bound,
 	
-	logic signed [31:0] 	a_temp, 	b_temp,
-								a_out,	b_out;
+	// vx vy output
+	output logic signed [31:0] vx_bounded, vy_bounded
+);
+
+	localparam signed [31:0] turnfactor = 32'h00001999;
+
+	logic [1:0] x_bchk, y_bchk;
 	
-	logic signed [31:0] alpha, beta;
+	logic signed [31:0] x_max_b_t, y_max_b_t;
 	
-	fix15_mul a_mul(
-		.a(a),
-		.b(32'hffff0000),
-		.q(a_out)
-		);
-		
-	fix15_mul b_mul(
-		.a(32'hffff0000),
-		.b(b),
-		.q(b_out)
-		);
+	assign x_max_b_t = $signed((32'd640 << 16) - x_bound);
+	assign y_max_b_t = $signed((32'd480 << 16) - y_bound);
 	
+	assign x_bchk = {$signed (x) > $signed(x_max_b_t), $signed(x) < $signed(x_bound)};
+	assign y_bchk = {$signed (y) > $signed(y_max_b_t), $signed(y) < $signed(y_bound)};
 	
-	
-	//absolute value
 	always_comb begin
-		if (a[31] == 1) begin
-			a_temp = a_out + (32'b1);
-		end else begin
-			a_temp = a;
+		case (x_bchk)
+			2'd0: begin
+					vx_bounded = vx;
+				end
+			2'd1: begin
+					vx_bounded = vx + turnfactor;
+				end
+			2'd2: begin
+					vx_bounded = vx - turnfactor;
+				end
+			default: begin
+					vx_bounded = vx;
+					// 3 is unreachable, contradictory state
+				end 
+		endcase
+		
+		case (y_bchk)
+			2'd0: begin
+					vy_bounded = vy;
+				end
+			2'd1: begin
+					vy_bounded = vy + turnfactor;
+				end
+			2'd2: begin
+					vy_bounded = vy - turnfactor;
+				end
+			default: begin
+					vy_bounded = vy;
+					// 3 is unreachable, contradictory state
+				end 
+		endcase
+	end
+
+endmodule
+
+module xcel_ctrl
+#(
+	parameter num_boids = 2;
+)
+(
+	input logic clk
+);
+
+localparam [2:0] 
+	init 		= 4'd0,
+	sa_init	= 4'd1,
+	sa_ld 	= 4'd2,
+	sa_calc	= 4'd3,
+	ac_wb		= 4'd4;
+	
+	logic [1:0] state, next_state;
+	
+	logic [$clog2(num_boids+1):0] boid_itr_ctr, boid_tot_ctr; 
+	
+	// state update (+ counters)
+	always @(posedge clk) begin
+	
+		// counter for per-boid loop
+		if (state == sa_ld) begin
+			boid_itr_ctr <= boid_itr_ctr + 1;
+		end 
+		else if (state == ac_wb | state == init)
+			boid_itr_ctr <= 0;
 		end
 		
-		if (b[31] == 1) begin
-			b_temp = b_out + (32'b1);
-		end else begin
-			b_temp = b;
-		end		
-		
-		if (a > b) begin
-			alpha = a_temp;
-			beta = b_temp;
-		end else begin
-			alpha = b_temp;
-			beta = a_temp;
+		// counter for total-boid loop
+		if (state == ac_wb) begin
+			boid_itr_ctr <= boid_itr_ctr + 1;
+		end 
+		else if (state == init)
+			boid_itr_ctr <= 0;
 		end
 		
-		q = alpha + (beta >>> 1);
-		
+		state <= next_state;
 	end
 	
+	// next-state logic
+	always @(*) begin
+		next_state = state;
+		
+		case(state)
+			init:	begin
+				next_state = !en ? sa_init : init;
+			end
+			sa_init: begin
+				// this MUST be changed to stall until it accepts a valid from the memory system
+				next_state = sa_ld;
+			end
+			sa_ld: begin
+				// this MUST be changed to stall until it accepts a valid from the memory system
+				next_state = sa_calc;
+			end
+			sa_calc: begin
+				if (boid_itr_ctr >= (num_boids - 1)) begin
+					next_state = ac_wb;
+				end else begin
+					next_state = sa_ld;
+				end
+			end
+			ac_wb: begin
+				if (boid_tot_ctr >= (num_boids)) begin
+					next_state = sa_init;
+				end else begin
+					next_state = init;
+				end
+			end
+			
+			default: // exhaustive case statement
+		endcase
+		
+	end
+
+	// output state control vars
 	
+	logic [$clog2(num_boids):0] which_boid;
+	// 
+	logic [6:0] 					 w_en;
+	logic 							 r_en_tot;
+	logic								 r_en_itr;
+	
+	// state control variables
+	always @(*) begin
+		w_en = 7'b0;
+		r_en_tot = 1'b0;
+		r_en_itr = 1'b0;
+		case(state)
+		init:
+		sa_init: begin
+			which_boid = boid_tot_ctr;
+			r_en_tot = 1'b1;
+		end
+		sa_ld: begin
+			// Must be reworked at parallelization step
+			which_boid 
+		sa_calc:
+		ac_wb: w_en = 7'b0011111;
+		endcase
+	end
+
 endmodule
 
-// fall_edge_detector will pulse 1 cycle high when a falling edge is recorded (with 1 cycle delay)
-
-module fall_edge_detector(
-  input  logic clk, signal,
-  output logic q
-);
-
-  logic signalPrev;
-
-  always_ff @(posedge clk) begin
-    signalPrev <= signal;
-    q       <= (!signal && signalPrev);
-  end
-
-endmodule
-
-// zero_pad_fix15 will sign extend the variable on fix_in to 32 bits, with 
-// compile-time defined parameters to determine how it should be interpreted.
-// on a [total_bit_width - 1:0] register, the variable to be sign extended
-// will be on bits [ (16 + fix_whole_bit_width + lsb_offset) : lsb_offset]
-// and the sign will be on bit 16 + fix_whole_bit_width + lsb_offset.
-// Requirement: total_bit_width, as defined, must be equal to or greater than 
-// 16 + fix_whole_bit_width + lsb_offset.
-
-module zero_pad_fix15
-#(	
-	parameter fix_whole_bit_width = 16,
-	parameter lsb_offset				= 0,
-	parameter total_bit_width		= 32
-)
-(	
-	input 	[total_bit_width - 1:0] fix_in,
-	output	[31:0]						fix_out
-);
-	localparam input_fix_bit_width = 15 + fix_whole_bit_width;
-	assign fix_out = 
-		{{(32 - input_fix_bit_width + lsb_offset){fix_in[input_fix_bit_width]}}, fix_in[input_fix_bit_width - 1:lsb_offset] };
+module xcel_dp
+();
 
 endmodule
 
@@ -358,6 +396,9 @@ module register_test_memory
 	
 	output	[31:0]	vx_acc_out,
 	output 	[31:0]	vy_acc_out
+	
+	// To investigate: making this a bi-directional bus
+	
 );
 	logic [$clog2(num_boids):0] x_t 			[27:0];
 	logic [$clog2(num_boids):0] y_t			[26:0];
