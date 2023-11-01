@@ -10,34 +10,58 @@ cModel Technology
 dC:/Users/rat83/Documents/GitHub/FPGA-Project/video_sram_master_sram_vga
 vamax_bmin
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1697837013
+Z1 !s110 1698868300
 !i10b 1
-!s100 V56RdAk;bPHGkMdQDWof02
-I7KfD;_`8D6kM8ldD1G?G80
+!s100 WjXMf7g_WAibCE>m92dS10
+IXVJ_25KgN3Y@97Z5NhceX2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 !s105 boid_accelerator_sv_unit
+Z3 !s105 boid_xcel_helper_sv_unit
 S1
 Z4 dC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog
-Z5 w1697836956
-Z6 8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
-Z7 FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
-L0 240
+Z5 w1698860424
+Z6 8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+Z7 FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+L0 33
 Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z9 !s108 1697837013.000000
-Z10 !s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv|
-Z11 !s90 -reportprogress|300|-work|boid_accelerator|-sv|-stats=none|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv|
+Z9 !s108 1698868300.000000
+Z10 !s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv|
+Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv|
 !i113 1
-Z12 o-work boid_accelerator -sv
+Z12 o-work work -sv
 Z13 tCvgOpt 0
 vboid_accelerator
 R0
+Z14 !s110 1698868299
+!i10b 1
+!s100 jIzC_9T^SZGnRe_iUbO220
+IADi>VUI;2bSE1]A8;IZ4[1
+R2
+Z15 !s105 boid_accelerator_sv_unit
+S1
+R4
+Z16 w1698868271
+Z17 8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+Z18 FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+L0 1
+R8
+r1
+!s85 0
+31
+Z19 !s108 1698868299.000000
+Z20 !s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv|
+Z21 !s90 -reportprogress|300|-work|boid_accelerator|-sv|-stats=none|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv|
+!i113 1
+Z22 o-work boid_accelerator -sv
+R13
+vd_reg
+R0
 R1
 !i10b 1
-!s100 [[K6ehG?1MJPT:2NlOQki3
-I7WQW=_Xl:2Coc4TQDcVPa0
+!s100 [Bn1mhMVQ><d70nJkNiW82
+ID60:8OeBQPjKg^>;Sb@Sz0
 R2
 R3
 S1
@@ -56,36 +80,12 @@ R11
 !i113 1
 R12
 R13
-vd_reg
-R0
-R1
-!i10b 1
-!s100 oQMGFPOFU:@8KPUdi?EjY2
-Im^^FL`G?]O7]7LABZgZU<3
-R2
-R3
-S1
-R4
-R5
-R6
-R7
-L0 208
-R8
-r1
-!s85 0
-31
-R9
-R10
-R11
-!i113 1
-R12
-R13
 vfall_edge_detector
 R0
 R1
 !i10b 1
-!s100 BBPHTzd[099C?^6D<`8S90
-Im:>zbkOSBA79^o@l]1jca2
+!s100 fWN<UmXR2W[dAA^k=H]4Z0
+I:2l0c2fLcoOQJZKHgE0O:3
 R2
 R3
 S1
@@ -93,7 +93,7 @@ R4
 R5
 R6
 R7
-L0 293
+L0 88
 R8
 r1
 !s85 0
@@ -108,8 +108,8 @@ vfix15_mul
 R0
 R1
 !i10b 1
-!s100 V7?bcK8IFaC5DEf4D]:Kd0
-I>[6]zZVZ1EI4:;=ImU6dE0
+!s100 Qge4@QENg8c;Ndn8aS3:Q2
+I^al[AUbPg];X57=Z24m3o3
 R2
 R3
 S1
@@ -117,7 +117,7 @@ R4
 R5
 R6
 R7
-L0 229
+L0 22
 R8
 r1
 !s85 0
@@ -129,13 +129,13 @@ R11
 R12
 R13
 vHexDigit
-R1
+R14
 !i10b 1
 !s100 FCA7Ee`D@EaGdW4_hN_hC0
 I;V<I<ggjPdBQEEd=XYX4J0
 R2
 R4
-w1697052319
+w1698088133
 8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/hex_decoder.v
 FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/hex_decoder.v
 L0 3
@@ -143,24 +143,48 @@ R8
 r1
 !s85 0
 31
-R9
+R19
 !s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/hex_decoder.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/hex_decoder.v|
 !i113 1
 o-work work
 R13
 n@hex@digit
+vregister_test_memory
+R0
+R14
+!i10b 1
+!s100 dYBa8IIP6nJ:2^3Q;<aEU3
+IVnh106kX:Kca9g8ZXC^TK3
+R2
+R15
+S1
+R4
+R16
+R17
+R18
+L0 394
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 1
+R22
+R13
 vtestbench
 R0
-R1
+R14
 !i10b 1
-!s100 Y@hjOnKig[O8AoQE>N^8H3
-IFjiZGnYi2]H;Pc9JUFz9U1
+!s100 Vlm`:1TSL0KWlj@bINVg;3
+IIW9Df4=2NzF6I[>dbQ`UO1
 R2
 !s105 testbench_sv_unit
 S1
 R4
-w1697837009
+w1698867446
 8C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv
 FC:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv
 L0 3
@@ -168,9 +192,129 @@ R8
 r1
 !s85 0
 31
-R9
+R19
 !s107 C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv|
 !s90 -reportprogress|300|-work|boid_accelerator|-sv|-stats=none|C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv|
+!i113 1
+R22
+R13
+vxcel_ctrl
+R0
+R14
+!i10b 1
+!s100 YZVgNcKWN6NKHGhFWo12b3
+IihKk8lW3EP:][d^Dn=a^T3
+R2
+R15
+S1
+R4
+R16
+R17
+R18
+L0 267
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 1
+R22
+R13
+vxcel_dp
+R0
+R14
+!i10b 1
+!s100 K^4IW`PM7`C1HW9KLBKaC2
+IBb6S93^PD3hoCD=0o=D>g0
+R2
+R15
+S1
+R4
+R16
+R17
+R18
+L0 389
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 1
+R22
+R13
+vxy_bound_check
+R0
+R14
+!i10b 1
+!s100 f@CZ`eU_RjAF8RkRE4]XY3
+I1>i71aW[zTSC29eK7WN9b0
+R2
+R15
+S1
+R4
+R16
+R17
+R18
+L0 209
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 1
+R22
+R13
+vxy_sep_chk
+R0
+R14
+!i10b 1
+!s100 W?c4LWi8^jm^=SYlgj41>3
+IX0SC=>D3Ih:VHNhe6zcd[0
+R2
+R15
+S1
+R4
+R16
+R17
+R18
+L0 204
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 1
+R22
+R13
+vzero_pad_fix15
+R0
+R1
+!i10b 1
+!s100 AM9jZZ8kH5Hj:ID5?`=2l2
+IoQ`g]N>[TFkm3Kzh1m5?;3
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 110
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
 !i113 1
 R12
 R13

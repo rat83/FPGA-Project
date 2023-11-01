@@ -10,7 +10,7 @@ always begin
 end
 
 always begin
-	#90
+	#300
 	en = ~en;
 	#10
 	en = ~en;
@@ -18,66 +18,30 @@ end
 
 logic [31:0] a_1, b_1, c_1, q_1, a_2, b_2, c_2, q_2;
 
+// control unit data ports
+logic [31:0] x_in_b, y_in_b, vx_in_b, vy_in_b;
 logic [31:0] x, y, vx, vy, px, py;
 
-// I'm aware this testbench is kinda gross right now, these are mostly 'sanity check'
-// type tests to make sure the modules I instantiated actually work properly
+// memory unit data ports
+logic [27:0] x_in; 
+logic [26:0] y_in; 
+logic [20:0] vx_in, vy_in;
 
-// checking amax_bmin
-/*
-initial begin
-	a_1 = 32'h0000c000;
-	b_1 =	32'h00013333;
-	c_1 =	32'h00019333;
-	#50
-	assert (c_1 == q_1);
-	a_1 = 32'h0001d999;
-	b_1 = 32'h00029999;
-	c_1 = 32'h00038665;
-	#50
-	assert (c_1 == q_1);
-	a_1 = 32'h0004f333;
-	b_1 = 32'h00014000;
-	c_1 = 32'h00059333;
-	#50
-	assert (c_1 == q_1);
-	a_1 = 32'h011c10e6;
-   b_1 = 32'h00de1f1b;
-   c_1 = 32'h018b2073;
-   #50;
-	assert (c_1 == q_1);
-	a_1 = 32'h0071244e;
-   b_1 = 32'h0000004b;
-   c_1 = 32'h00712473;
-   #50;
-   assert (c_1 == q_1);
-	a_1 = 32'h00566666;
-   b_1 = 32'h09c3f330;
-   c_1 = 32'h09ef2663;
-   #50;
-   assert (c_1 == q_1);
-end
+logic [27:0] x_out;
+logic [26:0] y_out;
+logic [20:0] vx_out, vy_out;
 
-// checking fix15_mul
-initial begin
-	a_2 = 32'h00566666;
-   b_2 = 32'h09c3f330;
-   c_2 = 32'h97775230;
-   #50;
-	assert (c_2 == q_2);
-	a_2 = 32'h00000013;
-   b_2 = 32'h01199c28;
-   c_2 = 32'h000029cd;
-   #50;
-   assert (c_2 == q_2);
-	a_2 = 32'hffffffff;
-	b_2 = 32'hffffffff;
-	c_2 = 32'hFFFC0000;
-   #50;
-   assert (c_2 == q_2);
-	
-end
-*/
+logic [31:0] vx_acc_in, vy_acc_in, vx_acc_out, vy_acc_out;//redundant, here so it compiles
+
+assign x_in_b = x_out;
+assign y_in_b = y_out;
+assign vx_in_b = vx_out;
+assign vy_in_b = vy_out;
+
+assign x_in = x;
+assign y_in = y;
+assign vx_in = vx;
+assign vy_in = vy;
 
 initial begin
 	clk = 0;
@@ -89,11 +53,50 @@ initial begin
 	$stop;
 end
 
+initial begin
+	x = 0;
+	y = 0;
+	vx = 0;
+	vy = 0;
+end
+
 always @(posedge clk) begin
 	// num <= num + 4'd1;
 end
 
+/*
+
 boid_accelerator dut(
+	.*
+);
+
+*/
+
+
+
+register_test_memory#(2) rtm( 
+	.*
+);
+
+	
+	logic [$clog2(2):0] which_boid;
+	// 
+	logic [6:0] 					 w_en;
+	logic 							 dp_en;
+	logic 							 r_en_tot;
+	logic								 r_en_itr;
+
+// notional dpath
+always @(posedge clk) begin
+	if (w_en != 0) begin
+		x = x + 1;
+		y = y + 1;
+		vx = vx + 1;
+		vy = vy + 1;
+	end
+end
+	
+xcel_ctrl#(2) ctrl(
 	.*
 );
 

@@ -2,6 +2,12 @@ module boid_accelerator(
 	input logic clk,
 	input logic en,
 	input logic reset,
+
+	input logic [31:0]  
+		x_in_b,  y_in_b, 	// current position
+		px_in_b, py_in_b, 	// previous position (for erasure)
+		vx_in_b, vy_in_b, 	// velocity
+	
 	
 	output logic [31:0]  
 		x,  y, 	// current position
@@ -257,12 +263,26 @@ module xy_bound_check
 
 endmodule
 
+// checked for 2 boids, should work
 module xcel_ctrl
 #(
-	parameter num_boids = 2;
+	parameter num_boids = 2
 )
 (
-	input logic clk
+	input logic clk,
+	
+	input logic en,
+	
+	input logic reset,
+	
+	// output state control vars
+	
+	output logic [$clog2(num_boids):0] 	which_boid,
+	
+	output logic [6:0] 					 	w_en,
+	output logic 								dp_en,
+	output logic 							 	r_en_tot,
+	output logic							 	r_en_itr
 );
 
 localparam [2:0] 
@@ -272,7 +292,7 @@ localparam [2:0]
 	sa_calc	= 4'd3,
 	ac_wb		= 4'd4;
 	
-	logic [1:0] state, next_state;
+	logic [2:0] state, next_state;
 	
 	logic [$clog2(num_boids+1):0] boid_itr_ctr, boid_tot_ctr; 
 	
@@ -283,16 +303,16 @@ localparam [2:0]
 		if (state == sa_ld) begin
 			boid_itr_ctr <= boid_itr_ctr + 1;
 		end 
-		else if (state == ac_wb | state == init)
+		else if (state == ac_wb | state == init) begin
 			boid_itr_ctr <= 0;
 		end
 		
 		// counter for total-boid loop
 		if (state == ac_wb) begin
-			boid_itr_ctr <= boid_itr_ctr + 1;
+			boid_tot_ctr <= boid_tot_ctr + 1;
 		end 
-		else if (state == init)
-			boid_itr_ctr <= 0;
+		else if (state == init) begin
+			boid_tot_ctr <= 0;
 		end
 		
 		state <= next_state;
@@ -300,64 +320,67 @@ localparam [2:0]
 	
 	// next-state logic
 	always @(*) begin
-		next_state = state;
-		
-		case(state)
-			init:	begin
-				next_state = !en ? sa_init : init;
-			end
-			sa_init: begin
-				// this MUST be changed to stall until it accepts a valid from the memory system
-				next_state = sa_ld;
-			end
-			sa_ld: begin
-				// this MUST be changed to stall until it accepts a valid from the memory system
-				next_state = sa_calc;
-			end
-			sa_calc: begin
-				if (boid_itr_ctr >= (num_boids - 1)) begin
-					next_state = ac_wb;
-				end else begin
+		if (reset) begin
+			next_state = init;
+		end else begin
+			next_state = state;
+			case(state)
+				init:	begin
+					next_state = !en ? sa_init : init;
+				end
+				sa_init: begin
+					// this MUST be changed to stall until it accepts a valid from the memory system
 					next_state = sa_ld;
 				end
-			end
-			ac_wb: begin
-				if (boid_tot_ctr >= (num_boids)) begin
-					next_state = sa_init;
-				end else begin
-					next_state = init;
+				sa_ld: begin
+					// this MUST be changed to stall until it accepts a valid from the memory system
+					next_state = sa_calc;
 				end
-			end
-			
-			default: // exhaustive case statement
-		endcase
-		
+				sa_calc: begin
+					if (boid_itr_ctr >= (num_boids - 1)) begin
+						next_state = ac_wb;
+					end else begin
+						next_state = sa_ld;
+					end
+				end
+				ac_wb: begin
+					if (boid_tot_ctr >= (num_boids - 1)) begin
+						next_state = init;
+					end else begin
+						next_state = sa_init;
+					end
+				end
+				
+				//default: // exhaustive case statement
+			endcase
+		end
 	end
 
-	// output state control vars
 	
-	logic [$clog2(num_boids):0] which_boid;
-	// 
-	logic [6:0] 					 w_en;
-	logic 							 r_en_tot;
-	logic								 r_en_itr;
 	
 	// state control variables
 	always @(*) begin
+		which_boid = 0;
 		w_en = 7'b0;
+		dp_en = 1'b0;
 		r_en_tot = 1'b0;
 		r_en_itr = 1'b0;
 		case(state)
-		init:
+		init: begin // blank case, all defaults hold
+		end
 		sa_init: begin
 			which_boid = boid_tot_ctr;
 			r_en_tot = 1'b1;
 		end
 		sa_ld: begin
 			// Must be reworked at parallelization step
-			which_boid 
-		sa_calc:
-		ac_wb: w_en = 7'b0011111;
+			which_boid = !boid_tot_ctr;
+			r_en_itr = 1'b1;
+		end
+		sa_calc: begin dp_en = 1'b1; end
+		ac_wb: begin 
+			which_boid = boid_tot_ctr;
+			w_en = 7'b0011111; end
 		endcase
 	end
 
@@ -372,40 +395,42 @@ module register_test_memory
 #(
 	parameter num_boids = 2
 )
-(
-	input 	[$clog2(num_boids):0]	which_boid,
+(	
+	input logic clk,
+	input logic reset,
+	input logic	[$clog2(num_boids):0] which_boid,
 	
-	input		[6:0] 	w_en,
+	input	logic	[6:0] 	w_en,
 	
 	// input ports
 	
-	input 	[27:0] 	x_in,
-	input 	[26:0]	y_in,
-	input		[20:0]	vx_in,
-	input		[20:0] 	vy_in,
+	input logic	[27:0] 	x_in,
+	input logic	[26:0]	y_in,
+	input	logic	[20:0]	vx_in,
+	input	logic	[20:0] 	vy_in,
 	
-	input		[31:0]	vx_acc_in,
-	input 	[31:0]	vy_acc_in,
+	input	logic	[31:0]	vx_acc_in,
+	input logic	[31:0]	vy_acc_in,
 	
 	// output ports
 	
-	output 	[27:0] 	x_out,
-	output 	[26:0]	y_out,
-	output	[20:0]	vx_out,
-	output	[20:0] 	vy_out,
+	output logic	[27:0] 	x_out,
+	output logic	[26:0]	y_out,
+	output logic	[20:0]	vx_out,
+	output logic	[20:0] 	vy_out,
 	
-	output	[31:0]	vx_acc_out,
-	output 	[31:0]	vy_acc_out
+	output logic	[31:0]	vx_acc_out,
+	output logic	[31:0]	vy_acc_out
 	
 	// To investigate: making this a bi-directional bus
 	
 );
-	logic [$clog2(num_boids):0] x_t 			[27:0];
-	logic [$clog2(num_boids):0] y_t			[26:0];
-	logic [$clog2(num_boids):0] vx_t 		[20:0];
-	logic [$clog2(num_boids):0] vy_t 		[20:0];
-	logic [$clog2(num_boids):0] vx_acc_t	[31:0]; 
-	logic [$clog2(num_boids):0] vy_acc_t	[31:0];
+	logic [27:0] x_t 			[$clog2(num_boids):0];
+	logic [26:0] y_t 			[$clog2(num_boids):0];
+	logic [20:0] vx_t 		[$clog2(num_boids):0];
+	logic [20:0] vy_t 		[$clog2(num_boids):0];
+	logic [31:0] vx_acc_t 	[$clog2(num_boids):0]; 
+	logic [31:0] vy_acc_t 	[$clog2(num_boids):0];
 													
 	// input genvar block, will instantiate test memory
 						
@@ -415,37 +440,49 @@ module register_test_memory
 		// each reg is muxed to state:
 		
 		d_reg #(28, ((28'd120 + 28'd40 * i) << 16)) x
-		(
+		(	
+			.clk(clk),
+			.reset(reset),
 			.d((which_boid == i && w_en[1] && w_en[0]) ? x_in : x_t[i]),
 			.q(x_t[i])
 		);
 		
 		d_reg #(27, ((27'd120 + 27'd40 * i) << 16)) y
 		(
+			.clk(clk),
+			.reset(reset),
 			.d((which_boid == i && w_en[2] && w_en[0]) ? y_in : y_t[i]),
 			.q(y_t[i])
 		);
 		
 		d_reg #(21, ((28'd5) << 16)) vx
 		(
+			.clk(clk),
+			.reset(reset),
 			.d((which_boid == i && w_en[3] && w_en[0]) ? vx_in : vx_t[i]),
 			.q(vx_t[i])
 		);
 		
 		d_reg #(21, ((28'd4) << 16)) vy
 		(
+			.clk(clk),
+			.reset(reset),
 			.d((which_boid == i && w_en[4] && w_en[0]) ? vy_in : vy_t[i]),
 			.q(vy_t[i])
 		);
 		
 		d_reg #(32, (0)) x_a
 		(
+			.clk(clk),
+			.reset(reset),
 			.d((which_boid == i && w_en[5] && w_en[0]) ? vx_acc_in : vx_acc_t[i]),
 			.q(vx_acc_t[i])
 		);
 		
 		d_reg #(32, (0)) y_a
 		(
+			.clk(clk),
+			.reset(reset),
 			.d((which_boid == i && w_en[6] && w_en[0]) ? vy_acc_in : vy_acc_t[i]),
 			.q(vy_acc_t[i])
 		);

@@ -1,810 +1,983 @@
-# Compile of boid_accelerator.sv failed with 2 errors.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 1 failed with 2 errors.
-# Compile of boid_accelerator.sv failed with 2 errors.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 1 failed with 2 errors.
-# Compile of boid_accelerator.sv failed with 11 errors.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 1 failed with 11 errors.
-# Compile of boid_accelerator.sv failed with 9 errors.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 1 failed with 9 errors.
-# Compile of boid_accelerator.sv failed with 9 errors.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 1 failed with 9 errors.
-# Compile of boid_accelerator.sv failed with 8 errors.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 1 failed with 8 errors.
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 15:33:47 on Nov 01,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.register_test_memory
+# Loading work.xcel_ctrl
+# Loading work.d_reg
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vx_acc_in'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vy_acc_in'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vx_acc_out'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vy_acc_out'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): [TFMPC] - Missing connection for port 'vx_acc_in'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): [TFMPC] - Missing connection for port 'vy_acc_in'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): [TFMPC] - Missing connection for port 'vx_acc_out'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): [TFMPC] - Missing connection for port 'vy_acc_out'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [PCDPC] - Port size (28) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [PCDPC] - Port size (28) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [PCDPC] - Port size (27) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [PCDPC] - Port size (27) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [PCDPC] - Port size (21) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [PCDPC] - Port size (21) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(477): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(477): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(477): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(477): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(483): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(483): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(483): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(483): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [PCDPC] - Port size (28) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [PCDPC] - Port size (28) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [PCDPC] - Port size (27) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [PCDPC] - Port size (27) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [PCDPC] - Port size (21) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [PCDPC] - Port size (21) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(477): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(477): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(477): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(477): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(483): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(483): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(483): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(483): [TFMPC] - Missing connection for port 'reset'.
+# Error loading design
+# End time: 15:33:47 on Nov 01,2023, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 61
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 15:34:40 on Nov 01,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.register_test_memory
+# Loading work.xcel_ctrl
+# Loading work.d_reg
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vx_acc_in'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vy_acc_in'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vx_acc_out'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vy_acc_out'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): [TFMPC] - Missing connection for port 'vx_acc_in'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): [TFMPC] - Missing connection for port 'vy_acc_in'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): [TFMPC] - Missing connection for port 'vx_acc_out'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): [TFMPC] - Missing connection for port 'vy_acc_out'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [PCDPC] - Port size (28) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [PCDPC] - Port size (28) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [PCDPC] - Port size (27) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [PCDPC] - Port size (27) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [PCDPC] - Port size (21) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [PCDPC] - Port size (21) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(477): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(477): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(477): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(477): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(483): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(483): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(483): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(483): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [PCDPC] - Port size (28) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [PCDPC] - Port size (28) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(453): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [PCDPC] - Port size (27) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [PCDPC] - Port size (27) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(459): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [PCDPC] - Port size (21) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(465): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [PCDPC] - Port size (21) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(471): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(477): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(477): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(477): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(477): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(483): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(483): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(483): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(483): [TFMPC] - Missing connection for port 'reset'.
+# Error loading design
+# End time: 15:34:41 on Nov 01,2023, Elapsed time: 0:00:01
+# Errors: 4, Warnings: 61
 # Compile of boid_accelerator.sv was successful.
 # Compile of testbench.sv was successful.
 # Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
 vsim -gui work.testbench
 # vsim -gui work.testbench 
-# Start time: 13:58:18 on Oct 18,2023
+# Start time: 15:34:54 on Nov 01,2023
 # Loading sv_std.std
 # Loading work.testbench
-# Loading work.boid_accelerator
+# Loading work.register_test_memory
+# Loading work.xcel_ctrl
 # Loading work.d_reg
-# Loading work.fix15_mul
-# Loading work.amax_bmin
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vx_acc_in'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vy_acc_in'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vx_acc_out'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vy_acc_out'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-8378) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): Port size (28) does not match connection size (32) for implicit .name connection port 'x_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(405).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-8378) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): Port size (27) does not match connection size (32) for implicit .name connection port 'y_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(406).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-8378) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): Port size (21) does not match connection size (32) for implicit .name connection port 'vx_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(407).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-8378) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): Port size (21) does not match connection size (32) for implicit .name connection port 'vy_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(408).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-8378) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): Port size (28) does not match connection size (32) for implicit .name connection port 'x_out'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(415).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-8378) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): Port size (27) does not match connection size (32) for implicit .name connection port 'y_out'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(416).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-8378) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): Port size (21) does not match connection size (32) for implicit .name connection port 'vx_out'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(417).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-8378) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): Port size (21) does not match connection size (32) for implicit .name connection port 'vy_out'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(418).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): [TFMPC] - Missing connection for port 'vx_acc_in'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): [TFMPC] - Missing connection for port 'vy_acc_in'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): [TFMPC] - Missing connection for port 'vx_acc_out'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(70): [TFMPC] - Missing connection for port 'vy_acc_out'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [PCDPC] - Port size (28) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [PCDPC] - Port size (27) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [PCDPC] - Port size (28) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [PCDPC] - Port size (27) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'reset'.
+# Error loading design
+# End time: 15:34:54 on Nov 01,2023, Elapsed time: 0:00:00
+# Errors: 12, Warnings: 53
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 15:36:43 on Nov 01,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.register_test_memory
+# Loading work.xcel_ctrl
+# Loading work.d_reg
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vx_acc_in'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vy_acc_in'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vx_acc_out'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vy_acc_out'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(75): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(75): [TFMPC] - Missing connection for port 'vx_acc_in'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(75): [TFMPC] - Missing connection for port 'vy_acc_in'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(75): [TFMPC] - Missing connection for port 'vx_acc_out'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(75): [TFMPC] - Missing connection for port 'vy_acc_out'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [PCDPC] - Port size (28) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [PCDPC] - Port size (27) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [PCDPC] - Port size (28) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [PCDPC] - Port size (27) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'reset'.
+# Error loading design
+# End time: 15:36:43 on Nov 01,2023, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 53
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 15:37:34 on Nov 01,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.register_test_memory
+# Loading work.xcel_ctrl
+# Loading work.d_reg
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vx_acc_in'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vy_acc_in'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vx_acc_out'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'vy_acc_out'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(75): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(75): [TFMPC] - Missing connection for port 'vx_acc_in'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(75): [TFMPC] - Missing connection for port 'vy_acc_in'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(75): [TFMPC] - Missing connection for port 'vx_acc_out'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(75): [TFMPC] - Missing connection for port 'vy_acc_out'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [PCDPC] - Port size (28) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [PCDPC] - Port size (27) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [PCDPC] - Port size (28) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [PCDPC] - Port size (27) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'reset'.
+# Error loading design
+# End time: 15:37:34 on Nov 01,2023, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 53
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 15:37:50 on Nov 01,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.register_test_memory
+# Loading work.xcel_ctrl
+# Loading work.d_reg
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [PCDPC] - Port size (28) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [PCDPC] - Port size (27) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [PCDPC] - Port size (28) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [PCDPC] - Port size (27) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'reset'.
 add wave -position insertpoint  \
-sim:/testbench/x \
-sim:/testbench/y \
-sim:/testbench/vx \
-sim:/testbench/vy
+sim:/testbench/rtm/which_boid \
+sim:/testbench/rtm/w_en \
+sim:/testbench/rtm/x_in \
+sim:/testbench/rtm/y_in \
+sim:/testbench/rtm/vx_in \
+sim:/testbench/rtm/vy_in \
+sim:/testbench/rtm/vx_acc_in \
+sim:/testbench/rtm/vy_acc_in \
+sim:/testbench/rtm/x_out \
+sim:/testbench/rtm/y_out \
+sim:/testbench/rtm/vx_out \
+sim:/testbench/rtm/vy_out \
+sim:/testbench/rtm/vx_acc_out \
+sim:/testbench/rtm/vy_acc_out \
+sim:/testbench/rtm/x_t \
+sim:/testbench/rtm/y_t \
+sim:/testbench/rtm/vx_t \
+sim:/testbench/rtm/vy_t \
+sim:/testbench/rtm/vx_acc_t \
+sim:/testbench/rtm/vy_acc_t
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: rat83  Hostname: EN-EC-LPH238-26  ProcessID: 5844
-#           Attempting to use alternate WLF file "./wlfts9ayr4".
+#           Attempting to use alternate WLF file "./wlft6tthsg".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfts9ayr4
-run
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 5100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
+#           Using alternate file: ./wlft6tthsg
 add wave -position insertpoint  \
 sim:/testbench/clk \
 sim:/testbench/reset \
 sim:/testbench/en
-quit -sim
-# End time: 13:59:42 on Oct 18,2023, Elapsed time: 0:01:24
-# Errors: 0, Warnings: 2
-vsim -gui work.testbench
-# vsim -gui work.testbench 
-# Start time: 13:59:48 on Oct 18,2023
-# Loading sv_std.std
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.fix15_mul
-# Loading work.amax_bmin
-add wave -position insertpoint  \
-sim:/testbench/clk \
-sim:/testbench/reset \
-sim:/testbench/en
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: rat83  Hostname: EN-EC-LPH238-26  ProcessID: 5844
-#           Attempting to use alternate WLF file "./wlftcqtgwj".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftcqtgwj
-add wave -position insertpoint  \
-sim:/testbench/x \
-sim:/testbench/y \
-sim:/testbench/vx \
-sim:/testbench/vy
-run
-run
-add wave -position insertpoint  \
-sim:/testbench/dut/x_comb \
-sim:/testbench/dut/y_comb
-restart -f
-run
 # Compile of boid_accelerator.sv was successful.
 # Compile of testbench.sv was successful.
 # Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.fix15_mul
-# Loading work.amax_bmin
-run
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
 run
 run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 5100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(53)
+#    Time: 50100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 53
 add wave -position insertpoint  \
-sim:/testbench/dut/x_bound \
-sim:/testbench/dut/y_bound
-restart -f
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 5100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.fix15_mul
-# Loading work.amax_bmin
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.fix15_mul
-# Loading work.amax_bmin
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.fix15_mul
-# Loading work.amax_bmin
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
+{sim:/testbench/rtm/tmem[1]/#implicit-wire#5} \
+{sim:/testbench/rtm/tmem[1]/#implicit-wire#4} \
+{sim:/testbench/rtm/tmem[1]/#implicit-wire#3} \
+{sim:/testbench/rtm/tmem[1]/#implicit-wire#2} \
+{sim:/testbench/rtm/tmem[1]/#implicit-wire#1} \
+{sim:/testbench/rtm/tmem[1]/#implicit-wire#0}
+# (vsim-4027) Logging is not supported for Packed Array item: /testbench/rtm/tmem[1]/#implicit-wire#5 
+# (vsim-4027) Logging is not supported for Packed Array item: /testbench/rtm/tmem[1]/#implicit-wire#4 
+# (vsim-4027) Logging is not supported for Packed Array item: /testbench/rtm/tmem[1]/#implicit-wire#3 
+# (vsim-4027) Logging is not supported for Packed Array item: /testbench/rtm/tmem[1]/#implicit-wire#2 
+# (vsim-4027) Logging is not supported for Packed Array item: /testbench/rtm/tmem[1]/#implicit-wire#1 
+# (vsim-4027) Logging is not supported for Packed Array item: /testbench/rtm/tmem[1]/#implicit-wire#0 
 add wave -position insertpoint  \
-sim:/testbench/dut/x_bchk \
-sim:/testbench/dut/y_bchk
+{sim:/testbench/rtm/tmem[1]/x/d} \
+{sim:/testbench/rtm/tmem[1]/x/q}
 restart -f
+# Loading work.testbench
+# Loading work.register_test_memory
+# Loading work.xcel_ctrl
+# Loading work.d_reg
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [PCDPC] - Port size (28) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [PCDPC] - Port size (27) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [PCDPC] - Port size (28) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [PCDPC] - Port size (27) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'reset'.
 run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(53)
 #    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 53
 add wave -position insertpoint  \
-sim:/testbench/dut/speed_bchk
+{sim:/testbench/rtm/tmem[1]/x_a/d} \
+{sim:/testbench/rtm/tmem[1]/x_a/q}
 restart -f
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [PCDPC] - Port size (28) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [PCDPC] - Port size (27) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [PCDPC] - Port size (28) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [PCDPC] - Port size (27) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [PCDPC] - Port size (21) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [PCDPC] - Port size (32) does not match connection size (2) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'reset'.
 run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(53)
 #    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 53
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Loading work.register_test_memory
+# Loading work.xcel_ctrl
+# Loading work.d_reg
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[0]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(440): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(446): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vx File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(452): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/vy File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(458): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/x_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(464): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/tmem[1]/y_a File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(470): [TFMPC] - Missing connection for port 'reset'.
+run -all
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(53)
+#    Time: 50100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 53
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Loading work.register_test_memory
+# Loading work.xcel_ctrl
+# Loading work.d_reg
+run -all
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(53)
+#    Time: 50100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 53
 add wave -position insertpoint  \
-sim:/testbench/dut/vx_bounded \
-sim:/testbench/dut/vy_bounded
-restart -f
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
+{sim:/testbench/rtm/tmem[0]/x/clk} \
+{sim:/testbench/rtm/tmem[0]/x/reset}
 add wave -position insertpoint  \
-sim:/testbench/dut/vx_comb \
-sim:/testbench/dut/vy_comb
+{sim:/testbench/rtm/tmem[1]/x/clk} \
+{sim:/testbench/rtm/tmem[1]/x/reset}
+restart -f
+run -all
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(53)
+#    Time: 50100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 53
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
 restart -f
 # Loading work.testbench
-# Loading work.boid_accelerator
+# Loading work.register_test_memory
+# Loading work.xcel_ctrl
 # Loading work.d_reg
-# Loading work.fix15_mul
-# Loading work.amax_bmin
 run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(53)
 #    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-restart -f
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.fix15_mul
-# Loading work.amax_bmin
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.fix15_mul
-# Loading work.amax_bmin
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.fix15_mul
-# Loading work.amax_bmin
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.fix15_mul
-# Loading work.amax_bmin
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.fix15_mul
-# Loading work.amax_bmin
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-run -all
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-# Break key hit
-# Simulation stop requested.
-restart -f
-restart -f
-restart -f
-quit
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.fix15_mul
-# Loading work.amax_bmin
-restart -f
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-restart -f
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-run
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.fix15_mul
-# Loading work.amax_bmin
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-run -all
-# Break key hit
-# Break in Module boid_accelerator at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv line 100
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.fix15_mul
-# Loading work.amax_bmin
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv failed with 3 errors.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 1 failed with 3 errors.
-# Compile of boid_accelerator.sv failed with 3 errors.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 1 failed with 3 errors.
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-run -all
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-restart -f
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-run -continue
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-add wave -position insertpoint  \
-sim:/testbench/dut/x_max_b_t \
-sim:/testbench/dut/y_max_b_t
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-run -all
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-add wave -position insertpoint  \
-sim:/testbench/dut/speed
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-run -all
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-# Loading work.fix15_mul
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-run -all
-restart -f
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-run
-run -all
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-run -all
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 53
 # Compile of boid_accelerator.sv failed with 1 errors.
 # Compile of testbench.sv was successful.
 # Compile of hex_decoder.v was successful.
-# 3 compiles, 1 failed with 1 error.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 1 failed with 1 error.
 restart -f
 # Loading work.testbench
+# Loading work.xcel_ctrl
 # Loading work.d_reg
-# Loading work.amax_bmin
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-add wave -position insertpoint  \
-sim:/testbench/dut/speed_calc/a_temp
-add wave -position insertpoint  \
-sim:/testbench/dut/speed_calc/b_temp
-add wave -position insertpoint  \
-sim:/testbench/dut/speed_calc/alpha
-add wave -position insertpoint  \
-sim:/testbench/dut/speed_calc/beta
-add wave -position insertpoint  \
-sim:/testbench/dut/speed_calc/q
-add wave -position insertpoint  \
-sim:/testbench/dut/speed_calc/a \
-sim:/testbench/dut/speed_calc/b
-add wave -position insertpoint  \
-sim:/testbench/dut/speed_calc/a_out
-add wave -position insertpoint  \
-sim:/testbench/dut/speed_calc/b_out
-restart -f
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv failed with 1 errors.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 1 failed with 1 error.
 # Compile of boid_accelerator.sv was successful.
 # Compile of testbench.sv was successful.
 # Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
+run -all
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(53)
+#    Time: 50100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 53
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
 restart -f
 # Loading work.testbench
-# Loading work.boid_accelerator
+# Loading work.register_test_memory
+# Loading work.xcel_ctrl
 # Loading work.d_reg
-# Loading work.amax_bmin
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-restart -f
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-run -all
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-restart -f
-# Compile of boid_accelerator.sv failed with 1 errors.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 1 failed with 1 error.
-# Compile of boid_accelerator.sv failed with 1 errors.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 1 failed with 1 error.
-# Compile of boid_accelerator.sv failed with 1 errors.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 1 failed with 1 error.
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv failed with 1 errors.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 1 failed with 1 error.
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.d_reg
-# Loading work.amax_bmin
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-write list -window .main_pane.list C:/Users/rat83/Desktop/list.lst
-add list sim:/testbench/y
-# Compile of boid_accelerator.sv failed with 1 errors.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 1 failed with 1 error.
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.fall_edge_detector
-# Loading work.d_reg
-# Loading work.amax_bmin
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-restart -f
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.fall_edge_detector
-# Loading work.d_reg
-# Loading work.amax_bmin
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
 add wave -position insertpoint  \
-sim:/testbench/x_sh \
-sim:/testbench/y_sh
-restart -f
+sim:/testbench/rtm/clk \
+sim:/testbench/rtm/reset
 run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(53)
 #    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.fall_edge_detector
-# Loading work.d_reg
-# Loading work.amax_bmin
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# 3 compiles, 0 failed with no errors.
-run -all
-restart -f
-# Loading work.testbench
-# Loading work.boid_accelerator
-# Loading work.fall_edge_detector
-# Loading work.d_reg
-# Loading work.amax_bmin
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(89)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 89
-run -all
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 53
+# End time: 15:55:46 on Nov 01,2023, Elapsed time: 0:17:56
+# Errors: 1, Warnings: 182
