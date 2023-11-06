@@ -1,11 +1,4 @@
-C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv {1 {vlog -work boid_accelerator -sv -stats=none C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module testbench
-
-Top level modules:
-	testbench
-
-} {} {}} C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv {1 {vlog -work work -sv -stats=none C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv {1 {vlog -work work -sv -stats=none C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module d_reg
 -- Compiling module fix15_mul
@@ -19,21 +12,12 @@ Top level modules:
 	fall_edge_detector
 	zero_pad_fix15
 
-} {} {}} C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv {1 {vlog -work boid_accelerator -sv -stats=none C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
+} {} {}} C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv {1 {vlog -work boid_accelerator -sv -stats=none C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module boid_accelerator
--- Compiling module xy_sep_chk
--- Compiling module xy_bound_check
--- Compiling module xcel_ctrl
--- Compiling module xcel_dp
--- Compiling module register_test_memory
+-- Compiling module testbench
 
 Top level modules:
-	boid_accelerator
-	xy_sep_chk
-	xcel_ctrl
-	xcel_dp
-	register_test_memory
+	testbench
 
 } {} {}} C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/hex_decoder.v {1 {vlog -work work -stats=none C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/hex_decoder.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016

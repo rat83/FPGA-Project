@@ -1,6 +1,6 @@
 module boid_accelerator(
 	input logic clk,
-	input logic en,
+	input logic dp_en,
 	input logic reset,
 
 	input logic [31:0]  
@@ -34,15 +34,8 @@ module boid_accelerator(
 	logic [31:0] 			x_comb, 	y_comb;
 	logic signed [31:0]	vx_comb,	vy_comb;
 	
-	// negedge detector
-	
-	fall_edge_detector fed(
-		.clk(clk),
-		.signal(en),
-		.q(en_post)
-		);
 
-	// pos/speed regs
+	// pos/speed regs for boid to be rewritten
 	
 	d_reg #(32,((32'd115) << 16))
 	x_reg
@@ -79,6 +72,87 @@ module boid_accelerator(
 		.reset	(reset),
 		.d			(en_post ? vy_comb : vy),
 		.q			(vy)
+	);
+	
+	logic [31:0] 			xa_comb, 	ya_comb;
+	logic [31:0] 			x_avg, 		y_avg;
+	logic signed [31:0]	vxa_comb,	vya_comb;
+	logic signed [31:0]	vx_avg,		vy_avg;
+	
+	// pos/speed average regs for accumulation
+	
+	d_reg #(32,0)
+	x_avg_reg
+	(
+		.clk		(clk),
+		.reset	(reset),
+		.d			(en_post ? xa_comb : x_avg),
+		.q			(x_avg)
+	);
+	
+	d_reg #(32,0)
+	y_avg_reg
+	(	
+		.clk		(clk),
+		.reset	(reset),
+		.d			(en_post ? ya_comb : y_avg),
+		.q			(y_avg)
+	);
+	
+	
+	d_reg #(32,0)
+	vx_avg_reg
+	(
+		.clk		(clk),
+		.reset	(reset),
+		.d			(en_post ? vxa_comb : vx_avg),
+		.q			(vx_avg)
+	);
+	
+	d_reg #(32,0)
+	vy_avg_reg
+	(
+		.clk		(clk),
+		.reset	(reset),
+		.d			(en_post ? vya_comb : vy_avg),
+		.q			(vy_avg)
+	);
+	
+	logic [31:0] 			xc_comb, 	yc_comb;
+	logic [31:0] 			x_close, 	y_close;
+	
+	// dx accumulator
+	
+	d_reg #(32,0)
+	x_close_reg
+	(
+		.clk		(clk),
+		.reset	(reset),
+		.d			(en_post ? xc_comb : x_close),
+		.q			(x_close)
+	);
+	
+	d_reg #(32,0)
+	y_close_reg
+	(	
+		.clk		(clk),
+		.reset	(reset),
+		.d			(en_post ? yc_comb : y_close),
+		.q			(y_close)
+	);
+	
+	// boid neighbor counter
+	// should parametrize 
+	
+	logic [5:0] boid_ctr, boid_ctr_in;
+	
+	d_reg #(5, 0)
+	boid_ctr_reg
+	(
+		.clk		(clk),
+		.reset	(reset),
+		.d 		(boid_ctr_in),
+		.q			(boid_ctr)
 	);
 	
 	// margins
@@ -201,8 +275,81 @@ module boid_accelerator(
 	
 endmodule
 
-module xy_sep_chk();
+module xy_sep_chk(
 
+	input logic 	[31:0] x, y, x_in, y_in,
+	
+	input logic 	[31:0] vx, vy,
+	
+	input logic 	[31:0] x_avg, y_avg, vx_avg, vy_avg,
+	
+	input logic 	[31:0] x_close, y_close,
+	
+	output logic 	[31:0] xa_comb, ya_comb, vxa_comb, vya_comb,	
+	
+	output logic 	[31:0] xc_comb, yc_comb,
+	
+	input logic 	[5:0] boid_ctr,
+	
+	output logic 	[5:0] boid_ctr_in
+);
+	
+	logic [31:0] x_sq, y_sq;
+	
+	logic [31:0] dx_t, dy_t;
+	
+	assign dx_t = x - x_in;
+	
+	assign dy_t = y - y_in;
+	
+	fix15_mul xmul (
+		.a(dx_t),
+		.b(dx_t),
+		.q(x_sq)
+	);
+	
+	fix15_mul ymul	(
+		.a(dy_t),
+		.b(dy_t),
+		.q(y_sq)
+	);	
+	
+	logic [31:0] d_sq;
+	
+	assign d_sq = x_sq + y_sq;
+	
+	logic [1:0] d_comparison;
+	
+	assign d_comparison = { (d_sq < (32'd64 << 16)); (d_sq < (32'd1600 << 16))};
+	always @(*) begin
+		
+		case (d_comparison)
+			01: begin 
+				xa_comb = x_avg + x_in;
+				ya_comb = y_avg + y_in;
+				vxa_comb = vx_avg + vx_in;
+				vya_comb = vy_avg + vy_in;
+				boid_ctr_in = boid_ctr + 6'd1;
+			end
+			11: begin
+				xc_comb = x_count + dx_t;
+				yc_comb = y_count + dy_t;
+			end
+			default: begin
+			// case 00 should have default behavior
+				xa_comb = x_avg;
+				ya_comb = y_avg;
+				vxa_comb = vx_avg;
+				vya_comb = vy_avg;
+				xc_comb = x_count;
+				yc_comb = y_count;
+				boid_ctr_in = boid_ctr;
+			end
+			// 01 is an impossible case due to the nature of the conditionals,
+			// if d_sq is less than 64, it is necessarily less than 1600
+		endcase
+	end
+	
 endmodule
 
 
@@ -285,6 +432,14 @@ module xcel_ctrl
 	output logic							 	r_en_itr
 );
 
+	// negedge detector
+	
+	fall_edge_detector fed(
+		.clk(clk),
+		.signal(en),
+		.q(en_post)
+		);
+
 localparam [2:0] 
 	init 		= 4'd0,
 	sa_init	= 4'd1,
@@ -326,7 +481,7 @@ localparam [2:0]
 			next_state = state;
 			case(state)
 				init:	begin
-					next_state = !en ? sa_init : init;
+					next_state = en_post ? sa_init : init;
 				end
 				sa_init: begin
 					// this MUST be changed to stall until it accepts a valid from the memory system
