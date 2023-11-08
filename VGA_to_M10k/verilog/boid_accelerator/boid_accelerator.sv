@@ -180,7 +180,7 @@ module boid_accelerator(
 	
 	logic signed [31:0] vx_bounded, vy_bounded;
 	
-	xy_bound_check xbc ( .* );
+	xy_writeback xbc ( .* );
 	
 	//boundary enforcement
 	
@@ -320,20 +320,28 @@ module xy_sep_chk(
 	
 	logic [1:0] d_comparison;
 	
-	assign d_comparison = { (d_sq < (32'd64 << 16)); (d_sq < (32'd1600 << 16))};
-	always @(*) begin
-		
-		case (d_comparison)
+	assign d_comparison = { (d_sq < (32'd64 << 16)); (d_sq < (32'd1600 << 16)) && (boid_ctr == 6'b111111)};
+	// { distance less than 'avoid threshold' ; distance less than 'visual' threshold and fewer than 31 boids have been collected }
+	
+	always @(*) begin	
+		casez (d_comparison)
+			1?: begin
+				xa_comb = x_avg;
+				ya_comb = y_avg;
+				vxa_comb = vx_avg;
+				vya_comb = vy_avg;
+				xc_comb = x_close + dx_t;
+				yc_comb = y_close + dy_t;
+				boid_ctr_in = boid_ctr;
+			end
 			01: begin 
 				xa_comb = x_avg + x_in;
 				ya_comb = y_avg + y_in;
 				vxa_comb = vx_avg + vx_in;
 				vya_comb = vy_avg + vy_in;
+				xc_comb = x_count;
+				yc_comb = y_count;
 				boid_ctr_in = boid_ctr + 6'd1;
-			end
-			11: begin
-				xc_comb = x_count + dx_t;
-				yc_comb = y_count + dy_t;
 			end
 			default: begin
 			// case 00 should have default behavior
@@ -345,25 +353,142 @@ module xy_sep_chk(
 				yc_comb = y_count;
 				boid_ctr_in = boid_ctr;
 			end
-			// 01 is an impossible case due to the nature of the conditionals,
-			// if d_sq is less than 64, it is necessarily less than 1600
+			// 10 arises if we have detected 31 neighboring boids, but we want to allow
+			// boids that are too close to be collected for separation + we will operate 
+			// in lockstep for multicore in the future regardless
 		endcase
 	end
 	
 endmodule
 
 
-module xy_bound_check
+module xy_writeback
 (
 	// vx vy input
 	input logic [31:0] vx, vy, x, y, x_bound, y_bound,
 	
+	input logic [31:0] vx_avg, vy_avg, x_avg, y_avg,
+	
+	input logic [31:0] x_close, y_close,
+	
+	input logic [5:0] boid_ctr;
+	
 	// vx vy output
 	output logic signed [31:0] vx_bounded, vy_bounded
 );
-
-	localparam signed [31:0] turnfactor = 32'h00001999;
-
+	localparam signed [31:0] turnfactor  	= 32'h00001999;
+			
+	localparam signed [31:0] avoidfactor 	= 32'h00000666;
+	
+	localparam signed [31:0] matchfactor 	= 32'h00000666;
+	
+	localparam signed [31:0] centerfactor 	= 32'h00000010;
+	
+	logic signed [31:0] div_val;
+	
+	// Instantiate lookup table for pre-calculated fractional dividers between 1 and 31
+	// or multiply all of these things by zero if boid_ctr remains 0
+	
+	lut_32_divider lut(
+		.lut_sel(boid_ctr),
+		.div_val(div_val)
+	);
+	
+	logic signed [31:0] x_avg_n, y_avg_n, vx_avg_n, vy_avg_n;
+	
+	// At this point, if area is a concern and we want to pay more cycles to calculate all of this stuff on signoff,
+	// we can reuse the same multipliers and add a register to bring our values through the same multipliers 3 times
+	// This reduces the multipliers we need from 10 to 4. We can reduce the required multipliers to 2 if we spend
+	// 6 cycles calculating, and we can reduce it to 1 if we spend 12 cycles calculating. This would also allow for
+	// a reduction in the critical path, which very likely will exist in this module (representing the path from a
+	// register through 3 multipliers, 5 adders, some control logic to adjudicate 2 of those additions, and the 
+	// path to write this information back to the memory system.
+	
+	// Initial set of divisions (multiplication by 1/neighboring boids, or 0)
+	
+	fix15_mul f15_1(
+		.a(x_avg),
+		.b(div_val),
+		.q(x_avg_n)
+	);
+	
+	fix15_mul f15_2(
+		.a(y_avg),
+		.b(div_val),
+		.q(y_avg_n)
+	);
+	
+	fix15_mul f15_3(
+		.a(vx_avg),
+		.b(div_val),
+		.q(vx_avg_n)
+	);
+	
+	fix15_mul f15_4(
+		.a(vy_avg),
+		.b(div_val),
+		.q(vy_avg_n)
+	);
+	
+	// Factorization
+	// Take the difference of the divided average and pos/vel and
+	// normalize by the center/match factors
+	
+	logic signed [31:0] x_avg_f, y_avg_f, vx_avg_f, vy_avg_f;
+	
+	fix15_mul f15_11(
+		.a(x_avg_n - x),
+		.b(centerfactor),
+		.q(x_avg_f)
+	);
+	
+	fix15_mul f15_21(
+		.a(y_avg_n - y),
+		.b(centerfactor),
+		.q(y_avg_f)
+	);
+	
+	fix15_mul f15_31(
+		.a(vx_avg_n - vx),
+		.b(matchfactor),
+		.q(vx_avg_f)
+	);
+	
+	fix15_mul f15_41(
+		.a(vy_avg_n - vy),
+		.b(matchfactor),
+		.q(vy_avg_f)
+	);
+	
+	logic signed [31:0] vx_t_1, vy_t_1;
+	
+	assign vx_t_1 = x_avg_f + vx_avg_f;
+	assign vy_t_1 = y_avg_f + vy_avg_f;
+	
+	// Factorize avoidance and sum into velocity
+	
+	logic signed [31:0] x_close_f, y_close_f;
+	
+	fix15_mul f15_12(
+		.a(x_close),
+		.b(avoidfactor),
+		.q(x_close_f)
+	);
+	
+	fix15_mul f15_22(
+		.a(y_close),
+		.b(avoidfactor),
+		.q(y_close_f)
+	);
+	
+	logic signed [31:0] vx_t_2, vy_t_2;
+	
+	assign vx_t_2 = vx_t_1 + x_close_f;
+	
+	assign vy_t_2 = vy_t_1 + y_close_f;
+	
+	// Perform movement to drive boids away from boundaries
+	
 	logic [1:0] x_bchk, y_bchk;
 	
 	logic signed [31:0] x_max_b_t, y_max_b_t;
@@ -377,32 +502,32 @@ module xy_bound_check
 	always_comb begin
 		case (x_bchk)
 			2'd0: begin
-					vx_bounded = vx;
+					vx_bounded = vx_t_2;
 				end
 			2'd1: begin
-					vx_bounded = vx + turnfactor;
+					vx_bounded = vx_t_2 + turnfactor;
 				end
 			2'd2: begin
-					vx_bounded = vx - turnfactor;
+					vx_bounded = vx_t_2 - turnfactor;
 				end
 			default: begin
-					vx_bounded = vx;
+					vx_bounded = vx_t_2;
 					// 3 is unreachable, contradictory state
 				end 
 		endcase
 		
 		case (y_bchk)
 			2'd0: begin
-					vy_bounded = vy;
+					vy_bounded = vy_t_2;
 				end
 			2'd1: begin
-					vy_bounded = vy + turnfactor;
+					vy_bounded = vy_t_2 + turnfactor;
 				end
 			2'd2: begin
-					vy_bounded = vy - turnfactor;
+					vy_bounded = vy_t_2 - turnfactor;
 				end
 			default: begin
-					vy_bounded = vy;
+					vy_bounded = vy_t_2;
 					// 3 is unreachable, contradictory state
 				end 
 		endcase
@@ -541,11 +666,6 @@ localparam [2:0]
 
 endmodule
 
-module xcel_dp
-();
-
-endmodule
-
 module register_test_memory
 #(
 	parameter num_boids = 2
@@ -655,5 +775,93 @@ module register_test_memory
 	
 endmodule
 
+module register_test_mem_wrapper
+#(
+	parameter num_boids = 2
+)
+(	
+	input logic clk,
+	input logic reset,
+	input logic	[$clog2(num_boids):0] which_boid,
+	
+	input	logic	[6:0] 	w_en,
+	
+	// input ports
+	
+	input logic	[31:0] 	x_in_32,
+	input logic	[31:0]	y_in_32,
+	input	logic	[31:0]	vx_in_32,
+	input	logic	[31:0] 	vy_in_32,
+	
+	input	logic	[31:0]	vx_acc_in,
+	input logic	[31:0]	vy_acc_in,
+	
+	// output ports
+	
+	output logic	[31:0] 	x_out_32,
+	output logic	[31:0]	y_out_32,
+	output logic	[31:0]	vx_out_32,
+	output logic	[31:0] 	vy_out_32,
+	
+	output logic	[31:0]	vx_acc_out,
+	output logic	[31:0]	vy_acc_out
+	
+	// To investigate: making this a bi-directional bus
+	
+);
+	
+	// This module truncates incoming values to the memory system 
+	// and pads outgoing values from the memory system
+	
+	// Memory bit-width values
+	logic	[27:0] 	x_in,
+	logic	[26:0]	y_in,
+	logic	[20:0]	vx_in,
+	logic	[20:0] 	vy_in,
+	
+	logic	[27:0] 	x_out,
+	logic	[26:0]	y_out,
+	logic	[20:0]	vx_out,
+	logic	[20:0] 	vy_out,
+	
+	assign x_in = x_in_32[27:0];
+	assign y_in = y_in_32[26:0];
+	assign vx_in = vx_in_32[20:0];
+	assign vy_in = vy_in_32[20:0];
+	
+	// This should be able to be replaced by a M10k memory
+	register_test_memory rtm(.*);
+	
+	zero_pad_fix15
+	#(16,0,28)
+	x_out_pad
+	(
+		.fix_in(x_out),
+		.fix_out(x_out_32)
+	);
+	
+	zero_pad_fix15
+	#(16,0,27)
+	y_out_pad
+	(
+		.fix_in(y_out),
+		.fix_out(y_out_32)
+	);
+	
+	zero_pad_fix15
+	#(16,0,20)
+	vx_out_pad
+	(
+		.fix_in(vx_out),
+		.fix_out(vx_out_32)
+	);
+	
+	zero_pad_fix15
+	#(16,0,20)
+	vy_out_pad
+	(
+		.fix_in(vy_out),
+		.fix_out(vy_out_32)
+	);
 
-
+endmodule
