@@ -114,19 +114,19 @@ module zero_pad_fix15
 	parameter total_bit_width		= 32
 )
 (	
-	input 	[total_bit_width - 1:0] fix_in,
+	input 	[fix_whole_bit_width - 1:0] fix_in,
 	output	[31:0]						fix_out
 );
-	localparam input_fix_bit_width = 15 + fix_whole_bit_width;
+	localparam input_fix_bit_width = fix_whole_bit_width;
 	assign fix_out = 
-		{{(32 - input_fix_bit_width + lsb_offset){fix_in[input_fix_bit_width]}}, fix_in[input_fix_bit_width - 1:lsb_offset] };
+		{{(32 - input_fix_bit_width + lsb_offset){fix_in[input_fix_bit_width - 1]}}, fix_in[input_fix_bit_width - 2:lsb_offset] };
 
 endmodule
 
 module lut_32_divider
 (	
-	input logic [5:0] lut_sel;
-	output logic signed[31:0] div_val;
+	input logic [5:0] lut_sel,
+	output logic signed[31:0] div_val
 );
 	// Lookup table for values of lut_sel mapping to 1/lut_sel for values
 	// from 1 to 31, and returning 0 for lut_sel = 0. This will lead to

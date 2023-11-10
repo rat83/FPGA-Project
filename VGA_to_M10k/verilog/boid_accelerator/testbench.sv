@@ -33,15 +33,23 @@ logic [20:0] vx_out, vy_out;
 
 logic [31:0] vx_acc_in, vy_acc_in, vx_acc_out, vy_acc_out;//redundant, here so it compiles
 
+logic [31:0] x_in_32; 
+logic [31:0] y_in_32; 
+logic [31:0] vx_in_32, vy_in_32;
+
+logic [31:0] x_out_32;
+logic [31:0] y_out_32;
+logic [31:0] vx_out_32, vy_out_32;
+
 assign x_in_b = x_out;
 assign y_in_b = y_out;
 assign vx_in_b = vx_out;
 assign vy_in_b = vy_out;
 
-assign x_in = x;
-assign y_in = y;
-assign vx_in = vx;
-assign vy_in = vy;
+assign x_in_32 = x;
+assign y_in_32 = y;
+assign vx_in_32 = vx;
+assign vy_in_32 = vy;
 
 initial begin
 	clk = 0;
@@ -74,7 +82,7 @@ boid_accelerator dut(
 
 
 
-register_test_memory#(2) rtm( 
+register_test_mem_wrapper#(2) rtm( 
 	.*
 );
 

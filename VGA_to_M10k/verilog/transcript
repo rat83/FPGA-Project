@@ -1,73 +1,44 @@
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
 vsim -gui work.testbench
 # vsim -gui work.testbench 
-# Start time: 13:35:36 on Nov 06,2023
+# Start time: 14:11:51 on Nov 10,2023
 # Loading sv_std.std
 # Loading work.testbench
+# Loading work.register_test_mem_wrapper
 # Loading work.register_test_memory
+# Loading work.zero_pad_fix15
 # Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
 # Loading work.d_reg
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(855): [PCDPC] - Port size (20) does not match connection size (21) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vx_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(863): [PCDPC] - Port size (20) does not match connection size (21) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vy_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
 run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(53)
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
 #    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 53
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
 restart -f
-add wave -position insertpoint  \
-sim:/testbench/ctrl/state
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: rat83  Hostname: EN-EC-LPH238-26  ProcessID: 5844
-#           Attempting to use alternate WLF file "./wlftcbxheq".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftcbxheq
-add wave -position insertpoint  \
-sim:/testbench/clk \
-sim:/testbench/reset \
-sim:/testbench/en
-add wave -position insertpoint  \
-sim:/testbench/rtm/which_boid \
-sim:/testbench/rtm/w_en \
-sim:/testbench/rtm/x_in \
-sim:/testbench/rtm/y_in \
-sim:/testbench/rtm/vx_in \
-sim:/testbench/rtm/vy_in \
-sim:/testbench/rtm/vx_acc_in \
-sim:/testbench/rtm/vy_acc_in \
-sim:/testbench/rtm/x_out \
-sim:/testbench/rtm/y_out \
-sim:/testbench/rtm/vx_out \
-sim:/testbench/rtm/vy_out \
-sim:/testbench/rtm/vx_acc_out \
-sim:/testbench/rtm/vy_acc_out
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(53)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 53
-add wave -position insertpoint  \
-{sim:/testbench/rtm/tmem[1]/x/q}
-add wave -position insertpoint  \
-{sim:/testbench/rtm/tmem[1]/y/q}
-view -new wave
-# -new not supported on PE
-add wave -position insertpoint  \
-{sim:/testbench/rtm/tmem[1]/vx/q}
-add wave -position insertpoint  \
-{sim:/testbench/rtm/tmem[1]/vx/q}
-add wave -position insertpoint  \
-{sim:/testbench/rtm/tmem[1]/vy/q}
-add wave -position insertpoint  \
-{sim:/testbench/rtm/tmem[0]/x/q}
-add wave -position insertpoint  \
-{sim:/testbench/rtm/tmem[0]/y/d}
-add wave -position insertpoint  \
-{sim:/testbench/rtm/tmem[0]/vx/q}
-add wave -position insertpoint  \
-{sim:/testbench/rtm/tmem[0]/y/q}
-add wave -position insertpoint  \
-{sim:/testbench/rtm/tmem[0]/vy/q}
-restart -f
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(53)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 53
+# Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(855): [PCDPC] - Port size (20) does not match connection size (21) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vx_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(863): [PCDPC] - Port size (20) does not match connection size (21) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vy_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
 # Compile of boid_accelerator.sv was successful.
 # Compile of testbench.sv was successful.
 # Compile of hex_decoder.v was successful.
@@ -75,13 +46,333 @@ run -all
 # 4 compiles, 0 failed with no errors.
 restart -f
 # Loading work.testbench
+# Loading work.register_test_mem_wrapper
 # Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(855): [PCDPC] - Port size (20) does not match connection size (21) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vx_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(863): [PCDPC] - Port size (20) does not match connection size (21) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vy_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+add wave -position insertpoint  \
+sim:/testbench/rtm/x_in_32 \
+sim:/testbench/rtm/y_in_32 \
+sim:/testbench/rtm/vx_in_32 \
+sim:/testbench/rtm/vy_in_32
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: rat83  Hostname: EN-EC-LPH238-26  ProcessID: 5844
+#           Attempting to use alternate WLF file "./wlftqnivks".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftqnivks
+add wave -position insertpoint  \
+sim:/testbench/rtm/clk \
+sim:/testbench/rtm/reset
+run
+add wave -position insertpoint  \
+sim:/testbench/rtm/x_out_32 \
+sim:/testbench/rtm/y_out_32 \
+sim:/testbench/rtm/vx_out_32 \
+sim:/testbench/rtm/vy_out_32
+restart -f
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(855): [PCDPC] - Port size (20) does not match connection size (21) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vx_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(863): [PCDPC] - Port size (20) does not match connection size (21) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vy_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+run -all
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
+#    Time: 50100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(839): [PCDPC] - Port size (32) does not match connection size (28) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/x_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-11).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/x_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(847): [PCDPC] - Port size (32) does not match connection size (27) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/y_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-10).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/y_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(855): [PCDPC] - Port size (32) does not match connection size (21) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vx_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-3).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vx_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(863): [PCDPC] - Port size (32) does not match connection size (21) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vy_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-3).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vy_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+restart -f
+# No Design Loaded!
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 14:11:51 on Nov 10,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(839): [PCDPC] - Port size (32) does not match connection size (28) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/x_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-11).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/x_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(847): [PCDPC] - Port size (32) does not match connection size (27) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/y_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-10).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/y_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(855): [PCDPC] - Port size (32) does not match connection size (21) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vx_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-3).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vx_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(863): [PCDPC] - Port size (32) does not match connection size (21) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vy_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-3).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vy_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# Error loading design
+# End time: 14:15:41 on Nov 10,2023, Elapsed time: 0:03:50
+# Errors: 8, Warnings: 18
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# No Design Loaded!
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 14:17:03 on Nov 10,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-11).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/x_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-10).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/y_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(855): [PCDPC] - Port size (20) does not match connection size (21) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vx_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-3).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vx_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(863): [PCDPC] - Port size (20) does not match connection size (21) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vy_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-3).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vy_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# Error loading design
+# End time: 14:17:03 on Nov 10,2023, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 2
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 14:17:36 on Nov 10,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-11).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/x_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-10).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/y_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-4).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vx_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-4).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vy_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# Error loading design
+# End time: 14:17:36 on Nov 10,2023, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 14:18:56 on Nov 10,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(839): [PCDPC] - Port size (12) does not match connection size (28) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/x_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(847): [PCDPC] - Port size (11) does not match connection size (27) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/y_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(855): [PCDPC] - Port size (5) does not match connection size (21) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vx_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(863): [PCDPC] - Port size (5) does not match connection size (21) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vy_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: rat83  Hostname: EN-EC-LPH238-26  ProcessID: 5844
+#           Attempting to use alternate WLF file "./wlft2ngk94".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft2ngk94
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(839): [PCDPC] - Port size (12) does not match connection size (28) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/x_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(847): [PCDPC] - Port size (11) does not match connection size (27) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/y_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(855): [PCDPC] - Port size (5) does not match connection size (21) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vx_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(863): [PCDPC] - Port size (5) does not match connection size (21) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vy_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(839): [PCDPC] - Port size (21) does not match connection size (28) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/x_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-4).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/x_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-10).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/y_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-4).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vx_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error (suppressible): (vsim-8607) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(122): Negative replication multiplier (-4).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/vy_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# No Design Loaded!
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 14:18:56 on Nov 10,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(839): [PCDPC] - Port size (21) does not match connection size (28) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/x_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: rat83  Hostname: EN-EC-LPH238-26  ProcessID: 5844
+#           Attempting to use alternate WLF file "./wlftfnk7dg".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftfnk7dg
+restart -f
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv(839): [PCDPC] - Port size (21) does not match connection size (28) for port 'fix_in'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(117).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm/x_out_pad File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
 # Loading work.xcel_ctrl
 # Loading work.fall_edge_detector
 # Loading work.d_reg
 run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(53)
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
 #    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 53
-# End time: 16:22:34 on Nov 06,2023, Elapsed time: 2:46:58
-# Errors: 1, Warnings: 2
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+run -all
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
+#    Time: 50100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
+run -all
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+restart -f
+restart -f
+# Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+restart -f
+run -all
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
+#    Time: 50100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
+add wave -position insertpoint  \
+sim:/testbench/en
+# End time: 15:22:39 on Nov 10,2023, Elapsed time: 1:03:43
+# Errors: 4, Warnings: 15
