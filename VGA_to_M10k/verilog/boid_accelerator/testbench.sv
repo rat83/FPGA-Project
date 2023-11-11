@@ -61,25 +61,141 @@ initial begin
 	$stop;
 end
 
+	
+
+	// xy_sep_chk verification
+
+	// input
+
+	logic 	[31:0] x_in_xcel, y_in_xcel;
+	
+	logic 	[31:0] vx_in_xcel, vy_in_xcel;
+	
+	logic 	[31:0] x_avg, y_avg;
+	
+	logic 	[31:0] x_close, y_close;
+	
+	logic signed 	[31:0] vx_avg, vy_avg;
+	
+	logic 	[5:0] boid_ctr;
+		
+	// output
+
+	logic 	[31:0] xa_comb, ya_comb;
+	
+	logic signed 	[31:0] vxa_comb, vya_comb;
+	
+	logic 	[31:0] xc_comb, yc_comb;
+	
+	logic 	[5:0] boid_ctr_in;
+
+//pseudo memory
+	
+always @(posedge clk) begin
+	if(~reset) begin
+		boid_ctr = boid_ctr_in;
+		x_close = xc_comb;
+		y_close = yc_comb;
+		x_avg = xa_comb;
+		y_avg = ya_comb;
+		vx_avg = vxa_comb;
+		vy_avg = vya_comb;
+	end
+end
+	
+	initial begin
+		x = 0;
+		y = 0;
+		x_in_xcel = 0;
+		y_in_xcel = 0;
+		vx = 0;
+		vy = 0;
+		vx_in_xcel = 0;
+		vy_in_xcel = 0;
+		x_avg = 0;
+		y_avg = 0;
+		x_close = 0;
+		y_close = 0;
+		vx_avg = 0;
+		vy_avg = 0;
+		boid_ctr = 0;
+		
+		#100
+		
+		x = 140 << 16;
+		y = 140 << 16;
+		vx = 3 << 16;
+		vy = 3 << 16;
+		
+		x_in_xcel = 150 << 16;
+		y_in_xcel = 140 << 16;
+		vx_in_xcel = 3 << 16;
+		vy_in_xcel = 3 << 16;
+		
+		#100 
+		
+		x_in_xcel = 140 << 16;
+		y_in_xcel = 150 << 16;
+		vx_in_xcel = -3 << 16;
+		vy_in_xcel = 3 << 16;
+				
+		#100 
+		
+		x_in_xcel = 150 << 16;
+		y_in_xcel = 150 << 16;
+		vx_in_xcel = 3 << 16;
+		vy_in_xcel = -3 << 16;
+				
+		#100 
+		
+		x_in_xcel = 180 << 16;
+		y_in_xcel = 180 << 16;
+		vx_in_xcel = 3 << 16;
+		vy_in_xcel = 3 << 16;
+		
+		#100 
+		
+		x_in_xcel = 150 << 16;
+		y_in_xcel = 150 << 16;
+		vx_in_xcel = -3 << 16;
+		vy_in_xcel = 3 << 16;
+		
+		#100 
+		
+		x_in_xcel = 141 << 16;
+		y_in_xcel = 141 << 16;
+		vx_in_xcel = 3 << 16;
+		vy_in_xcel = 3 << 16;
+		
+		#100
+		
+		x_in_xcel = 140 << 16;
+		y_in_xcel = 150 << 16;
+		vx_in_xcel = -3 << 16;
+		vy_in_xcel = 3 << 16;
+		
+		#1000
+		
+		x_in_xcel = 141 << 16;
+		y_in_xcel = 141 << 16;
+		vx_in_xcel = 3 << 16;
+		vy_in_xcel = 3 << 16;
+		
+		
+	end
+
+	xy_sep_chk xsc (.*);
+	
+/*
+
+// memory verification
+
 initial begin
 	x = 0;
 	y = 0;
 	vx = 0;
 	vy = 0;
 end
-
-always @(posedge clk) begin
-	// num <= num + 4'd1;
-end
-
-/*
-
-boid_accelerator dut(
-	.*
-);
-
-*/
-
 
 
 register_test_mem_wrapper#(2) rtm( 
@@ -102,17 +218,20 @@ always @(posedge clk) begin
 		vx = vx + 1;
 		vy = vy + 1;
 	end
+	
 end
 	
 xcel_ctrl#(2) ctrl(
 	.*
 );
 
+// xcel_dpath dp( .* );
+
 logic [31:0] x_sh, y_sh;
 
 assign x_sh = x >>> 16;
 assign y_sh = y >>> 16;
-
+*/
 /*
 
 amax_bmin dut1 (

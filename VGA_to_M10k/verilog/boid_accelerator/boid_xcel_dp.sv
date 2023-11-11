@@ -291,7 +291,16 @@ module xy_sep_chk(
 	
 	logic [1:0] d_comparison;
 	
-	assign d_comparison = { (d_sq < (32'd64 << 16)), (d_sq < (32'd1600 << 16)) && (boid_ctr == 6'b111111)};
+	logic d01_a, d01_b;
+	
+	localparam fix15_1600 = 32'h06400000;
+	//                      fix15 1600  
+	assign d01_a = (d_sq < fix15_1600);
+	
+	assign d01_b = (boid_ctr != 6'b111111);
+	
+								
+	assign d_comparison = { (d_sq < (32'd64 << 16)), d01_a && d01_b};
 	// { distance less than 'avoid threshold' ; distance less than 'visual' threshold and fewer than 31 boids have been collected }
 	
 	always @(*) begin	
