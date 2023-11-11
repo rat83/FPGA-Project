@@ -289,3 +289,243 @@ run -all
 # ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
 #    Time: 50100 ns  Iteration: 0  Instance: /testbench
 # Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/x'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/y'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/x_in_xcel'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/y_in_xcel'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/vx'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/vy'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/vx_in_xcel'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/vy_in_xcel'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/x_avg'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/y_avg'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/x_close'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/y_close'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/xa_comb'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/ya_comb'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/vx_avg'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/vy_avg'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/vxa_comb'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/vya_comb'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/xc_comb'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/yc_comb'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/boid_ctr_in'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/x_sq'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/y_sq'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/dx_t'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/dy_t'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/d_sq'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/boid_ctr'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/d_comparison'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/d01_a'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/d01_b'. 
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv failed with 2 errors.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 1 failed with 2 errors.
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv failed with 2 errors.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 1 failed with 2 errors.
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv failed with 1 errors.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+run
+restart -f
+# Loading work.testbench
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Loading work.xy_writeback
+# Loading work.lut_32_divider
+# Loading work.fix15_mul
+add wave -position insertpoint  \
+sim:/testbench/xyw/vx \
+sim:/testbench/xyw/vy \
+sim:/testbench/xyw/x \
+sim:/testbench/xyw/y \
+sim:/testbench/xyw/x_bound \
+sim:/testbench/xyw/y_bound \
+sim:/testbench/xyw/x_avg \
+sim:/testbench/xyw/y_avg \
+sim:/testbench/xyw/vx_avg \
+sim:/testbench/xyw/vy_avg \
+sim:/testbench/xyw/x_close \
+sim:/testbench/xyw/y_close \
+sim:/testbench/xyw/boid_ctr \
+sim:/testbench/xyw/vx_bounded \
+sim:/testbench/xyw/vy_bounded \
+sim:/testbench/xyw/div_val \
+sim:/testbench/xyw/x_avg_n \
+sim:/testbench/xyw/y_avg_n \
+sim:/testbench/xyw/vx_avg_n \
+sim:/testbench/xyw/vy_avg_n \
+sim:/testbench/xyw/x_avg_f \
+sim:/testbench/xyw/y_avg_f \
+sim:/testbench/xyw/vx_avg_f \
+sim:/testbench/xyw/vy_avg_f \
+sim:/testbench/xyw/vx_t_1 \
+sim:/testbench/xyw/vy_t_1 \
+sim:/testbench/xyw/x_close_f \
+sim:/testbench/xyw/y_close_f \
+sim:/testbench/xyw/vx_t_2 \
+sim:/testbench/xyw/vy_t_2 \
+sim:/testbench/xyw/x_bchk \
+sim:/testbench/xyw/y_bchk \
+sim:/testbench/xyw/x_max_b_t \
+sim:/testbench/xyw/y_max_b_t
+run
+run
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv failed with 1 errors.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Loading work.xy_writeback
+# Loading work.lut_32_divider
+# Loading work.fix15_mul
+run -all
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
+#    Time: 50100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Loading work.xy_writeback
+# Loading work.lut_32_divider
+# Loading work.fix15_mul
+run
+run
+add wave -position insertpoint  \
+sim:/testbench/xyw/vx \
+sim:/testbench/xyw/vy \
+sim:/testbench/xyw/x \
+sim:/testbench/xyw/y \
+sim:/testbench/xyw/x_bound \
+sim:/testbench/xyw/y_bound \
+sim:/testbench/xyw/x_avg \
+sim:/testbench/xyw/y_avg \
+sim:/testbench/xyw/vx_avg \
+sim:/testbench/xyw/vy_avg \
+sim:/testbench/xyw/x_close \
+sim:/testbench/xyw/y_close \
+sim:/testbench/xyw/boid_ctr \
+sim:/testbench/xyw/vx_bounded \
+sim:/testbench/xyw/vy_bounded \
+sim:/testbench/xyw/div_val \
+sim:/testbench/xyw/x_avg_n \
+sim:/testbench/xyw/y_avg_n \
+sim:/testbench/xyw/vx_avg_n \
+sim:/testbench/xyw/vy_avg_n \
+sim:/testbench/xyw/x_avg_f \
+sim:/testbench/xyw/y_avg_f \
+sim:/testbench/xyw/vx_avg_f \
+sim:/testbench/xyw/vy_avg_f \
+sim:/testbench/xyw/vx_t_1 \
+sim:/testbench/xyw/vy_t_1 \
+sim:/testbench/xyw/x_close_f \
+sim:/testbench/xyw/y_close_f \
+sim:/testbench/xyw/vx_t_2 \
+sim:/testbench/xyw/vy_t_2 \
+sim:/testbench/xyw/vx_t \
+sim:/testbench/xyw/vy_t \
+sim:/testbench/xyw/x_bchk \
+sim:/testbench/xyw/y_bchk \
+sim:/testbench/xyw/x_max_b_t \
+sim:/testbench/xyw/y_max_b_t
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Loading work.xy_writeback
+# Loading work.lut_32_divider
+# Loading work.fix15_mul
+run
+run
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Loading work.xy_writeback
+# Loading work.lut_32_divider
+# Loading work.fix15_mul
+run
+run

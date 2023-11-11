@@ -60,8 +60,61 @@ initial begin
 	#50000
 	$stop;
 end
-
 	
+	// xy_writeback verification
+	
+	// inputs
+	logic [31:0] x_bound, y_bound;
+	
+	assign x_bound = 100 << 16, y_bound = 100 << 16;
+	
+	logic [31:0] x_avg, y_avg;
+	
+	logic signed [31:0] vx_avg, vy_avg;
+	
+	logic [31:0] x_close, y_close;
+	
+	logic [5:0] boid_ctr;
+	
+	// vx vy output
+	logic signed [31:0] vx_bounded, vy_bounded; 
+
+	initial begin
+		x = 0;
+		y = 0;
+		vx = 0;
+		vy = 0;
+		x_avg = 0;
+		y_avg = 0;
+		vx_avg = 0;
+		vy_avg = 0;
+		x_close = 0;
+		y_close = 0;
+		boid_ctr = 0;
+		
+		#100
+		
+		x = 150 << 16;
+		y = 150 << 16;
+		vx = 3 << 16;
+		vy = 0 << 16;
+		
+		x_avg = 155 << 16;
+		y_avg = 145 << 16;
+		
+		vx_avg = 2 << 16;
+		vy_avg = 3 << 16;
+		
+		x_close = 0;
+		y_close = 0;
+		
+		boid_ctr = 1;
+		
+	end
+	
+	xy_writeback xyw (.*);
+	
+	/*
 
 	// xy_sep_chk verification
 
@@ -185,7 +238,7 @@ end
 	end
 
 	xy_sep_chk xsc (.*);
-	
+	*/
 /*
 
 // memory verification

@@ -465,9 +465,15 @@ module xy_writeback
 	
 	logic signed [31:0] vx_t_2, vy_t_2;
 	
-	assign vx_t_2 = vx_t_1 + x_close_f;
+	logic signed [31:0] vx_t, vy_t;
 	
-	assign vy_t_2 = vy_t_1 + y_close_f;
+	assign vx_t_2 = vx + x_close_f;
+	
+	assign vy_t_2 = vy + y_close_f;
+	
+	assign vx_t = vx_t_1 + vx_t_2;
+	
+	assign vy_t = vy_t_1 + vy_t_2;
 	
 	// Perform movement to drive boids away from boundaries
 	
@@ -484,32 +490,32 @@ module xy_writeback
 	always_comb begin
 		case (x_bchk)
 			2'd0: begin
-					vx_bounded = vx_t_2;
+					vx_bounded = vx_t;
 				end
 			2'd1: begin
-					vx_bounded = vx_t_2 + turnfactor;
+					vx_bounded = vx_t + turnfactor;
 				end
 			2'd2: begin
-					vx_bounded = vx_t_2 - turnfactor;
+					vx_bounded = vx_t - turnfactor;
 				end
 			default: begin
-					vx_bounded = vx_t_2;
+					vx_bounded = vx_t;
 					// 3 is unreachable, contradictory state
 				end 
 		endcase
 		
 		case (y_bchk)
 			2'd0: begin
-					vy_bounded = vy_t_2;
+					vy_bounded = vy_t;
 				end
 			2'd1: begin
-					vy_bounded = vy_t_2 + turnfactor;
+					vy_bounded = vy_t + turnfactor;
 				end
 			2'd2: begin
-					vy_bounded = vy_t_2 - turnfactor;
+					vy_bounded = vy_t - turnfactor;
 				end
 			default: begin
-					vy_bounded = vy_t_2;
+					vy_bounded = vy_t;
 					// 3 is unreachable, contradictory state
 				end 
 		endcase
