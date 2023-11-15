@@ -7,7 +7,7 @@ module register_test_memory
 	input logic reset,
 	input logic	[$clog2(num_boids):0] which_boid,
 	
-	input	logic	[6:0] 	wb_en,
+	input	logic	[6:0] 	w_en,
 	
 	// input ports
 	
@@ -50,7 +50,7 @@ module register_test_memory
 		(	
 			.clk(clk),
 			.reset(reset),
-			.d((which_boid == i && wb_en[1] && wb_en[0]) ? x_in : x_t[i]),
+			.d((which_boid == i && w_en[1] && w_en[0]) ? x_in : x_t[i]),
 			.q(x_t[i])
 		);
 		
@@ -58,7 +58,7 @@ module register_test_memory
 		(
 			.clk(clk),
 			.reset(reset),
-			.d((which_boid == i && wb_en[2] && wb_en[0]) ? y_in : y_t[i]),
+			.d((which_boid == i && w_en[2] && w_en[0]) ? y_in : y_t[i]),
 			.q(y_t[i])
 		);
 		
@@ -66,7 +66,7 @@ module register_test_memory
 		(
 			.clk(clk),
 			.reset(reset),
-			.d((which_boid == i && wb_en[3] && wb_en[0]) ? vx_in : vx_t[i]),
+			.d((which_boid == i && w_en[3] && w_en[0]) ? vx_in : vx_t[i]),
 			.q(vx_t[i])
 		);
 		
@@ -74,7 +74,7 @@ module register_test_memory
 		(
 			.clk(clk),
 			.reset(reset),
-			.d((which_boid == i && wb_en[4] && wb_en[0]) ? vy_in : vy_t[i]),
+			.d((which_boid == i && w_en[4] && w_en[0]) ? vy_in : vy_t[i]),
 			.q(vy_t[i])
 		);
 		
@@ -82,7 +82,7 @@ module register_test_memory
 		(
 			.clk(clk),
 			.reset(reset),
-			.d((which_boid == i && wb_en[5] && wb_en[0]) ? vx_acc_in : vx_acc_t[i]),
+			.d((which_boid == i && w_en[5] && w_en[0]) ? vx_acc_in : vx_acc_t[i]),
 			.q(vx_acc_t[i])
 		);
 		
@@ -90,7 +90,7 @@ module register_test_memory
 		(
 			.clk(clk),
 			.reset(reset),
-			.d((which_boid == i && wb_en[6] && wb_en[0]) ? vy_acc_in : vy_acc_t[i]),
+			.d((which_boid == i && w_en[6] && w_en[0]) ? vy_acc_in : vy_acc_t[i]),
 			.q(vy_acc_t[i])
 		);
 		end
@@ -116,7 +116,7 @@ module register_test_mem_wrapper
 	input logic reset,
 	input logic	[$clog2(num_boids):0] which_boid,
 	
-	input	logic	[6:0] 	wb_en,
+	input	logic	[6:0] 	w_en,
 	
 	// input ports
 	

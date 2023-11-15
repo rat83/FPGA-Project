@@ -15,6 +15,24 @@ module boid_accelerator(
 	
 );
 
+xcel_dp the_dp 
+(
+	.clk(clk),
+	.reset(reset)
+);
+
+xcel_ctrl the_ctrl 
+(
+	.clk(clk),
+	.reset(reset)
+);
+
+register_test_mem_wrapper the_mem 
+(
+	.clk(clk),
+	.reset(reset)
+);
+
 endmodule
 
 

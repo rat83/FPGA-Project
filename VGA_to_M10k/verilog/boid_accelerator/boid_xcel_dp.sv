@@ -1,12 +1,15 @@
 module xcel_dp(
 	input logic clk,
 	input logic en_write,
+	input logic en_itr,
 	input logic reset,
 	
 	// control signals
 	input logic r_en_tot,
 	
 	input logic r_en_itr,
+	
+	input logic [6:0] wb_en,
 	
 	// data from memory
 	input logic [31:0]
@@ -32,10 +35,12 @@ module xcel_dp(
 		ok this documentation is shit update it later. its just gonna move the boid
 		around and make it turn at the boundary
 		
-		this added to make materially different commit
+		*_comb values are the finalized combinatorial value of some variable prior to
+		it being sent to a register or memory
 	*/
 	
 	// x/v transient wires
+	// these no longer are written back into 
 	
 	logic [31:0] 			x_comb, 	y_comb;
 	logic signed [31:0]	vx_comb,	vy_comb;
@@ -189,7 +194,44 @@ module xcel_dp(
 	
 	logic signed [31:0] vx_bounded, vy_bounded;
 
-	// Writeback pipeline
+	// Writeback pipeline variables
+	
+	logic [31:0] 				vx_wb, vy_wb, x_wb, y_wb;
+	
+	logic [31:0] 				x_avg_wb, y_avg_wb;
+	
+	logic signed [31:0] 		vx_avg_wb, vy_avg_wb;
+	
+	logic [31:0] 				x_close_wb, y_close_wb;
+	
+	// writeback input muxing
+	
+	// eliminates switching in writeback pipeline prior to the data being
+	// ready to be written back to memory
+	
+	assign x_wb 			= wb_en[0] ? x : 32'b0;
+	
+	assign y_wb 			= wb_en[0] ? y : 32'b0;
+	
+	assign vx_wb 			= wb_en[0] ? vx : 32'b0;
+	
+	assign vy_wb 			= wb_en[0] ? vy : 32'b0;
+	
+	assign x_avg_wb 		= wb_en[0] ? x_avg : 32'b0;
+	
+	assign y_avg_wb 		= wb_en[0] ? y_avg : 32'b0;
+	
+	assign vx_avg_wb 		= wb_en[0] ? vx_avg : 32'b0;
+	
+	assign vy_avg_wb 		= wb_en[0] ? vy_avg : 32'b0;
+	
+	assign x_close_wb 	= wb_en[0] ? x_close : 32'b0;
+
+	assign y_close_wb 	= wb_en[0] ? y_close : 32'b0;
+	
+	assign boid_ctr_wb 	= wb_en[0] ? boid_ctr : 6'b0;
+	
+	// writeback module
 	
 	xy_writeback xbc ( .* );
 	
@@ -345,15 +387,15 @@ endmodule
 module xy_writeback
 (
 	// vx vy input
-	input logic [31:0] vx, vy, x, y, x_bound, y_bound,
+	input logic [31:0] vx_wb, vy_wb, x_wb, y_wb, x_bound, y_bound,
 	
-	input logic [31:0] x_avg, y_avg,
+	input logic [31:0] x_avg_wb, y_avg_wb,
 	
-	input logic signed [31:0] vx_avg, vy_avg,
+	input logic signed [31:0] vx_avg_wb, vy_avg_wb,
 	
-	input logic [31:0] x_close, y_close,
+	input logic [31:0] x_close_wb, y_close_wb,
 	
-	input logic [5:0] boid_ctr,
+	input logic [5:0] boid_ctr_wb,
 	
 	// vx vy output
 	output logic signed [31:0] vx_bounded, vy_bounded
