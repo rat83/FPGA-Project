@@ -14,8 +14,7 @@ module xcel_ctrl
 	
 	output logic [$clog2(num_boids):0] 	which_boid,
 	
-	output logic [6:0] 					 	w_en,
-	output logic 								dp_en,
+	output logic [6:0] 					 	wb_en,
 	output logic 							 	r_en_tot,
 	output logic							 	r_en_itr
 );
@@ -104,8 +103,7 @@ localparam [2:0]
 	// state control variables
 	always @(*) begin
 		which_boid = 0;
-		w_en = 7'b0;
-		dp_en = 1'b0;
+		wb_en = 7'b0;
 		r_en_tot = 1'b0;
 		r_en_itr = 1'b0;
 		case(state)
@@ -118,12 +116,14 @@ localparam [2:0]
 		sa_ld: begin
 			// Must be reworked at parallelization step
 			which_boid = !boid_tot_ctr;
-			r_en_itr = 1'b1;
 		end
-		sa_calc: begin dp_en = 1'b1; end
+		sa_calc: begin 
+			which_boid = !boid_tot_ctr;
+			r_en_itr = 1'b1; 
+		end
 		ac_wb: begin 
 			which_boid = boid_tot_ctr;
-			w_en = 7'b0011111; end
+			wb_en = 7'b0011111; end
 		endcase
 	end
 

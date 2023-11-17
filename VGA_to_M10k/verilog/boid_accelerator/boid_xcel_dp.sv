@@ -139,7 +139,7 @@ module xcel_dp(
 	(
 		.clk		(clk),
 		.reset	(reset),
-		.d			(dp_en ? xc_comb : x_close),
+		.d			(r_en_itr ? xc_comb : x_close),
 		.q			(x_close)
 	);
 	
@@ -148,7 +148,7 @@ module xcel_dp(
 	(	
 		.clk		(clk),
 		.reset	(reset),
-		.d			(dp_en ? yc_comb : y_close),
+		.d			(r_en_itr ? yc_comb : y_close),
 		.q			(y_close)
 	);
 	

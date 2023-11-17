@@ -27,7 +27,11 @@ module register_test_memory
 	output logic	[20:0] 	vy_out,
 	
 	output logic	[31:0]	vx_acc_out,
-	output logic	[31:0]	vy_acc_out
+	output logic	[31:0]	vy_acc_out,
+	
+	input logic 	[31:0]	x_chk_in,
+	input logic 	[31:0]	y_chk_in,
+	output logic				is_boid_here
 	
 	// To investigate: making this a bi-directional bus
 	
@@ -105,6 +109,21 @@ module register_test_memory
 	assign vx_acc_out	=	vx_acc_t[which_boid];
 	assign vy_acc_out = 	vy_acc_t[which_boid];
 	
+	logic [num_boids-1:0] is_boid_here_t;
+	
+	integer j;
+	always @(*) begin
+		for(j = 0; j < num_boids; j++) begin
+			is_boid_here_t[j] = ({{20{x_t[j][21]}}, (x_t[j] >>> 16)} == x_chk_in && {{21{y_t[j][20]}}, (y_t[j] >>> 16)} == y_chk_in);
+		end
+	end
+	
+	always_comb begin
+		is_boid_here = '0; // fill 0
+		foreach(is_boid_here_t[k])
+			is_boid_here |= is_boid_here_t[k];
+	end
+	
 endmodule
 
 module register_test_mem_wrapper
@@ -136,7 +155,12 @@ module register_test_mem_wrapper
 	output logic	[31:0] 	vy_out_32,
 	
 	output logic	[31:0]	vx_acc_out,
-	output logic	[31:0]	vy_acc_out
+	output logic	[31:0]	vy_acc_out,
+	
+	input logic 	[31:0]	x_chk_in,
+	input logic 	[31:0]	y_chk_in,
+	output logic				is_boid_here
+	
 	
 	// To investigate: making this a bi-directional bus
 	

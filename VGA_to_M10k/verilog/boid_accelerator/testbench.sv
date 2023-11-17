@@ -60,6 +60,7 @@ initial begin
 	#50000
 	$stop;
 end
+	/*
 	
 	// xy_writeback verification
 	
@@ -112,7 +113,10 @@ end
 		
 	end
 	
+	
 	xy_writeback xyw (.*);
+	
+	*/
 	
 	/*
 
@@ -239,15 +243,21 @@ end
 
 	xy_sep_chk xsc (.*);
 	*/
-/*
+
 
 // memory verification
+
+logic [31:0] x_chk_in, y_chk_in;
+
+logic is_boid_here;
 
 initial begin
 	x = 0;
 	y = 0;
 	vx = 0;
 	vy = 0;
+	x_chk_in = 1;
+	y_chk_in = 1;
 end
 
 
@@ -258,14 +268,14 @@ register_test_mem_wrapper#(2) rtm(
 	
 	logic [$clog2(2):0] which_boid;
 	// 
-	logic [6:0] 					 w_en;
+	logic [6:0] 					 wb_en;
 	logic 							 dp_en;
 	logic 							 r_en_tot;
 	logic								 r_en_itr;
 
 // notional dpath
 always @(posedge clk) begin
-	if (w_en != 0) begin
+	if (wb_en != 0) begin
 		x = x + 1;
 		y = y + 1;
 		vx = vx + 1;
@@ -284,7 +294,7 @@ logic [31:0] x_sh, y_sh;
 
 assign x_sh = x >>> 16;
 assign y_sh = y >>> 16;
-*/
+
 /*
 
 amax_bmin dut1 (

@@ -1,20 +1,51 @@
+# Compile of boid_accelerator.sv failed with 1 errors.
+# Compile of testbench.sv failed with 2 errors.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv failed with 1 errors.
+# Compile of boid_xcel_mem.sv failed with 10 errors.
+# 7 compiles, 4 failed with 14 errors.
 # Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv failed with 5 errors.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv failed with 1 errors.
+# Compile of boid_xcel_mem.sv failed with 10 errors.
+# 7 compiles, 2 failed with 11 errors.
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv failed with 1 errors.
+# Compile of boid_xcel_mem.sv failed with 10 errors.
+# 7 compiles, 2 failed with 11 errors.
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv failed with 1 errors.
+# Compile of boid_xcel_mem.sv failed with 10 errors.
+# 7 compiles, 2 failed with 11 errors.
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
 # Compile of hex_decoder.v was successful.
 # Compile of boid_xcel_helper.sv was successful.
 # Compile of boid_xcel_dp.sv was successful.
 # Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 1 failed with 5 errors.
+# Compile of boid_xcel_mem.sv failed with 1 errors.
+# 7 compiles, 1 failed with 1 error.
 # Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv failed with 5 errors.
+# Compile of testbench.sv was successful.
 # Compile of hex_decoder.v was successful.
 # Compile of boid_xcel_helper.sv was successful.
 # Compile of boid_xcel_dp.sv was successful.
 # Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 1 failed with 5 errors.
-# Load canceled
+# Compile of boid_xcel_mem.sv failed with 2 errors.
+# 7 compiles, 1 failed with 2 errors.
 # Compile of boid_accelerator.sv was successful.
 # Compile of testbench.sv was successful.
 # Compile of hex_decoder.v was successful.
@@ -25,9 +56,23 @@
 # 7 compiles, 0 failed with no errors.
 vsim -gui work.testbench
 # vsim -gui work.testbench 
-# Start time: 18:45:33 on Nov 10,2023
+# Start time: 14:48:02 on Nov 17,2023
 # Loading sv_std.std
 # Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'wb_en'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_mem.sv
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(264): [TFMPC] - Too few port connections. Expected 19, found 18.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/rtm File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_mem.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(264): [TFMPC] - Missing connection for port 'wb_en'.
+# Error loading design
+# End time: 14:48:02 on Nov 17,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
 # Compile of boid_accelerator.sv was successful.
 # Compile of testbench.sv was successful.
 # Compile of hex_decoder.v was successful.
@@ -36,156 +81,128 @@ vsim -gui work.testbench
 # Compile of boid_xcel_ctrl.sv was successful.
 # Compile of boid_xcel_mem.sv was successful.
 # 7 compiles, 0 failed with no errors.
-# Load canceled
-restart -f
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 14:48:47 on Nov 17,2023
+# Loading sv_std.std
 # Loading work.testbench
-# Loading work.xy_sep_chk
-# Loading work.fix15_mul
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'w_en'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/ctrl File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_ctrl.sv
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(287): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/ctrl File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_ctrl.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(287): [TFMPC] - Missing connection for port 'w_en'.
+# Error loading design
+# End time: 14:48:47 on Nov 17,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 14:49:34 on Nov 17,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+# ** Error: (vsim-3694) The implicit port connection (.*) did not find a matching port, net, variable or interface instance in testbench for port 'w_en'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/ctrl File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_ctrl.sv
+# ** Warning: (vsim-3017) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(287): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/ctrl File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_ctrl.sv
+# ** Warning: (vsim-3722) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(287): [TFMPC] - Missing connection for port 'w_en'.
+# Error loading design
+# End time: 14:49:35 on Nov 17,2023, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 2
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 14:50:15 on Nov 17,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+run
 add wave -position insertpoint  \
-sim:/testbench/clk \
-sim:/testbench/reset \
-sim:/testbench/en
+sim:/testbench/rtm/num_boids \
+sim:/testbench/rtm/clk \
+sim:/testbench/rtm/reset \
+sim:/testbench/rtm/which_boid \
+sim:/testbench/rtm/wb_en \
+sim:/testbench/rtm/x_in_32 \
+sim:/testbench/rtm/y_in_32 \
+sim:/testbench/rtm/vx_in_32 \
+sim:/testbench/rtm/vy_in_32 \
+sim:/testbench/rtm/vx_acc_in \
+sim:/testbench/rtm/vy_acc_in \
+sim:/testbench/rtm/x_out_32 \
+sim:/testbench/rtm/y_out_32 \
+sim:/testbench/rtm/vx_out_32 \
+sim:/testbench/rtm/vy_out_32 \
+sim:/testbench/rtm/vx_acc_out \
+sim:/testbench/rtm/vy_acc_out \
+sim:/testbench/rtm/x_chk_in \
+sim:/testbench/rtm/y_chk_in \
+sim:/testbench/rtm/is_boid_here \
+sim:/testbench/rtm/x_in \
+sim:/testbench/rtm/y_in \
+sim:/testbench/rtm/vx_in \
+sim:/testbench/rtm/vy_in \
+sim:/testbench/rtm/x_out \
+sim:/testbench/rtm/y_out \
+sim:/testbench/rtm/vx_out \
+sim:/testbench/rtm/vy_out
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: rat83  Hostname: EN-EC-LPH238-26  ProcessID: 5844
-#           Attempting to use alternate WLF file "./wlfthtvg7k".
+#           Attempting to use alternate WLF file "./wlftattvrn".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfthtvg7k
+#           Using alternate file: ./wlftattvrn
+restart -f
 add wave -position insertpoint  \
-sim:/testbench/xsc/x \
-sim:/testbench/xsc/y \
-sim:/testbench/xsc/x_in_xcel \
-sim:/testbench/xsc/y_in_xcel \
-sim:/testbench/xsc/vx \
-sim:/testbench/xsc/vy \
-sim:/testbench/xsc/vx_in_xcel \
-sim:/testbench/xsc/vy_in_xcel \
-sim:/testbench/xsc/x_avg \
-sim:/testbench/xsc/y_avg \
-sim:/testbench/xsc/x_close \
-sim:/testbench/xsc/y_close \
-sim:/testbench/xsc/xa_comb \
-sim:/testbench/xsc/ya_comb \
-sim:/testbench/xsc/vx_avg \
-sim:/testbench/xsc/vy_avg \
-sim:/testbench/xsc/vxa_comb \
-sim:/testbench/xsc/vya_comb \
-sim:/testbench/xsc/xc_comb \
-sim:/testbench/xsc/yc_comb \
-sim:/testbench/xsc/boid_ctr \
-sim:/testbench/xsc/boid_ctr_in \
-sim:/testbench/xsc/x_sq \
-sim:/testbench/xsc/y_sq \
-sim:/testbench/xsc/dx_t \
-sim:/testbench/xsc/dy_t \
-sim:/testbench/xsc/d_sq \
-sim:/testbench/xsc/d_comparison
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
-restart -f
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# Compile of boid_xcel_helper.sv was successful.
-# Compile of boid_xcel_dp.sv was successful.
-# Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 0 failed with no errors.
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# Compile of boid_xcel_helper.sv was successful.
-# Compile of boid_xcel_dp.sv was successful.
-# Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.xy_sep_chk
-# Loading work.fix15_mul
-run
-run
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# Compile of boid_xcel_helper.sv was successful.
-# Compile of boid_xcel_dp.sv was successful.
-# Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.xy_sep_chk
-# Loading work.fix15_mul
-run
-run
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# Compile of boid_xcel_helper.sv was successful.
-# Compile of boid_xcel_dp.sv was successful.
-# Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 0 failed with no errors.
-run
-restart -f
-# Loading work.testbench
-# Loading work.xy_sep_chk
-# Loading work.fix15_mul
-run
-run
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# Compile of boid_xcel_helper.sv was successful.
-# Compile of boid_xcel_dp.sv was successful.
-# Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.xy_sep_chk
-# Loading work.fix15_mul
-run
-run
-add wave -position insertpoint  \
-sim:/testbench/xsc/d01_a
-add wave -position insertpoint  \
-sim:/testbench/xsc/d01_b
-restart -f
-run
-run
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# Compile of boid_xcel_helper.sv was successful.
-# Compile of boid_xcel_dp.sv was successful.
-# Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.xy_sep_chk
-# Loading work.fix15_mul
-run
-run
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# Compile of boid_xcel_helper.sv was successful.
-# Compile of boid_xcel_dp.sv was successful.
-# Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.xy_sep_chk
-# Loading work.fix15_mul
+sim:/testbench/rtm/num_boids \
+sim:/testbench/rtm/clk \
+sim:/testbench/rtm/reset \
+sim:/testbench/rtm/which_boid \
+sim:/testbench/rtm/wb_en \
+sim:/testbench/rtm/x_in_32 \
+sim:/testbench/rtm/y_in_32 \
+sim:/testbench/rtm/vx_in_32 \
+sim:/testbench/rtm/vy_in_32 \
+sim:/testbench/rtm/vx_acc_in \
+sim:/testbench/rtm/vy_acc_in \
+sim:/testbench/rtm/x_out_32 \
+sim:/testbench/rtm/y_out_32 \
+sim:/testbench/rtm/vx_out_32 \
+sim:/testbench/rtm/vy_out_32 \
+sim:/testbench/rtm/vx_acc_out \
+sim:/testbench/rtm/vy_acc_out \
+sim:/testbench/rtm/x_chk_in \
+sim:/testbench/rtm/y_chk_in \
+sim:/testbench/rtm/is_boid_here \
+sim:/testbench/rtm/x_in \
+sim:/testbench/rtm/y_in \
+sim:/testbench/rtm/vx_in \
+sim:/testbench/rtm/vy_in \
+sim:/testbench/rtm/x_out \
+sim:/testbench/rtm/y_out \
+sim:/testbench/rtm/vx_out \
+sim:/testbench/rtm/vy_out
 run
 run
 run
@@ -196,10 +213,6 @@ run
 run
 run
 run
-run
-run
-run
-restart -f
 run
 run
 run
@@ -222,136 +235,240 @@ run
 # Compile of boid_xcel_helper.sv was successful.
 # Compile of boid_xcel_dp.sv was successful.
 # Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.xy_sep_chk
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# Compile of boid_xcel_helper.sv was successful.
-# Compile of boid_xcel_dp.sv was successful.
-# Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.xy_sep_chk
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# Compile of boid_xcel_helper.sv was successful.
-# Compile of boid_xcel_dp.sv was successful.
-# Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 0 failed with no errors.
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# Compile of boid_xcel_helper.sv was successful.
-# Compile of boid_xcel_dp.sv was successful.
-# Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.xy_sep_chk
-# Loading work.fix15_mul
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# Compile of boid_xcel_helper.sv was successful.
-# Compile of boid_xcel_dp.sv was successful.
-# Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.xy_sep_chk
-# Loading work.fix15_mul
-run
-run -all
-# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
-#    Time: 50100 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# Compile of boid_xcel_helper.sv was successful.
-# Compile of boid_xcel_dp.sv was successful.
-# Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/x'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/y'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/x_in_xcel'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/y_in_xcel'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/vx'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/vy'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/vx_in_xcel'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/vy_in_xcel'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/x_avg'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/y_avg'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/x_close'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/y_close'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/xa_comb'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/ya_comb'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/vx_avg'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/vy_avg'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/vxa_comb'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/vya_comb'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/xc_comb'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/yc_comb'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/boid_ctr_in'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/x_sq'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/y_sq'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/dx_t'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/dy_t'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/d_sq'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/boid_ctr'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/d_comparison'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/d01_a'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/xsc/d01_b'. 
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv failed with 2 errors.
-# Compile of hex_decoder.v was successful.
-# Compile of boid_xcel_helper.sv was successful.
-# Compile of boid_xcel_dp.sv was successful.
-# Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
+# Compile of boid_xcel_mem.sv failed with 2 errors.
 # 7 compiles, 1 failed with 2 errors.
 # Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv failed with 2 errors.
+# Compile of testbench.sv was successful.
 # Compile of hex_decoder.v was successful.
 # Compile of boid_xcel_helper.sv was successful.
 # Compile of boid_xcel_dp.sv was successful.
 # Compile of boid_xcel_ctrl.sv was successful.
 # Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 1 failed with 2 errors.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+
+run
+run
+run
+run
+run
+run
+
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 # Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv failed with 1 errors.
+# Compile of testbench.sv was successful.
 # Compile of hex_decoder.v was successful.
 # Compile of boid_xcel_helper.sv was successful.
 # Compile of boid_xcel_dp.sv was successful.
 # Compile of boid_xcel_ctrl.sv was successful.
 # Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/testbench/rtm/rtm/x_t \
+sim:/testbench/rtm/rtm/y_t
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
+#    Time: 50100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
+add wave -position insertpoint  \
+sim:/testbench/rtm/rtm/is_boid_here_t
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
+#    Time: 50100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
+#    Time: 50100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
+add wave -position insertpoint  \
+sim:/testbench/rtm/rtm/x_chk_in
+add wave -position insertpoint  \
+sim:/testbench/rtm/rtm/y_chk_in
+run -all
+run -all
+run -all
+run -all
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv failed with 1 errors.
 # 7 compiles, 1 failed with 1 error.
 # Compile of boid_accelerator.sv was successful.
 # Compile of testbench.sv was successful.
@@ -359,76 +476,7 @@ restart -f
 # Compile of boid_xcel_helper.sv was successful.
 # Compile of boid_xcel_dp.sv was successful.
 # Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 0 failed with no errors.
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# Compile of boid_xcel_helper.sv was successful.
-# Compile of boid_xcel_dp.sv was successful.
-# Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 0 failed with no errors.
-run
-restart -f
-# Loading work.testbench
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# Compile of boid_xcel_helper.sv was successful.
-# Compile of boid_xcel_dp.sv was successful.
-# Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.xy_writeback
-# Loading work.lut_32_divider
-# Loading work.fix15_mul
-add wave -position insertpoint  \
-sim:/testbench/xyw/vx \
-sim:/testbench/xyw/vy \
-sim:/testbench/xyw/x \
-sim:/testbench/xyw/y \
-sim:/testbench/xyw/x_bound \
-sim:/testbench/xyw/y_bound \
-sim:/testbench/xyw/x_avg \
-sim:/testbench/xyw/y_avg \
-sim:/testbench/xyw/vx_avg \
-sim:/testbench/xyw/vy_avg \
-sim:/testbench/xyw/x_close \
-sim:/testbench/xyw/y_close \
-sim:/testbench/xyw/boid_ctr \
-sim:/testbench/xyw/vx_bounded \
-sim:/testbench/xyw/vy_bounded \
-sim:/testbench/xyw/div_val \
-sim:/testbench/xyw/x_avg_n \
-sim:/testbench/xyw/y_avg_n \
-sim:/testbench/xyw/vx_avg_n \
-sim:/testbench/xyw/vy_avg_n \
-sim:/testbench/xyw/x_avg_f \
-sim:/testbench/xyw/y_avg_f \
-sim:/testbench/xyw/vx_avg_f \
-sim:/testbench/xyw/vy_avg_f \
-sim:/testbench/xyw/vx_t_1 \
-sim:/testbench/xyw/vy_t_1 \
-sim:/testbench/xyw/x_close_f \
-sim:/testbench/xyw/y_close_f \
-sim:/testbench/xyw/vx_t_2 \
-sim:/testbench/xyw/vy_t_2 \
-sim:/testbench/xyw/x_bchk \
-sim:/testbench/xyw/y_bchk \
-sim:/testbench/xyw/x_max_b_t \
-sim:/testbench/xyw/y_max_b_t
-run
-run
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# Compile of boid_xcel_helper.sv was successful.
-# Compile of boid_xcel_dp.sv failed with 1 errors.
-# Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
+# Compile of boid_xcel_mem.sv failed with 1 errors.
 # 7 compiles, 1 failed with 1 error.
 # Compile of boid_accelerator.sv was successful.
 # Compile of testbench.sv was successful.
@@ -440,10 +488,16 @@ run
 # 7 compiles, 0 failed with no errors.
 restart -f
 # Loading work.testbench
-# Loading work.xy_writeback
-# Loading work.lut_32_divider
-# Loading work.fix15_mul
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
 run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
 # ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
 #    Time: 50100 ns  Iteration: 0  Instance: /testbench
 # Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
@@ -457,75 +511,97 @@ run -all
 # 7 compiles, 0 failed with no errors.
 restart -f
 # Loading work.testbench
-# Loading work.xy_writeback
-# Loading work.lut_32_divider
-# Loading work.fix15_mul
-run
-run
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
+#    Time: 50100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
+restart -f
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
+#    Time: 50100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Loading work.register_test_mem_wrapper
+# Loading work.register_test_memory
+# Loading work.zero_pad_fix15
+# Loading work.xcel_ctrl
+# Loading work.fall_edge_detector
+# Loading work.d_reg
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
+#    Time: 50100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
 add wave -position insertpoint  \
-sim:/testbench/xyw/vx \
-sim:/testbench/xyw/vy \
-sim:/testbench/xyw/x \
-sim:/testbench/xyw/y \
-sim:/testbench/xyw/x_bound \
-sim:/testbench/xyw/y_bound \
-sim:/testbench/xyw/x_avg \
-sim:/testbench/xyw/y_avg \
-sim:/testbench/xyw/vx_avg \
-sim:/testbench/xyw/vy_avg \
-sim:/testbench/xyw/x_close \
-sim:/testbench/xyw/y_close \
-sim:/testbench/xyw/boid_ctr \
-sim:/testbench/xyw/vx_bounded \
-sim:/testbench/xyw/vy_bounded \
-sim:/testbench/xyw/div_val \
-sim:/testbench/xyw/x_avg_n \
-sim:/testbench/xyw/y_avg_n \
-sim:/testbench/xyw/vx_avg_n \
-sim:/testbench/xyw/vy_avg_n \
-sim:/testbench/xyw/x_avg_f \
-sim:/testbench/xyw/y_avg_f \
-sim:/testbench/xyw/vx_avg_f \
-sim:/testbench/xyw/vy_avg_f \
-sim:/testbench/xyw/vx_t_1 \
-sim:/testbench/xyw/vy_t_1 \
-sim:/testbench/xyw/x_close_f \
-sim:/testbench/xyw/y_close_f \
-sim:/testbench/xyw/vx_t_2 \
-sim:/testbench/xyw/vy_t_2 \
-sim:/testbench/xyw/vx_t \
-sim:/testbench/xyw/vy_t \
-sim:/testbench/xyw/x_bchk \
-sim:/testbench/xyw/y_bchk \
-sim:/testbench/xyw/x_max_b_t \
-sim:/testbench/xyw/y_max_b_t
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# Compile of boid_xcel_helper.sv was successful.
-# Compile of boid_xcel_dp.sv was successful.
-# Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 0 failed with no errors.
+sim:/testbench/b_1
+add wave -position insertpoint  \
+sim:/testbench/rtm/rtm/num_boids \
+sim:/testbench/rtm/rtm/clk \
+sim:/testbench/rtm/rtm/reset \
+sim:/testbench/rtm/rtm/which_boid \
+sim:/testbench/rtm/rtm/wb_en \
+sim:/testbench/rtm/rtm/x_in \
+sim:/testbench/rtm/rtm/y_in \
+sim:/testbench/rtm/rtm/vx_in \
+sim:/testbench/rtm/rtm/vy_in \
+sim:/testbench/rtm/rtm/vx_acc_in \
+sim:/testbench/rtm/rtm/vy_acc_in \
+sim:/testbench/rtm/rtm/x_out \
+sim:/testbench/rtm/rtm/y_out \
+sim:/testbench/rtm/rtm/vx_out \
+sim:/testbench/rtm/rtm/vy_out \
+sim:/testbench/rtm/rtm/vx_acc_out \
+sim:/testbench/rtm/rtm/vy_acc_out \
+sim:/testbench/rtm/rtm/x_chk_in \
+sim:/testbench/rtm/rtm/y_chk_in \
+sim:/testbench/rtm/rtm/is_boid_here \
+sim:/testbench/rtm/rtm/x_t \
+sim:/testbench/rtm/rtm/y_t \
+sim:/testbench/rtm/rtm/vx_t \
+sim:/testbench/rtm/rtm/vy_t \
+sim:/testbench/rtm/rtm/vx_acc_t \
+sim:/testbench/rtm/rtm/vy_acc_t \
+sim:/testbench/rtm/rtm/is_boid_here_t \
+sim:/testbench/rtm/rtm/j
 restart -f
-# Loading work.testbench
-# Loading work.xy_writeback
-# Loading work.lut_32_divider
-# Loading work.fix15_mul
-run
-run
-# Compile of boid_accelerator.sv was successful.
-# Compile of testbench.sv was successful.
-# Compile of hex_decoder.v was successful.
-# Compile of boid_xcel_helper.sv was successful.
-# Compile of boid_xcel_dp.sv was successful.
-# Compile of boid_xcel_ctrl.sv was successful.
-# Compile of boid_xcel_mem.sv was successful.
-# 7 compiles, 0 failed with no errors.
-restart -f
-# Loading work.testbench
-# Loading work.xy_writeback
-# Loading work.lut_32_divider
-# Loading work.fix15_mul
-run
-run
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(61)
+#    Time: 50100 ns  Iteration: 0  Instance: /testbench
+# Break in Module testbench at C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv line 61
+run -all
+run -all
+run -all
