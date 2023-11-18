@@ -60,6 +60,71 @@ initial begin
 	#50000
 	$stop;
 end
+
+	// d-path combined verification
+	
+	logic r_en_tot, r_en_itr;
+	
+	logic [6:0] wb_en;
+	
+	logic [31:0]
+		x_in_xcel,
+		y_in_xcel,
+		vx_in_xcel,
+		vy_in_xcel;
+		
+	logic [31:0]
+		x_out_xcel,
+		y_out_xcel,
+		vx_out_xcel,
+		vy_out_xcel;
+	
+	xcel_dp xdp
+	(
+		.*
+		
+	);
+	
+	initial begin
+	
+		r_en_tot = 0;
+		r_en_itr = 0;
+		wb_en		= 0;
+		x_in_xcel 	= 105 << 16;
+		y_in_xcel 	= 105 << 16;
+		vx_in_xcel 	= 2 << 16;
+		vy_in_xcel 	= -1 << 16;
+		
+		# 100
+		
+		r_en_tot = 1;
+		
+		#20
+		
+		r_en_tot = 0;
+		
+		#80
+		
+		r_en_itr = 1;
+		
+		x_in_xcel 	= 115 << 16;
+		y_in_xcel 	= 115 << 16;
+		vx_in_xcel 	= 3 << 16;
+		vy_in_xcel 	= 0 << 16;
+		
+		#20
+		
+		r_en_itr = 0;
+		
+		#80
+		
+		wb_en = 1;
+		
+		//#100
+		
+		
+	end
+
 	/*
 	
 	// xy_writeback verification
@@ -246,7 +311,7 @@ end
 
 
 // memory verification
-
+/*
 logic [31:0] x_chk_in, y_chk_in;
 
 logic is_boid_here;
@@ -295,6 +360,7 @@ logic [31:0] x_sh, y_sh;
 assign x_sh = x >>> 16;
 assign y_sh = y >>> 16;
 
+*/
 /*
 
 amax_bmin dut1 (

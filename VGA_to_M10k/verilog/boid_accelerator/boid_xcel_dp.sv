@@ -1,13 +1,11 @@
 module xcel_dp(
 	input logic clk,
-	input logic en_write,
-	input logic en_itr,
 	input logic reset,
 	
 	// control signals
-	input logic r_en_tot,
+	input logic r_en_tot, // en_write
 	
-	input logic r_en_itr,
+	input logic r_en_itr, // en_itr
 	
 	input logic [6:0] wb_en,
 	
@@ -42,10 +40,13 @@ module xcel_dp(
 	// x/v transient wires
 	// these no longer are written back into 
 	
+	logic [31:0] 			x, 	y;
+	logic signed [31:0]	vx,	vy;
+	
 	logic [31:0] 			x_comb, 	y_comb;
 	logic signed [31:0]	vx_comb,	vy_comb;
 	
-
+	
 	// pos/speed regs for boid to be rewritten
 	
 	d_reg #(32,0)
@@ -157,7 +158,7 @@ module xcel_dp(
 	
 	logic [5:0] boid_ctr, boid_ctr_in;
 	
-	d_reg #(5, 0)
+	d_reg #(6, 0)
 	boid_ctr_reg
 	(
 		.clk		(clk),
@@ -203,6 +204,8 @@ module xcel_dp(
 	logic signed [31:0] 		vx_avg_wb, vy_avg_wb;
 	
 	logic [31:0] 				x_close_wb, y_close_wb;
+	
+	logic [5:0] 				boid_ctr_wb;
 	
 	// writeback input muxing
 	
@@ -414,7 +417,7 @@ module xy_writeback
 	// or multiply all of these things by zero if boid_ctr remains 0
 	
 	lut_32_divider lut(
-		.lut_sel(boid_ctr),
+		.lut_sel(boid_ctr_wb),
 		.div_val(div_val)
 	);
 	
@@ -431,25 +434,25 @@ module xy_writeback
 	// Initial set of divisions (multiplication by 1/neighboring boids, or 0)
 	
 	fix15_mul f15_1(
-		.a(x_avg),
+		.a(x_avg_wb),
 		.b(div_val),
 		.q(x_avg_n)
 	);
 	
 	fix15_mul f15_2(
-		.a(y_avg),
+		.a(y_avg_wb),
 		.b(div_val),
 		.q(y_avg_n)
 	);
 	
 	fix15_mul f15_3(
-		.a(vx_avg),
+		.a(vx_avg_wb),
 		.b(div_val),
 		.q(vx_avg_n)
 	);
 	
 	fix15_mul f15_4(
-		.a(vy_avg),
+		.a(vy_avg_wb),
 		.b(div_val),
 		.q(vy_avg_n)
 	);
@@ -461,25 +464,25 @@ module xy_writeback
 	logic signed [31:0] x_avg_f, y_avg_f, vx_avg_f, vy_avg_f;
 	
 	fix15_mul f15_11(
-		.a(x_avg_n - x),
+		.a(x_avg_n - x_wb),
 		.b(centerfactor),
 		.q(x_avg_f)
 	);
 	
 	fix15_mul f15_21(
-		.a(y_avg_n - y),
+		.a(y_avg_n - y_wb),
 		.b(centerfactor),
 		.q(y_avg_f)
 	);
 	
 	fix15_mul f15_31(
-		.a(vx_avg_n - vx),
+		.a(vx_avg_n - vx_wb),
 		.b(matchfactor),
 		.q(vx_avg_f)
 	);
 	
 	fix15_mul f15_41(
-		.a(vy_avg_n - vy),
+		.a(vy_avg_n - vy_wb),
 		.b(matchfactor),
 		.q(vy_avg_f)
 	);
@@ -494,13 +497,13 @@ module xy_writeback
 	logic signed [31:0] x_close_f, y_close_f;
 	
 	fix15_mul f15_12(
-		.a(x_close),
+		.a(x_close_wb),
 		.b(avoidfactor),
 		.q(x_close_f)
 	);
 	
 	fix15_mul f15_22(
-		.a(y_close),
+		.a(y_close_wb),
 		.b(avoidfactor),
 		.q(y_close_f)
 	);
@@ -509,9 +512,9 @@ module xy_writeback
 	
 	logic signed [31:0] vx_t, vy_t;
 	
-	assign vx_t_2 = vx + x_close_f;
+	assign vx_t_2 = vx_wb + x_close_f;
 	
-	assign vy_t_2 = vy + y_close_f;
+	assign vy_t_2 = vy_wb + y_close_f;
 	
 	assign vx_t = vx_t_1 + vx_t_2;
 	
@@ -526,8 +529,8 @@ module xy_writeback
 	assign x_max_b_t = $signed((32'd640 << 16) - x_bound);
 	assign y_max_b_t = $signed((32'd480 << 16) - y_bound);
 	
-	assign x_bchk = {$signed (x) > $signed(x_max_b_t), $signed(x) < $signed(x_bound)};
-	assign y_bchk = {$signed (y) > $signed(y_max_b_t), $signed(y) < $signed(y_bound)};
+	assign x_bchk = {$signed (x_wb) > $signed(x_max_b_t), $signed(x_wb) < $signed(x_bound)};
+	assign y_bchk = {$signed (y_wb) > $signed(y_max_b_t), $signed(y_wb) < $signed(y_bound)};
 	
 	always_comb begin
 		case (x_bchk)

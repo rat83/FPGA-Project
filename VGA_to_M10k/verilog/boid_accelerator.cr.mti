@@ -1,11 +1,4 @@
-C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv {1 {vlog -work boid_accelerator -sv -stats=none C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module testbench
-
-Top level modules:
-	testbench
-
-} {} {}} C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv {1 {vlog -work work -sv -stats=none C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv
+C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv {1 {vlog -work work -sv -stats=none C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module xcel_dp
 -- Compiling module xy_sep_chk
@@ -13,6 +6,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	xcel_dp
+
+} {} {}} C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv {1 {vlog -work boid_accelerator -sv -stats=none C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module testbench
+
+Top level modules:
+	testbench
 
 } {} {}} C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv {1 {vlog -work work -sv -stats=none C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -29,6 +29,13 @@ Top level modules:
 	fall_edge_detector
 	zero_pad_fix15
 	lut_32_divider
+
+} {} {}} C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_ctrl.sv {1 {vlog -work work -sv -stats=none C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_ctrl.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module xcel_ctrl
+
+Top level modules:
+	xcel_ctrl
 
 } {} {}} C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv {1 {vlog -work boid_accelerator -sv -stats=none C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016

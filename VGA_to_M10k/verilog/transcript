@@ -605,3 +605,550 @@ run -all
 run -all
 run -all
 run -all
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv failed with 7 errors.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 1 failed with 7 errors.
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv failed with 3 errors.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 1 failed with 3 errors.
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv failed with 3 errors.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 1 failed with 3 errors.
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# ** Error: (vsim-3033) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(82): Instantiation of 'xcel_dpath' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv
+#         Searched libraries:
+#             C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator
+run
+# No Design Loaded!
+# Load canceled
+restart -f
+# No Design Loaded!
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 14:50:15 on Nov 17,2023
+# Loading sv_std.std
+# Loading work.testbench
+# ** Error: (vsim-3033) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(82): Instantiation of 'xcel_dpath' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv
+#         Searched libraries:
+#             C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator
+# Error loading design
+# End time: 22:12:30 on Nov 17,2023, Elapsed time: 7:22:15
+# Errors: 2, Warnings: 2
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 22:13:00 on Nov 17,2023
+# Loading sv_std.std
+# Loading work.testbench
+# ** Error: (vsim-3033) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv(82): Instantiation of 'xcel_dpath' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/testbench.sv
+#         Searched libraries:
+#             C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator
+# Error loading design
+# End time: 22:13:00 on Nov 17,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 22:13:23 on Nov 17,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.xcel_dp
+# Loading work.d_reg
+# Loading work.xy_sep_chk
+# Loading work.fix15_mul
+# Loading work.xy_writeback
+# Loading work.lut_32_divider
+# Loading work.amax_bmin
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(50): [PCDPC] - Port size (32) does not match connection size (1) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/x_reg File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(59): [PCDPC] - Port size (32) does not match connection size (1) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/y_reg File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(69): [PCDPC] - Port size (32) does not match connection size (1) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/vx_reg File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(78): [PCDPC] - Port size (32) does not match connection size (1) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/vy_reg File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(159): [PCDPC] - Port size (5) does not match connection size (6) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/boid_ctr_reg File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(159): [PCDPC] - Port size (5) does not match connection size (6) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/boid_ctr_reg File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error: (vsim-8378) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(191): Port size (32) does not match connection size (1) for implicit .name connection port 'x'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(287).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xsc File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv
+# ** Error: (vsim-8378) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(191): Port size (32) does not match connection size (1) for implicit .name connection port 'y'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(287).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xsc File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv
+# ** Error: (vsim-8378) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(191): Port size (32) does not match connection size (1) for implicit .name connection port 'vx'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(289).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xsc File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv
+# ** Error: (vsim-8378) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(191): Port size (32) does not match connection size (1) for implicit .name connection port 'vy'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(289).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xsc File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv
+# ** Error: (vsim-8378) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(234): Port size (6) does not match connection size (1) for implicit .name connection port 'boid_ctr_wb'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(396).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(414): [PCDPC] - Port size (6) does not match connection size (1) for port 'lut_sel'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(128).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/lut File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(431): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_1 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(437): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_2 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(443): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_3 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(449): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_4 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(494): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_12 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(500): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_22 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# Error loading design
+# End time: 22:13:23 on Nov 17,2023, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 13
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 22:16:45 on Nov 17,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.xcel_dp
+# Loading work.d_reg
+# Loading work.xy_sep_chk
+# Loading work.fix15_mul
+# Loading work.xy_writeback
+# Loading work.lut_32_divider
+# Loading work.amax_bmin
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(162): [PCDPC] - Port size (5) does not match connection size (6) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/boid_ctr_reg File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(162): [PCDPC] - Port size (5) does not match connection size (6) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/boid_ctr_reg File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error: (vsim-8378) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(237): Port size (6) does not match connection size (1) for implicit .name connection port 'boid_ctr_wb'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(399).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(417): [PCDPC] - Port size (6) does not match connection size (1) for port 'lut_sel'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(128).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/lut File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(434): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_1 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(440): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_2 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(446): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_3 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(452): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_4 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(497): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_12 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(503): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_22 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# Error loading design
+# End time: 22:16:46 on Nov 17,2023, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 9
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 22:18:01 on Nov 17,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.xcel_dp
+# Loading work.d_reg
+# Loading work.xy_sep_chk
+# Loading work.fix15_mul
+# Loading work.xy_writeback
+# Loading work.lut_32_divider
+# Loading work.amax_bmin
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(162): [PCDPC] - Port size (5) does not match connection size (6) for port 'd'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(8).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/boid_ctr_reg File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(162): [PCDPC] - Port size (5) does not match connection size (6) for port 'q'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(9).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/boid_ctr_reg File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Error: (vsim-8378) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(237): Port size (6) does not match connection size (1) for implicit .name connection port 'boid_ctr_wb'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(399).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(417): [PCDPC] - Port size (6) does not match connection size (1) for port 'lut_sel'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(128).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/lut File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(434): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_1 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(440): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_2 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(446): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_3 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(452): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_4 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(497): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_12 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(503): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_22 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# Error loading design
+# End time: 22:18:01 on Nov 17,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 9
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 22:18:12 on Nov 17,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.xcel_dp
+# Loading work.d_reg
+# Loading work.xy_sep_chk
+# Loading work.fix15_mul
+# Loading work.xy_writeback
+# Loading work.lut_32_divider
+# Loading work.amax_bmin
+# ** Error: (vsim-8378) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(237): Port size (6) does not match connection size (1) for implicit .name connection port 'boid_ctr_wb'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(399).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(417): [PCDPC] - Port size (6) does not match connection size (1) for port 'lut_sel'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(128).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/lut File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(434): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_1 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(440): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_2 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(446): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_3 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(452): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_4 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(497): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_12 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(503): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_22 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# Error loading design
+# End time: 22:18:12 on Nov 17,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 7
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 22:19:29 on Nov 17,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.xcel_dp
+# Loading work.d_reg
+# Loading work.xy_sep_chk
+# Loading work.fix15_mul
+# Loading work.xy_writeback
+# Loading work.lut_32_divider
+# Loading work.amax_bmin
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(419): [PCDPC] - Port size (6) does not match connection size (1) for port 'lut_sel'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(128).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/lut File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(436): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_1 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(442): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_2 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(448): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_3 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(454): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_4 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(499): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_12 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(505): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_22 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: rat83  Hostname: EN-EC-LPH238-26  ProcessID: 5844
+#           Attempting to use alternate WLF file "./wlfta5r8bt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfta5r8bt
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/num_boids'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/clk'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/reset'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/which_boid'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/wb_en'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/x_in'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/y_in'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/vx_in'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/vy_in'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/x_out'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/y_out'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/vx_out'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/vy_out'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/vx_acc_out'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/vy_acc_out'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/x_chk_in'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/y_chk_in'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/is_boid_here'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/x_t'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/y_t'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/testbench/rtm/rtm/is_boid_here_t'. 
+add wave -position insertpoint  \
+sim:/testbench/xdp/clk \
+sim:/testbench/xdp/reset \
+sim:/testbench/xdp/r_en_tot \
+sim:/testbench/xdp/r_en_itr \
+sim:/testbench/xdp/wb_en \
+sim:/testbench/xdp/x_in_xcel \
+sim:/testbench/xdp/y_in_xcel \
+sim:/testbench/xdp/vx_in_xcel \
+sim:/testbench/xdp/vy_in_xcel \
+sim:/testbench/xdp/x_out_xcel \
+sim:/testbench/xdp/y_out_xcel \
+sim:/testbench/xdp/vx_out_xcel \
+sim:/testbench/xdp/vy_out_xcel \
+sim:/testbench/xdp/x \
+sim:/testbench/xdp/y \
+sim:/testbench/xdp/vx \
+sim:/testbench/xdp/vy \
+sim:/testbench/xdp/x_comb \
+sim:/testbench/xdp/y_comb \
+sim:/testbench/xdp/vx_comb \
+sim:/testbench/xdp/vy_comb \
+sim:/testbench/xdp/xa_comb \
+sim:/testbench/xdp/ya_comb \
+sim:/testbench/xdp/x_avg \
+sim:/testbench/xdp/y_avg \
+sim:/testbench/xdp/vxa_comb \
+sim:/testbench/xdp/vya_comb \
+sim:/testbench/xdp/vx_avg \
+sim:/testbench/xdp/vy_avg \
+sim:/testbench/xdp/xc_comb \
+sim:/testbench/xdp/yc_comb \
+sim:/testbench/xdp/x_close \
+sim:/testbench/xdp/y_close \
+sim:/testbench/xdp/boid_ctr \
+sim:/testbench/xdp/boid_ctr_in \
+sim:/testbench/xdp/x_bound \
+sim:/testbench/xdp/y_bound \
+sim:/testbench/xdp/vx_bounded \
+sim:/testbench/xdp/vy_bounded \
+sim:/testbench/xdp/vx_wb \
+sim:/testbench/xdp/vy_wb \
+sim:/testbench/xdp/x_wb \
+sim:/testbench/xdp/y_wb \
+sim:/testbench/xdp/x_avg_wb \
+sim:/testbench/xdp/y_avg_wb \
+sim:/testbench/xdp/vx_avg_wb \
+sim:/testbench/xdp/vy_avg_wb \
+sim:/testbench/xdp/x_close_wb \
+sim:/testbench/xdp/y_close_wb \
+sim:/testbench/xdp/boid_ctr_wb \
+sim:/testbench/xdp/speed \
+sim:/testbench/xdp/speed_bchk
+run
+run
+restart -f
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(419): [PCDPC] - Port size (6) does not match connection size (1) for port 'lut_sel'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(128).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/lut File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(436): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_1 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(442): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_2 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(448): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_3 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(454): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_4 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(499): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_12 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# ** Warning: (vsim-3015) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(505): [PCDPC] - Port size (32) does not match connection size (1) for port 'a'. The port definition is at: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc/f15_22 File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv failed with 2 errors.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 1 failed with 2 errors.
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Loading work.xcel_dp
+# Loading work.d_reg
+# Loading work.xy_sep_chk
+# Loading work.fix15_mul
+# Loading work.xy_writeback
+# Loading work.lut_32_divider
+# Loading work.amax_bmin
+# ** Error: (vsim-3043) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(532): Unresolved reference to 'x'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv
+# ** Error: (vsim-3043) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(533): Unresolved reference to 'y'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 22:19:29 on Nov 17,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.xcel_dp
+# Loading work.d_reg
+# Loading work.xy_sep_chk
+# Loading work.fix15_mul
+# Loading work.xy_writeback
+# Loading work.lut_32_divider
+# Loading work.amax_bmin
+# ** Error: (vsim-3043) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(532): Unresolved reference to 'x'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv
+# ** Error: (vsim-3043) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(533): Unresolved reference to 'y'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv
+# Error loading design
+# End time: 22:22:36 on Nov 17,2023, Elapsed time: 0:03:07
+# Errors: 25, Warnings: 16
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui testbench
+# vsim -gui testbench 
+# Start time: 22:22:52 on Nov 17,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.xcel_dp
+# Loading work.d_reg
+# Loading work.xy_sep_chk
+# Loading work.fix15_mul
+# Loading work.xy_writeback
+# Loading work.lut_32_divider
+# Loading work.amax_bmin
+# ** Error: (vsim-3043) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(532): Unresolved reference to 'x'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv
+# ** Error: (vsim-3043) C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv(533): Unresolved reference to 'y'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/xdp/xbc File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_dp.sv
+# Error loading design
+# End time: 22:22:52 on Nov 17,2023, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui testbench
+# vsim -gui testbench 
+# Start time: 22:23:23 on Nov 17,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.xcel_dp
+# Loading work.d_reg
+# Loading work.xy_sep_chk
+# Loading work.fix15_mul
+# Loading work.xy_writeback
+# Loading work.lut_32_divider
+# Loading work.amax_bmin
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: rat83  Hostname: EN-EC-LPH238-26  ProcessID: 5844
+#           Attempting to use alternate WLF file "./wlftmm9g2m".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftmm9g2m
+run
+run
+restart -f
+run
+# Compile of boid_accelerator.sv was successful.
+# Compile of testbench.sv was successful.
+# Compile of hex_decoder.v was successful.
+# Compile of boid_xcel_helper.sv was successful.
+# Compile of boid_xcel_dp.sv was successful.
+# Compile of boid_xcel_ctrl.sv was successful.
+# Compile of boid_xcel_mem.sv was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# Loading work.testbench
+# Loading work.xcel_dp
+# Loading work.d_reg
+# Loading work.xy_sep_chk
+# Loading work.fix15_mul
+# Loading work.xy_writeback
+# Loading work.lut_32_divider
+# Loading work.amax_bmin
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+vsim -gui work.testbench
+# End time: 22:24:47 on Nov 17,2023, Elapsed time: 0:01:24
+# Errors: 0, Warnings: 2
+# vsim -gui work.testbench 
+# Start time: 22:24:47 on Nov 17,2023
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.xcel_dp
+# Loading work.d_reg
+# Loading work.xy_sep_chk
+# Loading work.fix15_mul
+# Loading work.xy_writeback
+# Loading work.lut_32_divider
+# Loading work.amax_bmin
+run
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint  \
+sim:/testbench/xdp/clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: rat83  Hostname: EN-EC-LPH238-26  ProcessID: 5844
+#           Attempting to use alternate WLF file "./wlftf92qhy".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftf92qhy
+run
+restart -f
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/testbench/a_1
+restart -f
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# End time: 22:27:51 on Nov 17,2023, Elapsed time: 0:03:04
+# Errors: 1, Warnings: 2
