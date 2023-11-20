@@ -12,7 +12,7 @@ end
 always begin
 	#300
 	en = ~en;
-	#10
+	#20
 	en = ~en;
 end
 
@@ -61,6 +61,22 @@ initial begin
 	$stop;
 end
 
+	logic is_boid_here;
+	
+	boid_accelerator xcel
+	(
+		.*
+	);
+	
+	initial begin
+		x = 105;
+		y = 105;
+		
+		
+	end
+	
+	/*
+
 	// d-path combined verification
 	
 	logic r_en_tot, r_en_itr;
@@ -79,11 +95,17 @@ end
 		vx_out_xcel,
 		vy_out_xcel;
 	
+	
+	
 	xcel_dp xdp
 	(
 		.*
 		
 	);
+	
+
+
+	
 	
 	initial begin
 	
@@ -120,11 +142,15 @@ end
 		
 		wb_en = 1;
 		
+		#20
+		
+		wb_en = 0;
+		
 		//#100
 		
 		
 	end
-
+	*/
 	/*
 	
 	// xy_writeback verification

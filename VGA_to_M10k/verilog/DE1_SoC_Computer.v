@@ -450,18 +450,21 @@ wire xy_comp, border_comp;
 assign xy_comp 		= ((x >>> 16) == next_x) & ((y >>> 16) == next_y);
 assign border_comp	= ((next_x == 100) | (next_y == 100) | (next_x == 540) | (next_y == 380));
 
+wire is_boid_here;
+
 boid_accelerator xcel (
 	.clk(vga_pll),
-	.reset(vga_reset),
+	.reset(~KEY[0]),
 	.en(VGA_VS),
-	.x(x),
-	.y(y)
+	.x(next_x),
+	.y(next_y),
+	.is_boid_here(is_boid_here)
 	// other outputs left disconnected
 );
 // Instantiate VGA driver					
 vga_driver DUT   (	.clock(vga_pll), 
 							.reset(vga_reset),
-							.color_in((xy_comp | border_comp) ? 9'b111111111 : 9'b0),	// Pixel color (8-bit) from memory
+							.color_in((is_boid_here | border_comp) ? 9'b111111111 : 9'b0),	// Pixel color (8-bit) from memory
 							.next_x(next_x),		// This (and next_y) used to specify memory read address
 							.next_y(next_y),		// This (and next_x) used to specify memory read address
 							.hsync(VGA_HS),

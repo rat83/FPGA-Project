@@ -13,6 +13,8 @@ module xcel_dp(
 	input logic [31:0]
 		x_in_xcel,
 		y_in_xcel,
+		
+	input logic signed [31:0]
 		vx_in_xcel,
 		vy_in_xcel,
 		
@@ -97,7 +99,7 @@ module xcel_dp(
 	x_avg_reg
 	(
 		.clk		(clk),
-		.reset	(reset),
+		.reset	(reset | r_en_tot),
 		.d			(r_en_itr ? xa_comb : x_avg),
 		.q			(x_avg)
 	);
@@ -106,7 +108,7 @@ module xcel_dp(
 	y_avg_reg
 	(	
 		.clk		(clk),
-		.reset	(reset),
+		.reset	(reset | r_en_tot),
 		.d			(r_en_itr ? ya_comb : y_avg),
 		.q			(y_avg)
 	);
@@ -116,7 +118,7 @@ module xcel_dp(
 	vx_avg_reg
 	(
 		.clk		(clk),
-		.reset	(reset),
+		.reset	(reset | r_en_tot),
 		.d			(r_en_itr ? vxa_comb : vx_avg),
 		.q			(vx_avg)
 	);
@@ -125,7 +127,7 @@ module xcel_dp(
 	vy_avg_reg
 	(
 		.clk		(clk),
-		.reset	(reset),
+		.reset	(reset | r_en_tot),
 		.d			(r_en_itr ? vya_comb : vy_avg),
 		.q			(vy_avg)
 	);
@@ -139,7 +141,7 @@ module xcel_dp(
 	x_close_reg
 	(
 		.clk		(clk),
-		.reset	(reset),
+		.reset	(reset | r_en_tot),
 		.d			(r_en_itr ? xc_comb : x_close),
 		.q			(x_close)
 	);
@@ -148,7 +150,7 @@ module xcel_dp(
 	y_close_reg
 	(	
 		.clk		(clk),
-		.reset	(reset),
+		.reset	(reset | r_en_tot),
 		.d			(r_en_itr ? yc_comb : y_close),
 		.q			(y_close)
 	);
@@ -162,8 +164,8 @@ module xcel_dp(
 	boid_ctr_reg
 	(
 		.clk		(clk),
-		.reset	(reset),
-		.d 		(boid_ctr_in),
+		.reset	(reset | r_en_tot),
+		.d 		(r_en_itr ? boid_ctr_in : boid_ctr),
 		.q			(boid_ctr)
 	);
 	
@@ -291,7 +293,7 @@ module xy_sep_chk(
 
 	input logic 	[31:0] x, y, x_in_xcel, y_in_xcel,
 	
-	input logic 	[31:0] vx, vy, vx_in_xcel, vy_in_xcel,
+	input logic signed	[31:0] vx, vy, vx_in_xcel, vy_in_xcel,
 	
 	input logic 	[31:0] x_avg, y_avg, 
 	

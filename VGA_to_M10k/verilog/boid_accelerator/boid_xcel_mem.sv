@@ -111,17 +111,28 @@ module register_test_memory
 	
 	logic [num_boids-1:0] is_boid_here_t;
 	
+	logic [31:0] boid_comp_x [num_boids-1:0];
+	
+	logic [31:0] boid_comp_y [num_boids-1:0];
+	
 	integer j;
 	always @(*) begin
 		for(j = 0; j < num_boids; j++) begin
-			is_boid_here_t[j] = ({{20{x_t[j][21]}}, (x_t[j] >>> 16)} == x_chk_in && {{21{y_t[j][20]}}, (y_t[j] >>> 16)} == y_chk_in);
+			boid_comp_x[j] = {{20{x_t[j][27]}}, (x_t[j] >>> 16)};
+			boid_comp_y[j] = {{21{y_t[j][26]}}, (y_t[j] >>> 16)};
+			is_boid_here_t[j] = ((boid_comp_x[j] == x_chk_in) && (boid_comp_y[j] == y_chk_in));
 		end
 	end
 	
-	always_comb begin
+	always @(*) begin
+	/*
 		is_boid_here = '0; // fill 0
-		foreach(is_boid_here_t[k])
+		foreach(is_boid_here_t[k]) begin
 			is_boid_here |= is_boid_here_t[k];
+		end
+		*/
+		
+		is_boid_here = is_boid_here_t[0] | is_boid_here_t[1];
 	end
 	
 endmodule

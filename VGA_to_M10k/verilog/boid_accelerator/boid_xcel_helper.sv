@@ -166,6 +166,7 @@ module lut_32_divider
 			29: 	div_val = 32'h00000469;
 			30: 	div_val = 32'h00000444;
 			31: 	div_val = 32'h00000421;
+			default: div_val = 32'b0;
 		endcase
 	end
 

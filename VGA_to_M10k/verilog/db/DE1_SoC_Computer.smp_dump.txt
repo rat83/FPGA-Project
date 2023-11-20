@@ -16,3 +16,11 @@ h_state.H_ACTIVE_STATE 0 0 0 0
 h_state.H_FRONT_STATE 0 0 1 1 
 h_state.H_PULSE_STATE 0 1 0 1 
 h_state.H_BACK_STATE 1 0 0 1 
+
+State Machine - |DE1_SoC_Computer|boid_accelerator:xcel|xcel_ctrl:the_ctrl|state
+Name state.sa_calc state.sa_ld state.sa_init state.init state.ac_wb 
+state.init 0 0 0 0 0 
+state.sa_init 0 0 1 1 0 
+state.sa_ld 0 1 0 1 0 
+state.sa_calc 1 0 0 1 0 
+state.ac_wb 0 0 0 1 1 

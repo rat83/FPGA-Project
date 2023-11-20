@@ -697,15 +697,15 @@ trigger;]]>
       </trigger>
     </signal_set>
     <position_info>
-      <single attribute="active tab" value="0"/>
-      <single attribute="data horizontal scroll position" value="72"/>
+      <single attribute="active tab" value="1"/>
+      <single attribute="data horizontal scroll position" value="0"/>
       <single attribute="data vertical scroll position" value="0"/>
       <single attribute="setup horizontal scroll position" value="0"/>
       <single attribute="setup vertical scroll position" value="0"/>
       <single attribute="zoom level denominator" value="1"/>
-      <single attribute="zoom level numerator" value="4"/>
+      <single attribute="zoom level numerator" value="65536"/>
       <single attribute="zoom offset denominator" value="1"/>
-      <single attribute="zoom offset numerator" value="32736"/>
+      <single attribute="zoom offset numerator" value="0"/>
       <multi attribute="timebars" size="1" value="123"/>
     </position_info>
   </instance>
