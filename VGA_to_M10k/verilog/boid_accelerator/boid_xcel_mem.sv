@@ -118,8 +118,8 @@ module register_test_memory
 	integer j;
 	always @(*) begin
 		for(j = 0; j < num_boids; j++) begin
-			boid_comp_x[j] = {{20{x_t[j][27]}}, (x_t[j] >>> 16)};
-			boid_comp_y[j] = {{21{y_t[j][26]}}, (y_t[j] >>> 16)};
+			boid_comp_x[j] = {{27{x_t[j][27]}}, (x_t[j] >>> 16)};
+			boid_comp_y[j] = {{26`{y_t[j][26]}}, (y_t[j] >>> 16)};
 			is_boid_here_t[j] = ((boid_comp_x[j] == x_chk_in) && (boid_comp_y[j] == y_chk_in));
 		end
 	end

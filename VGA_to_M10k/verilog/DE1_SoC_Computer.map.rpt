@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC_Computer
-Mon Nov 20 16:40:13 2023
+Tue Nov 21 12:58:52 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -215,7 +215,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Nov 20 16:40:13 2023       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 21 12:58:52 2023       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC_Computer                            ;
 ; Top-level Entity Name           ; DE1_SoC_Computer                            ;
@@ -342,7 +342,8 @@ refer to the applicable agreement for further details.
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
-;     Processors 8-12        ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -457,14 +458,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 1531           ;
+; Estimate of Logic utilization (ALMs needed) ; 1532           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 2352           ;
+; Combinational ALUT usage for logic          ; 2354           ;
 ;     -- 7 input functions                    ; 0              ;
 ;     -- 6 input functions                    ; 254            ;
 ;     -- 5 input functions                    ; 332            ;
 ;     -- 4 input functions                    ; 312            ;
-;     -- <=3 input functions                  ; 1454           ;
+;     -- <=3 input functions                  ; 1456           ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 1925           ;
 ;                                             ;                ;
@@ -481,8 +482,8 @@ refer to the applicable agreement for further details.
 ; Total DLLs                                  ; 1              ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 803            ;
-; Total fan-out                               ; 20612          ;
-; Average fan-out                             ; 3.45           ;
+; Total fan-out                               ; 20614          ;
+; Average fan-out                             ; 3.44           ;
 +---------------------------------------------+----------------+
 
 
@@ -491,7 +492,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+-----------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                                                                                  ; Entity Name                                                  ; Library Name    ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+-----------------+
-; |DE1_SoC_Computer                                                                                                                       ; 2352 (9)            ; 1925 (1)                  ; 12800             ; 42         ; 368  ; 0            ; |DE1_SoC_Computer                                                                                                                                                                                                                                                                                                                                                                                                    ; DE1_SoC_Computer                                             ; work            ;
+; |DE1_SoC_Computer                                                                                                                       ; 2354 (10)           ; 1925 (1)                  ; 12800             ; 42         ; 368  ; 0            ; |DE1_SoC_Computer                                                                                                                                                                                                                                                                                                                                                                                                    ; DE1_SoC_Computer                                             ; work            ;
 ;    |Computer_System:The_System|                                                                                                         ; 2 (0)               ; 36 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|Computer_System:The_System                                                                                                                                                                                                                                                                                                                                                                         ; Computer_System                                              ; Computer_System ;
 ;       |Computer_System_ARM_A9_HPS:arm_a9_hps|                                                                                           ; 1 (0)               ; 36 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|Computer_System:The_System|Computer_System_ARM_A9_HPS:arm_a9_hps                                                                                                                                                                                                                                                                                                                                   ; Computer_System_ARM_A9_HPS                                   ; Computer_System ;
 ;          |Computer_System_ARM_A9_HPS_fpga_interfaces:fpga_interfaces|                                                                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|Computer_System:The_System|Computer_System_ARM_A9_HPS:arm_a9_hps|Computer_System_ARM_A9_HPS_fpga_interfaces:fpga_interfaces                                                                                                                                                                                                                                                                        ; Computer_System_ARM_A9_HPS_fpga_interfaces                   ; Computer_System ;
@@ -555,7 +556,7 @@ refer to the applicable agreement for further details.
 ;       |Computer_System_vga_pio:vga_pio|                                                                                                 ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|Computer_System:The_System|Computer_System_vga_pio:vga_pio                                                                                                                                                                                                                                                                                                                                         ; Computer_System_vga_pio                                      ; Computer_System ;
 ;          |altera_pll:altera_pll_i|                                                                                                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|Computer_System:The_System|Computer_System_vga_pio:vga_pio|altera_pll:altera_pll_i                                                                                                                                                                                                                                                                                                                 ; altera_pll                                                   ; work            ;
 ;       |altera_reset_controller:rst_controller_001|                                                                                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|Computer_System:The_System|altera_reset_controller:rst_controller_001                                                                                                                                                                                                                                                                                                                              ; altera_reset_controller                                      ; Computer_System ;
-;    |boid_accelerator:xcel|                                                                                                              ; 1972 (0)            ; 502 (0)                   ; 0                 ; 42         ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel                                                                                                                                                                                                                                                                                                                                                                              ; boid_accelerator                                             ; work            ;
+;    |boid_accelerator:xcel|                                                                                                              ; 1973 (0)            ; 502 (0)                   ; 0                 ; 42         ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel                                                                                                                                                                                                                                                                                                                                                                              ; boid_accelerator                                             ; work            ;
 ;       |register_test_mem_wrapper:the_mem|                                                                                               ; 136 (0)             ; 194 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|register_test_mem_wrapper:the_mem                                                                                                                                                                                                                                                                                                                                            ; register_test_mem_wrapper                                    ; work            ;
 ;          |register_test_memory:rtm|                                                                                                     ; 136 (121)           ; 194 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|register_test_mem_wrapper:the_mem|register_test_memory:rtm                                                                                                                                                                                                                                                                                                                   ; register_test_memory                                         ; work            ;
 ;             |d_reg:tmem[0].vx|                                                                                                          ; 2 (2)               ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|register_test_mem_wrapper:the_mem|register_test_memory:rtm|d_reg:tmem[0].vx                                                                                                                                                                                                                                                                                                  ; d_reg                                                        ; work            ;
@@ -566,8 +567,8 @@ refer to the applicable agreement for further details.
 ;             |d_reg:tmem[1].vy|                                                                                                          ; 1 (1)               ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|register_test_mem_wrapper:the_mem|register_test_memory:rtm|d_reg:tmem[1].vy                                                                                                                                                                                                                                                                                                  ; d_reg                                                        ; work            ;
 ;             |d_reg:tmem[1].x|                                                                                                           ; 1 (1)               ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|register_test_mem_wrapper:the_mem|register_test_memory:rtm|d_reg:tmem[1].x                                                                                                                                                                                                                                                                                                   ; d_reg                                                        ; work            ;
 ;             |d_reg:tmem[1].y|                                                                                                           ; 1 (1)               ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|register_test_mem_wrapper:the_mem|register_test_memory:rtm|d_reg:tmem[1].y                                                                                                                                                                                                                                                                                                   ; d_reg                                                        ; work            ;
-;       |xcel_ctrl:the_ctrl|                                                                                                              ; 17 (16)             ; 13 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|xcel_ctrl:the_ctrl                                                                                                                                                                                                                                                                                                                                                           ; xcel_ctrl                                                    ; work            ;
-;          |fall_edge_detector:fed|                                                                                                       ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|xcel_ctrl:the_ctrl|fall_edge_detector:fed                                                                                                                                                                                                                                                                                                                                    ; fall_edge_detector                                           ; work            ;
+;       |xcel_ctrl:the_ctrl|                                                                                                              ; 18 (16)             ; 13 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|xcel_ctrl:the_ctrl                                                                                                                                                                                                                                                                                                                                                           ; xcel_ctrl                                                    ; work            ;
+;          |fall_edge_detector:fed|                                                                                                       ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|xcel_ctrl:the_ctrl|fall_edge_detector:fed                                                                                                                                                                                                                                                                                                                                    ; fall_edge_detector                                           ; work            ;
 ;       |xcel_dp:the_dp|                                                                                                                  ; 1819 (575)          ; 295 (0)                   ; 0                 ; 42         ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|xcel_dp:the_dp                                                                                                                                                                                                                                                                                                                                                               ; xcel_dp                                                      ; work            ;
 ;          |amax_bmin:speed_calc|                                                                                                         ; 232 (232)           ; 0 (0)                     ; 0                 ; 6          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|xcel_dp:the_dp|amax_bmin:speed_calc                                                                                                                                                                                                                                                                                                                                          ; amax_bmin                                                    ; work            ;
 ;             |fix15_mul:a_mul|                                                                                                           ; 0 (0)               ; 0 (0)                     ; 0                 ; 3          ; 0    ; 0            ; |DE1_SoC_Computer|boid_accelerator:xcel|xcel_dp:the_dp|amax_bmin:speed_calc|fix15_mul:a_mul                                                                                                                                                                                                                                                                                                                          ; fix15_mul                                                    ; work            ;
@@ -4717,7 +4718,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_hps_interface_interrupts                                ; 1     ;
 ; arriav_hps_interface_tpiu_trace                                ; 1     ;
 ; arriav_io_obuf                                                 ; 97    ;
-; arriav_lcell_comb                                              ; 2057  ;
+; arriav_lcell_comb                                              ; 2059  ;
 ;     arith                                                      ; 759   ;
 ;         0 data inputs                                          ; 6     ;
 ;         1 data inputs                                          ; 154   ;
@@ -4725,9 +4726,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs                                          ; 62    ;
 ;         4 data inputs                                          ; 239   ;
 ;         5 data inputs                                          ; 144   ;
-;     normal                                                     ; 951   ;
+;     normal                                                     ; 953   ;
 ;         0 data inputs                                          ; 2     ;
-;         1 data inputs                                          ; 2     ;
+;         1 data inputs                                          ; 4     ;
 ;         2 data inputs                                          ; 336   ;
 ;         3 data inputs                                          ; 244   ;
 ;         4 data inputs                                          ; 27    ;
@@ -4815,8 +4816,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CLOCK_50                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; CLOCK_50                                                                                          ; N/A                                                                                                                                                            ;
 ; boid_accelerator:xcel|clk   ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; Computer_System:The_System|Computer_System_vga_pio:vga_pio|altera_pll:altera_pll_i|outclk_wire[0] ; N/A                                                                                                                                                            ;
 ; boid_accelerator:xcel|clk   ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; Computer_System:The_System|Computer_System_vga_pio:vga_pio|altera_pll:altera_pll_i|outclk_wire[0] ; N/A                                                                                                                                                            ;
-; boid_accelerator:xcel|en    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga_driver:DUT|vsync_reg                                                                          ; N/A                                                                                                                                                            ;
-; boid_accelerator:xcel|en    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga_driver:DUT|vsync_reg                                                                          ; N/A                                                                                                                                                            ;
+; boid_accelerator:xcel|en    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; KEY[1]~_wirecell                                                                                  ; N/A                                                                                                                                                            ;
+; boid_accelerator:xcel|en    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; KEY[1]~_wirecell                                                                                  ; N/A                                                                                                                                                            ;
 ; boid_accelerator:xcel|reset ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; KEY[0]~_wirecell                                                                                  ; N/A                                                                                                                                                            ;
 ; boid_accelerator:xcel|reset ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; KEY[0]~_wirecell                                                                                  ; N/A                                                                                                                                                            ;
 ; boid_accelerator:xcel|x[0]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; vga_driver:DUT|next_x[0]~0                                                                        ; N/A                                                                                                                                                            ;
@@ -5054,7 +5055,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 20 16:37:17 2023
+    Info: Processing started: Tue Nov 21 12:55:54 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC_Computer -c DE1_SoC_Computer
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file computer_system/synthesis/computer_system.v
@@ -5196,8 +5197,8 @@ Warning (10230): Verilog HDL assignment warning at boid_xcel_ctrl.sv(125): trunc
 Info (12128): Elaborating entity "fall_edge_detector" for hierarchy "boid_accelerator:xcel|xcel_ctrl:the_ctrl|fall_edge_detector:fed" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_ctrl.sv Line: 28
 Info (12128): Elaborating entity "register_test_mem_wrapper" for hierarchy "boid_accelerator:xcel|register_test_mem_wrapper:the_mem" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_accelerator.sv Line: 87
 Info (12128): Elaborating entity "register_test_memory" for hierarchy "boid_accelerator:xcel|register_test_mem_wrapper:the_mem|register_test_memory:rtm" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_mem.sv Line: 200
-Warning (10230): Verilog HDL assignment warning at boid_xcel_mem.sv(121): truncated value with size 48 to match size of target (32) File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_mem.sv Line: 121
-Warning (10230): Verilog HDL assignment warning at boid_xcel_mem.sv(122): truncated value with size 48 to match size of target (32) File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_mem.sv Line: 122
+Warning (10230): Verilog HDL assignment warning at boid_xcel_mem.sv(121): truncated value with size 55 to match size of target (32) File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_mem.sv Line: 121
+Warning (10230): Verilog HDL assignment warning at boid_xcel_mem.sv(122): truncated value with size 53 to match size of target (32) File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_mem.sv Line: 122
 Info (12128): Elaborating entity "d_reg" for hierarchy "boid_accelerator:xcel|register_test_mem_wrapper:the_mem|register_test_memory:rtm|d_reg:tmem[0].x" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_mem.sv Line: 59
 Warning (10230): Verilog HDL assignment warning at boid_xcel_helper.sv(14): truncated value with size 32 to match size of target (28) File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_helper.sv Line: 14
 Info (12128): Elaborating entity "d_reg" for hierarchy "boid_accelerator:xcel|register_test_mem_wrapper:the_mem|register_test_memory:rtm|d_reg:tmem[0].y" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/boid_accelerator/boid_xcel_mem.sv Line: 67
@@ -5496,7 +5497,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/db/cmpr_99c.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.11.20.16:37:36 Progress: Loading sldc8888fe3/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.11.21.12:56:14 Progress: Loading sldc8888fe3/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -5801,14 +5802,13 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 25 node(s), including 0 DDIO, 3 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance Computer_System:The_System|Computer_System_System_PLL:system_pll|Computer_System_System_PLL_sys_pll:sys_pll|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/programs/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Warning (21074): Design contains 30 input pin(s) that do not drive logic
+Warning (21074): Design contains 29 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 190
     Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 191
     Warning (15610): No output dependent on input pin "CLOCK4_50" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 192
     Warning (15610): No output dependent on input pin "ADC_DOUT" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 197
     Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 201
     Warning (15610): No output dependent on input pin "IRDA_RXD" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 238
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 242
     Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 242
     Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 242
     Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 255
@@ -5832,19 +5832,19 @@ Warning (21074): Design contains 30 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "TD_DATA[7]" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 259
     Warning (15610): No output dependent on input pin "TD_HS" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 260
     Warning (15610): No output dependent on input pin "TD_VS" File: C:/Users/rat83/Documents/GitHub/FPGA-Project/VGA_to_M10k/verilog/DE1_SoC_Computer.v Line: 262
-Info (21057): Implemented 4944 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4945 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 47 input pins
     Info (21059): Implemented 157 output pins
     Info (21060): Implemented 168 bidirectional pins
-    Info (21061): Implemented 3775 logic cells
+    Info (21061): Implemented 3776 logic cells
     Info (21064): Implemented 100 RAM segments
     Info (21065): Implemented 3 PLLs
     Info (21066): Implemented 1 delay-locked loops
     Info (21062): Implemented 42 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 368 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 367 warnings
     Info: Peak virtual memory: 5249 megabytes
-    Info: Processing ended: Mon Nov 20 16:40:13 2023
-    Info: Elapsed time: 00:02:56
-    Info: Total CPU time (on all processors): 00:03:11
+    Info: Processing ended: Tue Nov 21 12:58:52 2023
+    Info: Elapsed time: 00:02:58
+    Info: Total CPU time (on all processors): 00:03:13
 
 
