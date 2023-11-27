@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC_Computer
-Mon Nov 27 11:07:42 2023
+Mon Nov 27 11:51:52 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Nov 27 11:07:42 2023           ;
+; Analysis & Synthesis Status ; Failed - Mon Nov 27 11:51:52 2023           ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; DE1_SoC_Computer                            ;
 ; Top-level Entity Name       ; DE1_SoC_Computer                            ;
