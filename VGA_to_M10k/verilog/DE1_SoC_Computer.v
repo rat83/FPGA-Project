@@ -455,7 +455,7 @@ wire is_boid_here;
 boid_accelerator xcel (
 	.clk(vga_pll),
 	.reset(~KEY[0]),
-	.en(~KEY[1]),
+	.en(VGA_VS),//~KEY[1]),
 	.x(next_x),
 	.y(next_y),
 	.is_boid_here(is_boid_here)

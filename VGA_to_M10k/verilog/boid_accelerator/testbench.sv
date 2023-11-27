@@ -16,6 +16,7 @@ always begin
 	en = ~en;
 end
 
+/*
 logic [31:0] a_1, b_1, c_1, q_1, a_2, b_2, c_2, q_2;
 
 // control unit data ports
@@ -41,6 +42,7 @@ logic [31:0] x_out_32;
 logic [31:0] y_out_32;
 logic [31:0] vx_out_32, vy_out_32;
 
+
 assign x_in_b = x_out;
 assign y_in_b = y_out;
 assign vx_in_b = vx_out;
@@ -50,6 +52,7 @@ assign x_in_32 = x;
 assign y_in_32 = y;
 assign vx_in_32 = vx;
 assign vy_in_32 = vy;
+*/
 
 initial begin
 	clk = 0;
@@ -61,16 +64,127 @@ initial begin
 	$stop;
 end
 
-	logic is_boid_here;
+parameter num_boids = 2;
+
+logic clk_2, clk_en;
+logic en_2, en_en;
 	
-	boid_accelerator xcel
-	(
-		.*
-	);
+logic [31:0]  x,  y;	
 	
+logic is_boid_here;
+
+logic [31:0] 	x_m_d, y_m_d, vx_m_d, vy_m_d,
+					x_d_m_1, y_d_m_1, vx_d_m_1, vy_d_m_1,
+					x_d_m_2, y_d_m_2, vx_d_m_2, vy_d_m_2;
+
+logic r_en_itr, r_en_tot;
+
+logic [6:0] wb_en, wb_en_2;
+
+logic [$clog2(num_boids):0] 	which_boid_1, which_boid_2, bwr;
+
+xcel_dp the_dp 
+(
+	.clk(clk_2),
+	.reset(reset),
+	
+	
+	.r_en_itr(r_en_itr),
+	.r_en_tot(r_en_tot),
+	.wb_en(wb_en),
+	
+	.x_in_xcel(x_m_d),
+	.y_in_xcel(y_m_d),
+	.vx_in_xcel(vx_m_d),
+	.vy_in_xcel(vy_m_d),
+	
+	.x_out_xcel(x_d_m_1),
+	.y_out_xcel(y_d_m_1),
+	.vx_out_xcel(vx_d_m_1),
+	.vy_out_xcel(vy_d_m_1)
+);
+
+xcel_ctrl #(num_boids) the_ctrl 
+(
+	.clk(clk_2),
+	.en(en_2),
+	.reset(reset),
+	
+	.which_boid(which_boid_1),
+	.r_en_tot(r_en_tot),
+	.r_en_itr(r_en_itr),
+	.wb_en(wb_en)
+);
+
+register_test_mem_wrapper #(num_boids) the_mem 
+(
+	.clk(clk_2),
+	.reset(reset),
+	.which_boid(which_boid_2),
+	.wb_en(wb_en_2),
+	
+	.x_in_32(x_d_m_2),
+	.y_in_32(y_d_m_2),
+	.vx_in_32(vx_d_m_2),
+	.vy_in_32(vy_d_m_2),
+	
+	.x_out_32(x_m_d),
+	.y_out_32(y_m_d),
+	.vx_out_32(vx_m_d),
+	.vy_out_32(vy_m_d),
+	
+	.x_chk_in(x),
+	.y_chk_in(y),
+	.is_boid_here(is_boid_here)
+);
+
+logic [31:0] xwr, ywr, vxwr, vywr;
+
+logic write_ext;
+
+
+assign clk_2 = clk_en ? clk : 1'b1;
+
+assign en_2 = en_en ? en : 1'b1;
+
+assign wb_en_2 = write_ext ? 7'b0011111 : wb_en;
+
+assign x_d_m_2 = write_ext ? xwr : x_d_m_1;
+
+assign y_d_m_2 = write_ext ? ywr : y_d_m_1;
+
+assign vx_d_m_2 = write_ext ? vxwr : vx_d_m_1;
+
+assign vy_d_m_2 = write_ext ? vywr : vy_d_m_1;
+
+assign which_boid_2 = write_ext ? bwr : which_boid_1;
+
 	initial begin
 		x = 105;
 		y = 105;
+		en_en = 0;
+		clk_en = 1;
+		write_ext = 1;
+		#200
+		
+		bwr = 0;
+		xwr = 	32'h013190ff;
+		ywr = 	32'h00e94929;
+		vxwr = 	32'h0003d134;
+		vywr = 	32'h00011162;
+		
+		#40
+		
+		bwr = 1; 	
+		xwr = 	32'h015f941f;
+		ywr = 	32'h00ffe497;
+		vxwr = 	32'h00041d66;
+		vywr = 	32'hfffffaac;
+		
+		#40
+		
+		write_ext = 0;
+		en_en = 1;
 		
 		
 	end

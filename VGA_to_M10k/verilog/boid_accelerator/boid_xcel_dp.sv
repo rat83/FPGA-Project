@@ -10,11 +10,9 @@ module xcel_dp(
 	input logic [6:0] wb_en,
 	
 	// data from memory
-	input logic [31:0]
+	input logic signed [31:0]
 		x_in_xcel,
 		y_in_xcel,
-		
-	input logic signed [31:0]
 		vx_in_xcel,
 		vy_in_xcel,
 		
@@ -42,10 +40,10 @@ module xcel_dp(
 	// x/v transient wires
 	// these no longer are written back into 
 	
-	logic [31:0] 			x, 	y;
+	logic signed [31:0] 	x, 	y;
 	logic signed [31:0]	vx,	vy;
 	
-	logic [31:0] 			x_comb, 	y_comb;
+	logic signed [31:0] 	x_comb, 	y_comb;
 	logic signed [31:0]	vx_comb,	vy_comb;
 	
 	
@@ -88,8 +86,8 @@ module xcel_dp(
 		.q			(vy)
 	);
 	
-	logic [31:0] 			xa_comb, 	ya_comb;
-	logic [31:0] 			x_avg, 		y_avg;
+	logic signed [31:0] 	xa_comb, 	ya_comb;
+	logic signed [31:0] 	x_avg, 		y_avg;
 	logic signed [31:0]	vxa_comb,	vya_comb;
 	logic signed [31:0]	vx_avg,		vy_avg;
 	
@@ -132,8 +130,8 @@ module xcel_dp(
 		.q			(vy_avg)
 	);
 	
-	logic [31:0] 			xc_comb, 	yc_comb;
-	logic [31:0] 			x_close, 	y_close;
+	logic signed [31:0] 	xc_comb, 	yc_comb;
+	logic signed [31:0] 	x_close, 	y_close;
 	
 	// dx accumulator
 	
@@ -199,13 +197,13 @@ module xcel_dp(
 
 	// Writeback pipeline variables
 	
-	logic [31:0] 				vx_wb, vy_wb, x_wb, y_wb;
+	logic signed [31:0] 		vx_wb, vy_wb, x_wb, y_wb;
 	
-	logic [31:0] 				x_avg_wb, y_avg_wb;
+	logic signed [31:0] 		x_avg_wb, y_avg_wb;
 	
 	logic signed [31:0] 		vx_avg_wb, vy_avg_wb;
 	
-	logic [31:0] 				x_close_wb, y_close_wb;
+	logic signed [31:0] 		x_close_wb, y_close_wb;
 	
 	logic [5:0] 				boid_ctr_wb;
 	
@@ -277,8 +275,8 @@ module xcel_dp(
 		endcase
 	end
 	
-	assign x_comb = x + vx_comb;
-	assign y_comb = y + vy_comb;
+	assign x_comb = x_wb + vx_comb;
+	assign y_comb = y_wb + vy_comb;
 	
 	// Outputs assigned from comb to output ports
 	
@@ -291,21 +289,21 @@ endmodule
 
 module xy_sep_chk(
 
-	input logic 	[31:0] x, y, x_in_xcel, y_in_xcel,
+	input logic signed 	[31:0] x, y, x_in_xcel, y_in_xcel,
 	
 	input logic signed	[31:0] vx, vy, vx_in_xcel, vy_in_xcel,
 	
-	input logic 	[31:0] x_avg, y_avg, 
+	input logic signed 	[31:0] x_avg, y_avg, 
 	
-	input logic 	[31:0] x_close, y_close,
+	input logic signed 	[31:0] x_close, y_close,
 	
-	output logic 	[31:0] xa_comb, ya_comb, 
+	output logic signed 	[31:0] xa_comb, ya_comb, 
 	
 	input logic signed 	[31:0] vx_avg, vy_avg,
 		
 	output logic signed 	[31:0] vxa_comb, vya_comb,
 	
-	output logic 	[31:0] xc_comb, yc_comb,
+	output logic signed 	[31:0] xc_comb, yc_comb,
 	
 	input logic 	[5:0] boid_ctr,
 	
@@ -392,20 +390,25 @@ endmodule
 module xy_writeback
 (
 	// vx vy input
-	input logic [31:0] vx_wb, vy_wb, x_wb, y_wb, x_bound, y_bound,
+	input logic signed [31:0] vx_wb, vy_wb, x_wb, y_wb,
 	
-	input logic [31:0] x_avg_wb, y_avg_wb,
+	input logic signed [31:0] x_avg_wb, y_avg_wb,
 	
 	input logic signed [31:0] vx_avg_wb, vy_avg_wb,
 	
-	input logic [31:0] x_close_wb, y_close_wb,
+	input logic signed [31:0] x_close_wb, y_close_wb,
+	
+	input logic [31:0]  		  x_bound, y_bound,
 	
 	input logic [5:0] boid_ctr_wb,
 	
 	// vx vy output
 	output logic signed [31:0] vx_bounded, vy_bounded
 );
-	localparam signed [31:0] turnfactor  	= 32'h00001999;
+
+	// ADJUST THIS PARAMETER, IT IS BEHAVING POORLY
+	// This might not be the only issue but it's worth exploring
+	localparam signed [31:0] turnfactor  	= 32'h00007999;
 			
 	localparam signed [31:0] avoidfactor 	= 32'h00000666;
 	

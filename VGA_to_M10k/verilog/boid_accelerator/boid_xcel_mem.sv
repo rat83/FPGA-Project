@@ -119,7 +119,7 @@ module register_test_memory
 	always @(*) begin
 		for(j = 0; j < num_boids; j++) begin
 			boid_comp_x[j] = {{27{x_t[j][27]}}, (x_t[j] >>> 16)};
-			boid_comp_y[j] = {{26`{y_t[j][26]}}, (y_t[j] >>> 16)};
+			boid_comp_y[j] = {{26{y_t[j][26]}}, (y_t[j] >>> 16)};
 			is_boid_here_t[j] = ((boid_comp_x[j] == x_chk_in) && (boid_comp_y[j] == y_chk_in));
 		end
 	end
@@ -200,7 +200,7 @@ module register_test_mem_wrapper
 	register_test_memory rtm(.*);
 	
 	zero_pad_fix15
-	#(28,0,32)
+	#(28,32)
 	x_out_pad
 	(
 		.fix_in(x_out),
@@ -208,7 +208,7 @@ module register_test_mem_wrapper
 	);
 	
 	zero_pad_fix15
-	#(27,0,32)
+	#(27,32)
 	y_out_pad
 	(
 		.fix_in(y_out),
@@ -216,7 +216,7 @@ module register_test_mem_wrapper
 	);
 	
 	zero_pad_fix15
-	#(21,0,32)
+	#(21,32)
 	vx_out_pad
 	(
 		.fix_in(vx_out),
@@ -224,7 +224,7 @@ module register_test_mem_wrapper
 	);
 	
 	zero_pad_fix15
-	#(21,0,32)
+	#(21,32)
 	vy_out_pad
 	(
 		.fix_in(vy_out),

@@ -110,7 +110,6 @@ endmodule
 module zero_pad_fix15
 #(	
 	parameter fix_whole_bit_width = 16,
-	parameter lsb_offset				= 0,
 	parameter total_bit_width		= 32
 )
 (	
@@ -119,7 +118,7 @@ module zero_pad_fix15
 );
 	localparam input_fix_bit_width = fix_whole_bit_width;
 	assign fix_out = 
-		{{(32 - input_fix_bit_width + lsb_offset){fix_in[input_fix_bit_width - 1]}}, fix_in[input_fix_bit_width - 2:lsb_offset] };
+		{{(33 - input_fix_bit_width){fix_in[input_fix_bit_width - 1]}}, fix_in[input_fix_bit_width - 2:0] };
 
 endmodule
 
