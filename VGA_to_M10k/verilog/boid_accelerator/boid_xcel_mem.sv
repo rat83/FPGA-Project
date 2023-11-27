@@ -5,7 +5,7 @@ module register_test_memory
 (	
 	input logic clk,
 	input logic reset,
-	input logic	[$clog2(num_boids):0] which_boid,
+	input logic	[$clog2(num_boids)-1:0] which_boid,
 	
 	input	logic	[6:0] 	wb_en,
 	
@@ -36,18 +36,19 @@ module register_test_memory
 	// To investigate: making this a bi-directional bus
 	
 );
-	logic [27:0] x_t 			[$clog2(num_boids):0];
-	logic [26:0] y_t 			[$clog2(num_boids):0];
-	logic [20:0] vx_t 		[$clog2(num_boids):0];
-	logic [20:0] vy_t 		[$clog2(num_boids):0];
-	logic [31:0] vx_acc_t 	[$clog2(num_boids):0]; 
-	logic [31:0] vy_acc_t 	[$clog2(num_boids):0];
+	logic [27:0] x_t 			[$clog2(num_boids)-1:0];
+	logic [26:0] y_t 			[$clog2(num_boids)-1:0];
+	logic [20:0] vx_t 		[$clog2(num_boids)-1:0];
+	logic [20:0] vy_t 		[$clog2(num_boids)-1:0];
+	logic [31:0] vx_acc_t 	[$clog2(num_boids)-1:0]; 
+	logic [31:0] vy_acc_t 	[$clog2(num_boids)-1:0];
 													
 	// input genvar block, will instantiate test memory
 						
-	genvar i;
-	generate for (i = 0; i < num_boids; i++) begin : tmem
-		
+	
+	generate 
+		genvar i;
+		for (i = 0; i < num_boids; i++) begin : tmem
 		// each reg is muxed to state:
 		
 		d_reg #(28, ((28'd120 + 28'd40 * i) << 16)) x
@@ -144,7 +145,7 @@ module register_test_mem_wrapper
 (	
 	input logic clk,
 	input logic reset,
-	input logic	[$clog2(num_boids):0] which_boid,
+	input logic	[$clog2(num_boids)-1:0] which_boid,
 	
 	input	logic	[6:0] 	wb_en,
 	
@@ -197,7 +198,7 @@ module register_test_mem_wrapper
 	assign vy_in = vy_in_32[20:0];
 	
 	// This should be able to be replaced by a M10k memory
-	register_test_memory rtm(.*);
+	register_test_memory #(num_boids) rtm(.*);
 	
 	zero_pad_fix15
 	#(28,32)

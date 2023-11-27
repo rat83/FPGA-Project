@@ -12,7 +12,7 @@ module xcel_ctrl
 	
 	// output state control vars
 	
-	output logic [$clog2(num_boids):0] 	which_boid,
+	output logic [$clog2(num_boids)-1:0] 	which_boid,
 	
 	output logic [6:0] 					 	wb_en,
 	output logic 							 	r_en_tot,
@@ -28,11 +28,11 @@ module xcel_ctrl
 		);
 
 localparam [2:0] 
-	init 		= 4'd0,
-	sa_init	= 4'd1,
-	sa_ld 	= 4'd2,
-	sa_calc	= 4'd3,
-	ac_wb		= 4'd4;
+	init 		= 3'd0,
+	sa_init	= 3'd1,
+	sa_ld 	= 3'd2,
+	sa_calc	= 3'd3,
+	ac_wb		= 3'd4;
 	
 	logic [2:0] state, next_state;
 	

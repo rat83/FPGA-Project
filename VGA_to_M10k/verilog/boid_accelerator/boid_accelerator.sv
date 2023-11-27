@@ -29,7 +29,7 @@ logic r_en_itr, r_en_tot;
 
 logic [6:0] wb_en;
 
-logic [$clog2(num_boids):0] 	which_boid;
+logic [$clog2(num_boids) - 1:0] 	which_boid;
 
 xcel_dp the_dp 
 (

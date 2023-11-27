@@ -452,7 +452,8 @@ assign border_comp	= ((next_x == 100) | (next_y == 100) | (next_x == 540) | (nex
 
 wire is_boid_here;
 
-boid_accelerator xcel (
+boid_accelerator #(4'd10) xcel 
+(
 	.clk(vga_pll),
 	.reset(~KEY[0]),
 	.en(VGA_VS),//~KEY[1]),
