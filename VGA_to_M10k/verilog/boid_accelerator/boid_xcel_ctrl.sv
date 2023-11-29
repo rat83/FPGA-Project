@@ -10,6 +10,10 @@ module xcel_ctrl
 	
 	input logic reset,
 	
+	input logic [9:0] SW,
+	
+	input logic is_refilling,
+	
 	// output state control vars
 	
 	output logic [$clog2(num_boids)-1:0] 	which_boid,
@@ -23,7 +27,7 @@ module xcel_ctrl
 	
 	fall_edge_detector fed(
 		.clk(clk),
-		.signal(en),
+		.signal(en | is_refilling),
 		.q(en_post)
 		);
 
@@ -86,7 +90,9 @@ localparam [2:0]
 					end
 				end
 				ac_wb: begin
-					if (boid_tot_ctr >= (num_boids - 1)) begin
+					if(~SW[9]) begin
+						next_state = ac_wb;
+					end else if (boid_tot_ctr >= (num_boids - 1)) begin
 						next_state = init;
 					end else begin
 						next_state = sa_init;

@@ -6,6 +6,7 @@ module boid_accelerator
 	input logic clk,
 	input logic en,
 	input logic reset,
+	input logic [9:0] SW,
 	
 	/*
 	input logic [31:0]  
@@ -35,7 +36,7 @@ xcel_dp the_dp
 (
 	.clk(clk),
 	.reset(reset),
-	
+	.SW(SW),
 	
 	.r_en_itr(r_en_itr),
 	.r_en_tot(r_en_tot),
@@ -57,6 +58,7 @@ xcel_ctrl #(num_boids) the_ctrl
 	.clk(clk),
 	.en(en),
 	.reset(reset),
+	.SW(SW),
 	
 	.which_boid(which_boid),
 	.r_en_tot(r_en_tot),

@@ -1,6 +1,7 @@
 module xcel_dp(
 	input logic clk,
 	input logic reset,
+	input logic [9:0] SW,
 	
 	// control signals
 	input logic r_en_tot, // en_write
@@ -97,8 +98,8 @@ module xcel_dp(
 	x_avg_reg
 	(
 		.clk		(clk),
-		.reset	(reset | r_en_tot),
-		.d			(r_en_itr ? xa_comb : x_avg),
+		.reset	(reset),
+		.d			(r_en_tot ? 0 : r_en_itr ? xa_comb : x_avg),
 		.q			(x_avg)
 	);
 	
@@ -106,8 +107,8 @@ module xcel_dp(
 	y_avg_reg
 	(	
 		.clk		(clk),
-		.reset	(reset | r_en_tot),
-		.d			(r_en_itr ? ya_comb : y_avg),
+		.reset	(reset),
+		.d			(r_en_tot ? 0 : r_en_itr ? ya_comb : y_avg),
 		.q			(y_avg)
 	);
 	
@@ -117,7 +118,7 @@ module xcel_dp(
 	(
 		.clk		(clk),
 		.reset	(reset | r_en_tot),
-		.d			(r_en_itr ? vxa_comb : vx_avg),
+		.d			(r_en_tot ? 0 : r_en_itr ? vxa_comb : vx_avg),
 		.q			(vx_avg)
 	);
 	
@@ -126,7 +127,7 @@ module xcel_dp(
 	(
 		.clk		(clk),
 		.reset	(reset | r_en_tot),
-		.d			(r_en_itr ? vya_comb : vy_avg),
+		.d			(r_en_tot ? 0 : r_en_itr ? vya_comb : vy_avg),
 		.q			(vy_avg)
 	);
 	
@@ -163,7 +164,7 @@ module xcel_dp(
 	(
 		.clk		(clk),
 		.reset	(reset | r_en_tot),
-		.d 		(r_en_itr ? boid_ctr_in : boid_ctr),
+		.d 		(r_en_tot ? 0 : r_en_itr ? boid_ctr_in : boid_ctr),
 		.q			(boid_ctr)
 	);
 	
@@ -212,13 +213,13 @@ module xcel_dp(
 	// eliminates switching in writeback pipeline prior to the data being
 	// ready to be written back to memory
 	
-	assign x_wb 			= wb_en[0] ? x : 32'b0;
+	assign x_wb 			= x;//wb_en[0] ? x : 32'b0;
 	
-	assign y_wb 			= wb_en[0] ? y : 32'b0;
+	assign y_wb 			= y;//wb_en[0] ? y : 32'b0;
 	
-	assign vx_wb 			= wb_en[0] ? vx : 32'b0;
+	assign vx_wb 			= vx;//wb_en[0] ? vx : 32'b0;
 	
-	assign vy_wb 			= wb_en[0] ? vy : 32'b0;
+	assign vy_wb 			= vy;//wb_en[0] ? vy : 32'b0;
 	
 	assign x_avg_wb 		= wb_en[0] ? x_avg : 32'b0;
 	
@@ -401,6 +402,7 @@ module xy_writeback
 	input logic [31:0]  		  x_bound, y_bound,
 	
 	input logic [5:0] boid_ctr_wb,
+	input logic [9:0] SW,
 	
 	// vx vy output
 	output logic signed [31:0] vx_bounded, vy_bounded
@@ -408,7 +410,7 @@ module xy_writeback
 
 	// ADJUST THIS PARAMETER, IT IS BEHAVING POORLY
 	// This might not be the only issue but it's worth exploring
-	localparam signed [31:0] turnfactor  	= 32'h00007999;
+	localparam signed [31:0] turnfactor  	= 32'h00003999;
 			
 	localparam signed [31:0] avoidfactor 	= 32'h00000666;
 	
@@ -470,25 +472,25 @@ module xy_writeback
 	
 	fix15_mul f15_11(
 		.a(x_avg_n - x_wb),
-		.b(centerfactor),
+		.b(SW[1] ? centerfactor : 0),
 		.q(x_avg_f)
 	);
 	
 	fix15_mul f15_21(
 		.a(y_avg_n - y_wb),
-		.b(centerfactor),
+		.b(SW[1] ? centerfactor : 0),
 		.q(y_avg_f)
 	);
 	
 	fix15_mul f15_31(
 		.a(vx_avg_n - vx_wb),
-		.b(matchfactor),
+		.b(SW[0] ? matchfactor : 0),
 		.q(vx_avg_f)
 	);
 	
 	fix15_mul f15_41(
 		.a(vy_avg_n - vy_wb),
-		.b(matchfactor),
+		.b(SW[0] ? matchfactor : 0),
 		.q(vy_avg_f)
 	);
 	

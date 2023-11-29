@@ -51,7 +51,7 @@ module register_test_memory
 		for (i = 0; i < num_boids; i++) begin : tmem
 		// each reg is muxed to state:
 		
-		d_reg #(28, ((28'd120 + 28'd40 * i) << 16)) x
+		d_reg #(28, ((28'd110 + 28'd5 * (i % 64)) << 16)) x
 		(	
 			.clk(clk),
 			.reset(reset),
@@ -59,7 +59,7 @@ module register_test_memory
 			.q(x_t[i])
 		);
 		
-		d_reg #(27, ((27'd120 + 27'd40 * i) << 16)) y
+		d_reg #(27, ((28'd110 + 28'd5 * (i / 512)) << 16)) y
 		(
 			.clk(clk),
 			.reset(reset),
@@ -146,6 +146,7 @@ module register_test_mem_wrapper
 	input logic clk,
 	input logic reset,
 	input logic	[$clog2(num_boids)-1:0] which_boid,
+	output logic is_refilling,
 	
 	input	logic	[6:0] 	wb_en,
 	
@@ -177,6 +178,8 @@ module register_test_mem_wrapper
 	// To investigate: making this a bi-directional bus
 	
 );
+	
+	assign is_refilling = 1'b0;
 	
 	// This module truncates incoming values to the memory system 
 	// and pads outgoing values from the memory system
@@ -231,5 +234,76 @@ module register_test_mem_wrapper
 		.fix_in(vy_out),
 		.fix_out(vy_out_32)
 	);
+
+endmodule
+
+module mem_initializer
+#(
+	parameter num_boids = 2
+)
+(
+	input 	logic clk,
+	input 	logic reset,
+	output 	logic is_refilling,
+	
+	output	logic	[6:0] 	wb_en,
+	output	logic	[$clog2(num_boids)-1:0] which_boid,
+	
+	output logic	[27:0] 	x_out_r,
+	output logic	[26:0]	y_out_r,
+	output logic	[20:0]	vx_out_r,
+	output logic	[20:0] 	vy_out_r
+);
+
+logic [$clog2(num_boids)-1:0] up_ctr;
+
+logic [1:0] state, next_state;
+
+always @(posedge clk) begin
+	if (reset) begin
+		state <= 2'b0;
+	end else begin
+		state <= next_state;
+	end
+	
+	if (state == 1) begin
+		up_ctr <= up_ctr + 1;
+	end else if (state == 0) begin
+		up_ctr <= 0;
+	end
+end
+
+always @(*) begin
+	case(state)
+		0: begin next_state = 1; end
+		1:	begin next_state = 2; end
+		2:	begin next_state = (up_ctr >= num_boids) ? 3 : 1;end
+		3:	begin next_state = 3;end
+		default: begin end
+	endcase
+end
+
+always @(*) begin
+	is_refilling = (state != 2'd3);
+	wb_en = 7'b0;
+	x_out_r = 0;
+	y_out_r = 0;
+	vx_out_r = 0;
+	vy_out_r = 0 ;
+	case(state)
+		0: begin end
+		1: begin end
+		2: begin
+			
+			wb_en = 7'b0011111;
+			x_out_r = ((28'd100 + 28'd10 * (up_ctr % 540)) << 16);
+			y_out_r = ((28'd100 + 28'd10 * (up_ctr / 280)) << 16);
+			vx_out_r = ((21'd4) << 16); 
+			vy_out_r = ((21'd4) << 16); 
+		end
+		3: begin end
+		default: begin end
+	endcase
+end
 
 endmodule
