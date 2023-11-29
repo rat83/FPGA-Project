@@ -36,12 +36,12 @@ module register_test_memory
 	// To investigate: making this a bi-directional bus
 	
 );
-	logic [27:0] x_t 			[$clog2(num_boids)-1:0];
-	logic [26:0] y_t 			[$clog2(num_boids)-1:0];
-	logic [20:0] vx_t 		[$clog2(num_boids)-1:0];
-	logic [20:0] vy_t 		[$clog2(num_boids)-1:0];
-	logic [31:0] vx_acc_t 	[$clog2(num_boids)-1:0]; 
-	logic [31:0] vy_acc_t 	[$clog2(num_boids)-1:0];
+	logic [27:0] x_t 			[num_boids-1:0];
+	logic [26:0] y_t 			[num_boids-1:0];
+	logic [20:0] vx_t 		[num_boids-1:0];
+	logic [20:0] vy_t 		[num_boids-1:0];
+	logic [31:0] vx_acc_t 	[num_boids-1:0]; 
+	logic [31:0] vy_acc_t 	[num_boids-1:0];
 													
 	// input genvar block, will instantiate test memory
 						
@@ -133,7 +133,7 @@ module register_test_memory
 		end
 		*/
 		
-		is_boid_here = is_boid_here_t[0] | is_boid_here_t[1];
+		is_boid_here = |is_boid_here_t;
 	end
 	
 endmodule
