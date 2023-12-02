@@ -157,9 +157,9 @@ module xcel_dp(
 	// boid neighbor counter
 	// should parametrize 
 	
-	logic [5:0] boid_ctr, boid_ctr_in;
+	logic [9:0] boid_ctr, boid_ctr_in;
 	
-	d_reg #(6, 0)
+	d_reg #(10, 0)
 	boid_ctr_reg
 	(
 		.clk		(clk),
@@ -206,20 +206,20 @@ module xcel_dp(
 	
 	logic signed [31:0] 		x_close_wb, y_close_wb;
 	
-	logic [5:0] 				boid_ctr_wb;
+	logic [9:0] 				boid_ctr_wb;
 	
 	// writeback input muxing
 	
 	// eliminates switching in writeback pipeline prior to the data being
 	// ready to be written back to memory
 	
-	assign x_wb 			= x;//wb_en[0] ? x : 32'b0;
+	assign x_wb 			= wb_en[0] ? x : 32'b0;
 	
-	assign y_wb 			= y;//wb_en[0] ? y : 32'b0;
+	assign y_wb 			= wb_en[0] ? y : 32'b0;
 	
-	assign vx_wb 			= vx;//wb_en[0] ? vx : 32'b0;
+	assign vx_wb 			= wb_en[0] ? vx : 32'b0;
 	
-	assign vy_wb 			= vy;//wb_en[0] ? vy : 32'b0;
+	assign vy_wb 			= wb_en[0] ? vy : 32'b0;
 	
 	assign x_avg_wb 		= wb_en[0] ? x_avg : 32'b0;
 	
@@ -261,8 +261,8 @@ module xcel_dp(
 					vy_comb = vy_bounded;
 				end
 			2'd1: begin
-					vx_comb = vx_bounded + (vx_bounded >>> 2 + 32'b1);
-					vy_comb = vy_bounded + (vy_bounded >>> 2 + 32'b1);
+					vx_comb = vx_bounded + (vx_bounded >>> 2);
+					vy_comb = vy_bounded + (vy_bounded >>> 2);
 				end
 			2'd2: begin
 					vx_comb = vx_bounded - (vx_bounded >>> 2);
@@ -306,9 +306,9 @@ module xy_sep_chk(
 	
 	output logic signed 	[31:0] xc_comb, yc_comb,
 	
-	input logic 	[5:0] boid_ctr,
+	input logic 	[9:0] boid_ctr,
 	
-	output logic 	[5:0] boid_ctr_in
+	output logic 	[9:0] boid_ctr_in
 );
 	
 	logic [31:0] x_sq, y_sq;
@@ -343,7 +343,7 @@ module xy_sep_chk(
 	//                      fix15 1600  
 	assign d01_a = (d_sq < fix15_1600);
 	
-	assign d01_b = (boid_ctr != 6'b111111);
+	assign d01_b = ~(boid_ctr == 10'b1111111111);
 	
 								
 	assign d_comparison = { (d_sq < (32'd64 << 16)), d01_a && d01_b};
@@ -401,7 +401,8 @@ module xy_writeback
 	
 	input logic [31:0]  		  x_bound, y_bound,
 	
-	input logic [5:0] boid_ctr_wb,
+	input logic [9:0] boid_ctr_wb,
+	
 	input logic [9:0] SW,
 	
 	// vx vy output
@@ -410,11 +411,13 @@ module xy_writeback
 
 	// ADJUST THIS PARAMETER, IT IS BEHAVING POORLY
 	// This might not be the only issue but it's worth exploring
+	
+	/// 3999 0666 1666 0010
 	localparam signed [31:0] turnfactor  	= 32'h00003999;
 			
 	localparam signed [31:0] avoidfactor 	= 32'h00000666;
 	
-	localparam signed [31:0] matchfactor 	= 32'h00000666;
+	localparam signed [31:0] matchfactor 	= 32'h00001666;
 	
 	localparam signed [31:0] centerfactor 	= 32'h00000010;
 	
@@ -423,7 +426,7 @@ module xy_writeback
 	// Instantiate lookup table for pre-calculated fractional dividers between 1 and 31
 	// or multiply all of these things by zero if boid_ctr remains 0
 	
-	lut_32_divider lut(
+	lut_512_divider lut(
 		.lut_sel(boid_ctr_wb),
 		.div_val(div_val)
 	);
@@ -470,26 +473,40 @@ module xy_writeback
 	
 	logic signed [31:0] x_avg_f, y_avg_f, vx_avg_f, vy_avg_f;
 	
+	logic signed [31:0] x_avg_mid, y_avg_mid, vx_avg_mid, vy_avg_mid;
+	
+	logic no_boids;
+	
+	assign no_boids = boid_ctr_wb == 8'b0;
+	
+	assign x_avg_mid = x_avg_n - x_wb;
+	
+	assign y_avg_mid = y_avg_n - y_wb;
+	
+	assign vx_avg_mid = vx_avg_n - vx_wb;
+	
+	assign vy_avg_mid = vy_avg_n - vy_wb;
+	
 	fix15_mul f15_11(
-		.a(x_avg_n - x_wb),
+		.a(no_boids ? 0 : x_avg_mid),
 		.b(SW[1] ? centerfactor : 0),
 		.q(x_avg_f)
 	);
 	
 	fix15_mul f15_21(
-		.a(y_avg_n - y_wb),
+		.a(no_boids ? 0 : y_avg_mid),
 		.b(SW[1] ? centerfactor : 0),
 		.q(y_avg_f)
 	);
 	
 	fix15_mul f15_31(
-		.a(vx_avg_n - vx_wb),
+		.a(no_boids ? 0 : vx_avg_mid),
 		.b(SW[0] ? matchfactor : 0),
 		.q(vx_avg_f)
 	);
 	
 	fix15_mul f15_41(
-		.a(vy_avg_n - vy_wb),
+		.a(no_boids ? 0 : vy_avg_mid),
 		.b(SW[0] ? matchfactor : 0),
 		.q(vy_avg_f)
 	);
